@@ -1,0 +1,139 @@
+.main-header {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  min-width: 320px;
+  padding-top: 19px;
+  background-color: var(--basic);
+  transition: background-color 0.5s, padding 0.5s;
+
+  &--scroll {
+    padding-top: 27px;
+    //background-color: #ffffff;
+
+    .main-header__logo-mobile-white {
+      display: none;
+    }
+
+    .main-header__logo-mobile-black {
+      display: block;
+    }
+
+    .main-header__nav-btn {
+      top: 25px;
+
+      &::before,
+      &::after {
+        background-color: #cccccc;
+      }
+    }
+  }
+}
+
+.main-header__logo-wrapper {
+  position: relative;
+  z-index: 4;
+  min-height: 73px;
+  padding-left: var(--padding-mobile);
+}
+
+.main-header__logo-mobile-black,
+.main-header__logo-mobile-white {
+  position: absolute;
+  top: 0;
+}
+
+.main-header__logo-mobile-black {
+  display: none;
+}
+
+.main-header__logo-mobile-white {
+  display: block;
+}
+
+.main-header__nav-btn {
+  position: absolute;
+  z-index: 6;
+  top: 19px;
+  right: 26px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.main-header__nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  padding-top: 118px;
+  padding-left: var(--padding-mobile);
+  padding-right: var(--padding-mobile);
+  padding-bottom: 35px;
+}
+
+.main-header__user-links {
+  position: absolute;
+  top: 457px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.user-links__link {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+
+  &--phone {
+    background-color: var(--accent-800);
+
+    &:hover {
+      background-color: var(--accent-900);
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
+
+    &::before {
+      content: url("../img/icons/icon-call.svg");
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.3s;
+    }
+  }
+
+  &--mail {
+    background-color: var(--accent-600);
+
+    &:hover {
+      background-color: var(--accent-800);
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
+
+    &::before {
+      content: url("../img/icons/icon-email.svg");
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.3s;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+/* Custom CSS Prop */
+
+:root {
+  /* Colors */
+
+  --basic: #161c35;
+  --basic-300: #1d2e5b;
+  --basic-400: #192144;
+  --basic-600: #121936;
+  --basic-fade: rgba(22, 28, 53, 0.3); // #161c35 in RGB
+
+  --accent: #ffd74b;
+  --accent-600: #ffbd30;
+  --accent-700: #ffa530;
+  --accent-800: #ff8d30;
+  --accent-900: #f26926;
+
+  --background: #edeff6;
+  --backrgound-600: #e2e5f2;
+  --backrgound-700: #dfe3f0;
+  --backrgound-800: #d4d9eb;
+
+  --main-text: #444444;
+  --main-text-900: #000000;
+  --contrast-text: #ffffff;
+
+  /* Adaptive paddings */
+
+  --padding-mobile: 25px;
+  --padding-tablet: 40px;
+}
+
+/* Fonts */
+
+$font-light: "Blogger Sans Light", "Verdana", sans-serif;
+$font-regular: "Blogger Sans", "Verdana", sans-serif;
+$font-medium: "Blogger Sans Medium", "Verdana", sans-serif;
+$font-bold: "Blogger Sans Bold", "Verdana", sans-serif;

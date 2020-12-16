@@ -1,1 +1,15 @@
-// Начните писать стили здесь
+/* Common Styles */
+@import "fonts.scss";
+@import "variables.scss";
+@import "common.scss";
+
+/* Header */
+@import "blocks/main-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/contacts-list.scss";
+@import "blocks/user-links.scss";
+@import "blocks/humburger.scss";
+@import "blocks/socials.scss";
+
+/* Main-content */
+@import "blocks/promo.scss";

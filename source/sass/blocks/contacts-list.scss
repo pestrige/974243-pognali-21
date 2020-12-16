@@ -1,0 +1,30 @@
+.contacts-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.contacts-list__link {
+  display: flex;
+  align-items: center;
+  font-family: $font-bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-400);
+}
+
+.contacts-list__svg {
+  margin-right: 16px;
+  width: 45px;
+  height: 45px;
+
+  circle {
+    fill: var(--basic-600);
+  }
+
+  path {
+    fill: var(--accent);
+  }
+}

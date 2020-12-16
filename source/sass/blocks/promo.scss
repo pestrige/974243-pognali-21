@@ -1,0 +1,120 @@
+.promo {
+  position: relative;
+  padding-top: 95px;
+  display: grid;
+  color: var(--contrast-text);
+  background-color: var(--basic);
+  // background-image:
+  //   url("../img/bg/promo-bg-man-mobile.png"),
+  //   url("../img/bg/promo-bg-mobile.jpg");
+  // background-position: 62% bottom, center top;
+  // background-repeat: no-repeat, no-repeat;
+  // background-size: auto auto, cover;
+}
+
+.promo__title-wrapper {
+  margin-bottom: 49px;
+  padding-bottom: 262px;
+  background-image:
+    url("../img/bg/promo-bg-man-mobile.png"),
+    url("../img/bg/promo-bg-mobile.jpg");
+  background-position: 62% bottom, center top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto auto, cover;
+}
+
+.promo__title {
+  font-family: $font-bold;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.promo__info-block {
+  position: absolute;
+  padding-top: 49px;
+  background-image: linear-gradient(180deg, var(--basic) 50%, var(--basic-400) 50%);
+}
+
+.promo__quote {
+  padding-left: 50px;
+  padding-right: 100px;
+  margin: 0;
+  margin-bottom: 29px;
+}
+
+.promo__quote-author {
+  font-family: $font-bold;
+  font-style: normal;
+}
+
+.promo__quote-text {
+  margin-top: 0;
+  margin-bottom: 17px;
+}
+
+.promo__steps {
+  padding-left: var(--padding-mobile);
+  padding-right: var(--padding-mobile);
+  margin-bottom: 39px;
+  background-image: linear-gradient(180deg, var(--basic) 25%, var(--basic-400) 25%);
+}
+
+.promo__steps-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: steps;
+}
+
+.promo__steps-item {
+  position: relative;
+  padding: 22px 24px 32px 24px;
+  margin-bottom: -10px;
+  font-family: $font-bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--basic);
+  background-color: var(--accent);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  &::after {
+    position: absolute;
+    top: 22px;
+    right: 21px;
+    counter-increment: steps;
+    content: counter(steps);
+    font-family: $font-bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: var(--contrast-text);
+  }
+
+  &:nth-child(4n+1) {
+    background-color: var(--accent-800);
+  }
+
+  &:nth-child(4n+2) {
+    background-color: var(--accent-700);
+  }
+
+  &:nth-child(4n+3) {
+    background-color: var(--accent-600);
+  }
+
+  &:nth-child(4n) {
+    background-color: var(--accent);
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 0;
+    padding-bottom: 22px;
+  }
+}

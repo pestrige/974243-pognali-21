@@ -1,0 +1,38 @@
+.main-nav {
+  background-color: #ffffff;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+
+  &--close {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+.main-nav__list {
+  margin-top: 0;
+  margin-bottom: 51px;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.main-nav__link {
+  font-family: $font-medium;
+  font-size: 30px;
+  line-height: 35px;
+  color: var(--basic-400);
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.main-nav__btn-auth {
+  margin-bottom: 52px;
+}
+
+.main-nav__contacts {
+  margin-bottom: 39px;
+}
