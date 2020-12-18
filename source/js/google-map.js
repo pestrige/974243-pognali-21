@@ -1,9 +1,9 @@
 {
   function initMap() {
 
-    const uluru = { lat: 59.939033513366084, lng: 30.32128792141334 };
-    const markerPos = { lat:59.938753982836836, lng: 30.32304743616715 };
-    const markerIcon = './img/map-pin.png';
+    const uluru = { lat: 59.93621193405666, lng: 30.321726596813022 };
+    const markerPos = { lat:59.93621193405666, lng: 30.321726596813022 };
+    const markerIcon = './img/icons/map-pin.svg';
 
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 16,
@@ -18,3 +18,7 @@
     });
   }
 }
+
+// 59.93621193405666, 30.321726596813022
+
+//map id 1edc6f337d15f752
