@@ -1,0 +1,93 @@
+.companion-card {
+  position: relative;
+  width: 270px;
+  display: grid;
+}
+
+.companion-card__info {
+  padding: 27px 36px 14px 36px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: var(--text);
+  background-color: var(--background-white);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.companion-card__heading {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.companion-card__name {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-300);
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -16px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--offline {
+    &::before {
+      background-color: var(--warning);
+    }
+  }
+
+  &--online {
+    &::before {
+      background-color: var(--okay);
+    }
+  }
+}
+
+.companion-card__tags {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 0;
+  font-family: $font-light;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  resize: none;
+  border: none;
+}
+
+.companion-card__icons-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.companion-card__flag-list {
+  position: absolute;
+  top: 259px;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.companion-card__item + .companion-card__item {
+  margin-left: 20px;
+}

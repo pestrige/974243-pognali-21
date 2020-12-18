@@ -3,6 +3,12 @@
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+
+  &--contrast {
+    .contacts-list__link {
+      color: var(--accent);
+    }
+  }
 }
 
 .contacts-list__link {

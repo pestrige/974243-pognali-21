@@ -1,0 +1,65 @@
+.rates {
+  list-style: none;
+  counter-reset: rates-number;
+}
+
+.rates__item {
+  position: relative;
+  margin-right: 46px;
+  padding-top: 12px;
+  padding-bottom: 16px;
+  display: grid;
+  grid-template-columns: 200px;
+  border-bottom: 1px solid #e1e3e9;
+  counter-increment: rates-number;
+
+  &:first-child {
+    border-top: 1px solid #e1e3e9;
+  }
+
+  &::before {
+    position: absolute;
+    top: 3px;
+    right: -45px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: counter(rates-number);
+    font-family: $font-regular;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--contrast-text);
+    border-radius: 50%;
+  }
+
+  &:nth-child(3n+1)::before {
+    background-color: var(--accent-800);
+  }
+
+  &:nth-child(3n+2)::before {
+    background-color: var(--accent-600);
+  }
+
+  &:nth-child(3n+3)::before {
+    background-color: var(--accent);
+  }
+}
+
+.rates__title {
+  order: 1;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: $font-light;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.rates__price {
+  order: 3;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 16px;
+}

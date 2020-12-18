@@ -1,0 +1,41 @@
+.ways {
+  position: relative;
+  z-index: 9;
+  padding-bottom: 33px;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  background-color: var(--background);
+}
+
+.ways__countries {
+  margin-top: 0;
+  margin-bottom: 28px;
+  padding-left: 0;
+  display: grid;
+  gap: 11px;
+  list-style: none;
+
+  @media (min-width: 600px) {
+    grid-auto-flow: column;
+  }
+}
+
+.ways__countries-item {
+  display: flex;
+  justify-content: center;
+}
+
+.ways__wrapper {
+  padding-top: 70px;
+}
+
+.ways__title {
+  margin-bottom: 19px;
+  margin-left: 24px;
+}
+
+.ways__descr {
+  margin-top: 0;
+  margin-bottom: 60px;
+  margin-left: 24px;
+}

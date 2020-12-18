@@ -1,0 +1,55 @@
+// .chart {
+//   --chart-persent: 99;
+// }
+
+.chart__svg {
+  width: 60px;
+  height: 60px;
+}
+
+.chart__circle {
+  fill: rgba(0, 0, 0, 0.6);
+  stroke-width: 2;
+  stroke: var(--accent-800);
+  stroke-linecap: round;
+  //stroke-dasharray: var(--chart-persent) 100;
+  transform-origin: center center;
+  transform: rotate(270deg);
+}
+
+.chart__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transform: translate(-50%, -50%);
+}
+
+.chart__persent {
+  position: relative;
+  font-family: $font-bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--contrast-text);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 30px;
+    height: 1px;
+    background-color: rgba(#ffffff, 0.3);
+  }
+}
+
+.chart__level {
+  font-family: $font-regular;
+  font-size: 14px;
+  line-height: 14px;
+  color: var(--contrast-text);
+}

@@ -1,0 +1,29 @@
+.address {
+  position: relative;
+  z-index: 5;
+  margin-top: -30px;
+  padding-top: 62px;
+  padding-bottom: 34px;
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  column-gap: 16px;
+  row-gap: 33px;
+  align-items: center;
+  background-color: var(--accent);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.address__text {
+  font-family: $font-bold;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--basic-300);
+  text-transform: uppercase;
+}
+
+.address__btn {
+  padding: 18px 36px 19px 19px;
+  grid-column: 1 / -1;
+}

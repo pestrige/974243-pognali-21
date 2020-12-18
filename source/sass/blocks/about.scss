@@ -1,0 +1,42 @@
+.about {
+  position: relative;
+  z-index: 10;
+  color: var(--contrast-text);
+  background-color: var(--basic-400);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33%;
+    height: 132px;
+    background-color: var(--basic-700);
+  }
+}
+
+.about__wrapper {
+  position: relative;
+  z-index: 1;
+  padding: 33px 60px 82px 49px;
+  background-image: url("../img/bg/about-bg-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 17px top;
+}
+
+.about__title {
+  margin-bottom: 19px;
+}
+
+.about__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.about__text-strong {
+  font-family: $font-bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}

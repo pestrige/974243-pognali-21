@@ -1,0 +1,33 @@
+.pricing {
+  position: relative;
+  z-index: 7;
+  padding-top: 37px;
+  padding-bottom: 36px;
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  row-gap: 31px;
+  background-color: var(--background);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.pricing__title {
+  margin-top: 16px;
+  margin-left: 25px;
+}
+
+.pricing__rates {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 24px;
+  grid-column: 1 / -1;
+}
+
+.pricing__business-link {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: $font-bold;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--basic-200);
+}

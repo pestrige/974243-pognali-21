@@ -36,7 +36,15 @@ input[type="radio"].visually-hidden {
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
-  color: var(--main-text);
+  color: var(--text);
+  background-color: var(--background);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--padding-mobile);
+  padding-right: var(--padding-mobile);
 }
 
 .btn {
@@ -72,9 +80,40 @@ input[type="radio"].visually-hidden {
     padding-bottom: 3px;
     overflow-x: hidden;
   }
+
+  &--big {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 22px 36px 22px 23px;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: left;
+    text-transform: none;
+    border-radius: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 17px;
+      top: 50%;
+      border: 6px solid transparent;
+      border-left: 10px solid var(--basic-300);
+      transform: translateY(-50%);
+      transition: opacity 0.3s;
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
+  }
+
+  &--border {
+    border: 3px solid var(--basic-400);
+  }
 }
 
-.main-title {
+.section-title {
   margin-top: 0;
   margin-bottom: 0;
   font-family: $font-bold;

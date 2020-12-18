@@ -1,0 +1,24 @@
+.icons-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.icons-list__item {
+  & + & {
+    margin-left: 12px;
+  }
+
+  svg path {
+    fill: #101d41;
+    opacity: 0.15;
+  }
+
+  &--active {
+    svg path {
+      opacity: 1;
+    }
+  }
+}

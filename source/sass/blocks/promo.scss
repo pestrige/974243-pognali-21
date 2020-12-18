@@ -18,12 +18,15 @@
   background-image:
     url("../img/bg/promo-bg-man-mobile.png"),
     url("../img/bg/promo-bg-mobile.jpg");
-  background-position: 62% bottom, center top;
+  background-position: 62% bottom, center center;
   background-repeat: no-repeat, no-repeat;
   background-size: auto auto, cover;
 }
 
 .promo__title {
+  max-width: 270px;
+  margin-left: auto;
+  margin-right: auto;
   font-family: $font-bold;
   margin-top: 0;
   margin-bottom: 0;
@@ -57,9 +60,8 @@
 }
 
 .promo__steps {
-  padding-left: var(--padding-mobile);
-  padding-right: var(--padding-mobile);
-  margin-bottom: 39px;
+  width: 100%;
+  padding-bottom: 39px;
   background-image: linear-gradient(180deg, var(--basic) 25%, var(--basic-400) 25%);
 }
 
