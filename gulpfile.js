@@ -89,18 +89,22 @@ exports.server = server;
 
 const clean = () => del('./build');
 
+exports.copy = copy;
+
 // Copy
 
 const copy = (done) => {
   gulp.src([
     './source/fonts/*.{woff2,woff}',
-    './source/img/**/*.{img,png,svg}'
+    './source/img/**/*.{jpg,png,svg}'
   ], {
     base: 'source'
   })
   .pipe(gulp.dest('./build'))
   done();
 };
+
+exports.copy = copy;
 
 // Reload
 
