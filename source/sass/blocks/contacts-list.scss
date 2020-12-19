@@ -19,12 +19,23 @@
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basic-400);
+
+  @media (min-width: $tablet) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .contacts-list__svg {
-  margin-right: 16px;
   width: 45px;
   height: 45px;
+  margin-right: 16px;
+
+  @media (min-width: $tablet) {
+    width: 68px;
+    height: 68px;
+    margin-right: 23px;
+  }
 
   circle {
     fill: var(--basic-600);
@@ -32,5 +43,11 @@
 
   path {
     fill: var(--accent);
+  }
+}
+
+.contacts-list__text {
+  @media (min-width: $tablet) {
+    margin-top: 8px;
   }
 }

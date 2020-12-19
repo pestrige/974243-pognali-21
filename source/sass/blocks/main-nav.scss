@@ -18,6 +18,11 @@
   padding-left: 0;
   list-style: none;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 128px;
+    text-align: left;
+  }
 }
 
 .main-nav__link {
@@ -27,12 +32,31 @@
   color: var(--basic-400);
   text-transform: uppercase;
   transition: color 0.3s;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 71px;
+  }
 }
 
 .main-nav__btn-auth {
   margin-bottom: 52px;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }
 
 .main-nav__contacts {
   margin-bottom: 39px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 130px;
+  }
+}
+
+.main-nav__socials {
+  @media (min-width: $tablet) {
+    display: inline-block;
+  }
 }

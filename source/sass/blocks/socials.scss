@@ -7,6 +7,10 @@
   align-items: center;
   list-style: none;
 
+  @media (min-width: $tablet) {
+    margin-left: 25px;
+  }
+
   &--circle {
     .socials__item + .socials__item {
       margin-left: 0;
@@ -39,10 +43,35 @@
 
 .socials__item + .socials__item {
   margin-left: 27px;
+
+  @media (min-width: $tablet) {
+    margin-left: 36px;
+  }
 }
 
 .socials__svg {
   transition: fill 0.3s, opacity 0.3s;
+
+  &--facebook {
+    @media (min-width: $tablet) {
+      width: 14px;
+      height: 28px;
+    }
+  }
+
+  &--vk {
+    @media (min-width: $tablet) {
+      width: 31px;
+      height: 16px;
+    }
+  }
+
+  &--instagram {
+    @media (min-width: $tablet) {
+      width: 24px;
+      height: 24px;
+    }
+  }
 
   path {
     fill: var(--basic-400);

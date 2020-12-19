@@ -7,6 +7,7 @@
   const mainHeader = body.querySelector('.main-header__wrapper');
   const menuBtn = mainHeader.querySelector('.humburger');
   const mainNav = mainHeader.querySelector('.main-nav');
+  const userLinks = body.querySelector('.main-header__user-links');
 
   menuBtn.classList.remove('humburger--open');
   mainHeader.classList.remove('main-header__wrapper--white');
@@ -33,6 +34,8 @@
     window.addEventListener('scroll', () => {
       const isFixed = mainHeader.classList.contains('main-header__wrapper--fixed');
       const isClose = mainNav.classList.contains('main-nav--close');
+      const pageWidth = document.documentElement.scrollWidth;
+      const isTablet = pageWidth >= 768;
       const y = window.scrollY;
 
       if (isClose) {
@@ -40,13 +43,17 @@
           mainHeader.classList.add(fixedClass);
           mainHeader.classList.remove(animationClassOut);
           mainHeader.classList.add(animationClassIn);
+          userLinks.classList.add(animationClassIn);
         };
         const delFixed = () => {
           mainHeader.classList.remove(animationClassIn);
+          if (isTablet) userLinks.classList.remove(animationClassIn);
           mainHeader.classList.add(animationClassOut);
+          if (isTablet) userLinks.classList.add(animationClassOut);
           setTimeout(() => {
             mainHeader.classList.remove(fixedClass);
             mainHeader.classList.remove(animationClassOut);
+            userLinks.classList.remove(animationClassOut);
           }, 500);
         };
 
