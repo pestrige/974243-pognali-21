@@ -1,0 +1,57 @@
+.user-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.user-links__link {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+
+  &--phone {
+    background-color: var(--accent-800);
+
+    &:hover {
+      background-color: var(--accent-900);
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
+
+    &::before {
+      content: url("../img/icons/icon-call.svg");
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.3s;
+    }
+  }
+
+  &--mail {
+    background-color: var(--accent-600);
+
+    &:hover {
+      background-color: var(--accent-800);
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
+
+    &::before {
+      content: url("../img/icons/icon-email.svg");
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: opacity 0.3s;
+    }
+  }
+}
