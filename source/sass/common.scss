@@ -122,3 +122,51 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   color: var(--accent-800);
 }
+
+.animation-in {
+  animation: menu-in 1s forwards;
+
+  @keyframes menu-in {
+    0% {
+      transform: translateY(-30px);
+    }
+
+    33% {
+      transform: translateY(-5px);
+    }
+
+    66% {
+      transform: translateY(-15px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+.animation-out {
+  animation: menu-out 0.5s linear;
+
+  @keyframes menu-out {
+    0% {
+      transform: translateY(0);
+    }
+
+    // 33% {
+    //   transform: translateY(-15px);
+    // }
+
+    // 66% {
+    //   transform: translateY(-5px);
+    // }
+
+    100% {
+      transform: translateY(-30px);
+    }
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
