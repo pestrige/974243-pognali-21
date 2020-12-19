@@ -89,8 +89,6 @@ exports.server = server;
 
 const clean = () => del('./build');
 
-exports.copy = copy;
-
 // Copy
 
 const copy = (done) => {
