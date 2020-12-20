@@ -24,6 +24,11 @@
   background-image: url("../img/bg/about-bg-mobile.png");
   background-repeat: no-repeat;
   background-position: 17px top;
+
+  @media (min-width: $tablet) {
+    background-image: url("../img/bg/about-bg-tablet.png");
+    background-position: right top;
+  }
 }
 
 .about__title {
@@ -33,6 +38,10 @@
 .about__text {
   margin-top: 0;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    width: 310px;
+  }
 }
 
 .about__text-strong {
