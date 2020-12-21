@@ -9,11 +9,36 @@
   background-color: var(--background);
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
+
+  @media (min-width: $tablet) {
+    padding-top: 58px;
+    padding-bottom: 45px;
+    grid-template-columns: 1fr 145px;
+  }
 }
 
 .pricing__title {
   margin-top: 16px;
   margin-left: 25px;
+
+  @media (min-width: $tablet) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    margin-left: 0;
+    margin-bottom: 41px;
+    text-align: center;
+  }
+}
+
+.pricing__currency {
+  width: 100px;
+  height: 100px;
+
+  @media (min-width: $tablet) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    margin-top: -11px;
+  }
 }
 
 .pricing__rates {
@@ -21,6 +46,11 @@
   margin-bottom: 0;
   padding-left: 24px;
   grid-column: 1 / -1;
+
+  @media (min-width: $tablet) {
+    padding-left: 0;
+    grid-row: 2 / 3;
+  }
 }
 
 .pricing__business-link {
@@ -30,4 +60,28 @@
   font-size: 16px;
   line-height: 16px;
   color: var(--basic-200);
+
+  @media (min-width: $tablet) {
+    margin-top: -11px;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+
+    &::before {
+      content: "";
+      top: 0;
+      left: 0;
+      margin-right: 21px;
+      width: 68px;
+      height: 68px;
+      background-image: url("../img/icons/icon-business.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
 }

@@ -14,6 +14,14 @@
     width: 33%;
     height: 132px;
     background-color: var(--basic-700);
+
+    @media (min-width: $tablet) {
+      width: calc(100% - var(--padding-tablet) * 2);
+      height: 212px;
+      margin-left: var(--padding-tablet);
+      margin-right: var(--padding-tablet);
+      border-radius: 20px;
+    }
   }
 }
 
@@ -26,13 +34,19 @@
   background-position: 17px top;
 
   @media (min-width: $tablet) {
+    margin-right: 8px;
+    padding: 41px 60px 89px 74px;
     background-image: url("../img/bg/about-bg-tablet.png");
-    background-position: right top;
+    background-position: right 48px;
   }
 }
 
 .about__title {
   margin-bottom: 19px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 41px;
+  }
 }
 
 .about__text {
@@ -41,11 +55,32 @@
 
   @media (min-width: $tablet) {
     width: 310px;
+    margin-bottom: 30px;
+
+    br {
+      display: none;
+    }
   }
 }
 
 .about__text-strong {
-  font-family: $font-bold;
   margin-top: 0;
   margin-bottom: 0;
+  font-family: $font-bold;
+
+  @media (min-width: $tablet) {
+    width: 310px;
+    margin-bottom: 52px;
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+.about__btn {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+    width: 276px;
+  }
 }

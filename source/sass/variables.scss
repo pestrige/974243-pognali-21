@@ -42,10 +42,15 @@
   /* Section border radius */
 
   --border-radius: 30px;
+
+  @media (min-width: 768px) {
+    --border-radius: 60px;
+  }
 }
 
 /* Break points */
 
+$mobilexl: 520px;
 $tablet: 768px;
 $desktop: 1440px;
 

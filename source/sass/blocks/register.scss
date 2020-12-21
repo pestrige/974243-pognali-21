@@ -7,11 +7,21 @@
   background-color: var(--basic-400);
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
+
+  @media (min-width: $tablet) {
+    margin-top: -60px;
+    padding-top: 136px;
+    padding-bottom: 56px;
+  }
 }
 
 .register__title {
   margin-bottom: 19px;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 59px;
+  }
 }
 
 .register__text {
@@ -19,10 +29,22 @@
   color: var(--contrast-text);
   text-align: center;
 
+  @media (min-width: $tablet) {
+    margin: 0 35px 63px;
+
+    br {
+      display: none;
+    }
+  }
+
   &--wide {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 18px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 41px;
+    }
   }
 }
 
@@ -45,6 +67,14 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 60px;
+
+  @media (min-width: $tablet) {
+    width: auto;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 60px;
+    grid-template-columns: 1fr 80px;
+  }
 }
 
 .register__input {
@@ -60,6 +90,15 @@
   background-color: #ffffff;
   border: none;
   border-radius: 10px;
+
+  @media (min-width: $tablet) {
+    height: 80px;
+    padding-left: 36px;
+    padding-right: 100px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+  }
 }
 
 .register__btn {
@@ -75,6 +114,12 @@
   border-radius: 10px;
   transition: background-color 0.3s;
   cursor: pointer;
+
+  @media (min-width: $tablet) {
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 
   &:hover {
     background-color: var(--accent-600);
@@ -94,5 +139,11 @@
     border: 6px solid transparent;
     border-left: 10px solid var(--basic-300);
     transition: opacity 0.3s;
+  }
+}
+
+.register__contacts {
+  @media (min-width: $tablet) {
+    padding-left: 34px;
   }
 }

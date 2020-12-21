@@ -10,6 +10,16 @@
   background-color: var(--background-white);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
+
+  @media (min-width: $tablet) {
+    margin-top: -117px;
+    padding-top: 46px;
+    padding-bottom: 32px;
+    padding-left: var(--padding-tablet);
+    padding-right: var(--padding-tablet);
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
 }
 
 .main-footer__creator {
@@ -20,6 +30,13 @@
   align-items: center;
   border-top: 1px solid #f2f2f2;
   transition: opacity 0.3s;
+
+  @media (min-width: $tablet) {
+    padding-top: 0;
+    justify-self: end;
+    justify-content: end;
+    border-top: none;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -37,4 +54,17 @@
   font-size: 16px;
   line-height: 16px;
   color: var(--text);
+
+  @media (min-width: $tablet) {
+    margin-right: 23px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.main-footer__logo {
+  @media (min-width: $tablet) {
+    justify-self: start;
+    margin-top: 9px;
+  }
 }

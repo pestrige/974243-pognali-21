@@ -11,6 +11,13 @@
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
 
+  @media (min-width: $tablet) {
+    margin-top: -60px;
+    padding-bottom: 87px;
+    background-image: url("../img/bg/companions-bg-woman-tablet.png");
+    background-position: 85% 140px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -21,6 +28,14 @@
     top: 68px;
     background-color: var(--basic-700);
     border-radius: 20px;
+
+    @media (min-width: $tablet) {
+      width: 212px;
+      height: 212px;
+      left: 40px;
+      top: 131px;
+      border-radius: 20px;
+    }
   }
 }
 
@@ -29,28 +44,69 @@
   background-image: url("../img/bg/companions-bg-man.png");
   background-repeat: no-repeat;
   background-position: 85% 64px;
+
+  @media (min-width: $tablet) {
+    padding-top: 201px;
+    background-position: 6% 487px;
+  }
 }
 
 .companions__title {
   margin-left: 24px;
   margin-bottom: 19px;
+
+  @media (min-width: $tablet) {
+    margin-left: 33px;
+    margin-bottom: 56px;
+  }
 }
 
 .companions__descr {
   margin-left: 24px;
   margin-right: 29px;
   margin-bottom: 54px;
+
+  @media (min-width: $tablet) {
+    width: 430px;
+    margin-left: 35px;
+    margin-bottom: 58px;
+  }
 }
 
 .companions__text {
   margin-top: 0;
   margin-bottom: 21px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 41px;
+  }
+
+  br {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+    }
+  }
 }
 
 .companions__text-strong {
   margin-top: 0;
   margin-bottom: 0;
   font-family: $font-bold;
+
+  @media (min-width: $tablet) {
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  br {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+    }
+  }
 }
 
 .companions__list {
@@ -62,8 +118,14 @@
   gap: 9px;
 
   @media (min-width: 610px) {
-    grid-template-columns: 1fr 1fr;
+    margin-bottom: 81px;
+    grid-auto-flow: column;
     gap: 20px;
+    justify-content: center;
+  }
+
+  @media (min-width: $tablet) {
+    gap: 50px;
   }
 }
 
@@ -72,8 +134,10 @@
   justify-content: center;
 }
 
-.companion__level {
-  position: absolute;
-  top: 18px;
-  left: 17px;
+.companions__link {
+  @media (min-width: $tablet) {
+    width: auto;
+    margin-left: 34px;
+    margin-right: 34px;
+  }
 }

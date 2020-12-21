@@ -5,6 +5,44 @@
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
   background-color: var(--background);
+
+  @media (min-width: $tablet) {
+    padding-bottom: 80px;
+  }
+}
+
+.ways__wrapper {
+  padding-top: 70px;
+
+  @media (min-width: $tablet) {
+    padding-top: 73px;
+    background-image: url("../img/bg/ways-bg-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 92% 81px;
+  }
+}
+
+.ways__title {
+  margin-bottom: 19px;
+  margin-left: 24px;
+
+  @media (min-width: $mobilexl) {
+    margin-bottom: 58px;
+    margin-left: 33px;
+  }
+}
+
+.ways__descr {
+  width: 200px;
+  margin-top: 0;
+  margin-bottom: 60px;
+  margin-left: 24px;
+
+  @media (min-width: $mobilexl) {
+    width: 350px;
+    margin-left: 35px;
+    margin-bottom: 103px;
+  }
 }
 
 .ways__countries {
@@ -15,8 +53,22 @@
   gap: 11px;
   list-style: none;
 
-  @media (min-width: 600px) {
-    grid-template-columns: 1fr 1fr;
+  @media (min-width: $mobilexl) {
+    position: relative;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 47px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -38px;
+      left: -35px;
+      width: 141px;
+      height: 141px;
+      background-color: var(--backrgound-600);
+      border-radius: 20px;
+    }
   }
 }
 
@@ -25,22 +77,10 @@
   justify-content: center;
 }
 
-.ways__wrapper {
-  padding-top: 70px;
-}
-
-.ways__title {
-  margin-bottom: 19px;
-  margin-left: 24px;
-}
-
-.ways__descr {
-  width: 200px;
-  margin-top: 0;
-  margin-bottom: 60px;
-  margin-left: 24px;
-
-  @media (min-width: 400px) {
+.ways__btn {
+  @media (min-width: $mobilexl) {
     width: auto;
+    margin-left: 35px;
+    margin-right: 35px;
   }
 }

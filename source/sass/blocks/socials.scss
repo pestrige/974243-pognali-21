@@ -12,6 +12,10 @@
   }
 
   &--circle {
+    @media (min-width: $tablet) {
+      margin-left: 0;
+    }
+
     .socials__item + .socials__item {
       margin-left: 0;
     }
@@ -25,6 +29,11 @@
       background-color: var(--accent);
       border-radius: 50%;
       transition: background-color 0.3s;
+
+      @media (min-width: $tablet) {
+        width: 62px;
+        height: 62px;
+      }
 
       &:hover {
         background-color: var(--accent-600);

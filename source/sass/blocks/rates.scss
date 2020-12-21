@@ -1,4 +1,28 @@
 .rates {
+  @media (min-width: $tablet) {
+    position: relative;
+
+    ::after {
+      content: "";
+      position: absolute;
+      width: 198px;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin-top: -41px;
+      margin-bottom: -46px;
+      background-color: var(--backrgound-600);
+      border-radius: 20px;
+    }
+  }
+}
+
+.rates__list {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
   list-style: none;
   counter-reset: rates-number;
 }
@@ -12,6 +36,14 @@
   grid-template-columns: 200px;
   border-bottom: 1px solid #e1e3e9;
   counter-increment: rates-number;
+
+  @media (min-width: $tablet) {
+    margin-left: 90px;
+    margin-right: 0;
+    padding-top: 21px;
+    padding-bottom: 11px;
+    grid-template-columns: 1fr 198px;
+  }
 
   &:first-child {
     border-top: 1px solid #e1e3e9;
@@ -32,6 +64,15 @@
     line-height: 16px;
     color: var(--contrast-text);
     border-radius: 50%;
+
+    @media (min-width: $tablet) {
+      top: 0;
+      left: -88px;
+      width: 66px;
+      height: 66px;
+      font-size: 28px;
+      line-height: 28px;
+    }
   }
 
   &:nth-child(3n+1)::before {
@@ -54,6 +95,11 @@
   font-family: $font-light;
   font-size: 16px;
   line-height: 16px;
+
+  @media (min-width: $tablet) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .rates__price {
@@ -62,4 +108,10 @@
   margin-bottom: 0;
   font-size: 16px;
   line-height: 16px;
+
+  @media (min-width: $tablet) {
+    font-size: 28px;
+    line-height: 28px;
+    text-align: center;
+  }
 }

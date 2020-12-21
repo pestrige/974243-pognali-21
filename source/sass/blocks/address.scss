@@ -12,6 +12,26 @@
   background-color: var(--accent);
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
+
+  @media (min-width: $tablet) {
+    margin-top: -60px;
+    padding-top: 110px;
+    padding-bottom: 84px;
+    grid-template-columns: 103px 1fr;
+    column-gap: 26px;
+    row-gap: 42px;
+  }
+}
+
+.address__marker {
+  width: 45px;
+  height: 45px;
+
+  @media (min-width: $tablet) {
+    width: 68px;
+    height: 68px;
+    margin-left: 35px;
+  }
 }
 
 .address__text {
@@ -21,9 +41,21 @@
   line-height: 22px;
   color: var(--basic-300);
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .address__btn {
   padding: 18px 36px 19px 19px;
   grid-column: 1 / -1;
+
+  @media (min-width: $tablet) {
+    padding: 26px 51px 24px 35px;
+    width: auto;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
 }

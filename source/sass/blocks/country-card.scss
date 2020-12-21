@@ -2,11 +2,23 @@
   position: relative;
   width: 270px;
   display: grid;
+
+  @media (min-width: $mobilexl) {
+    width: 100%;
+    grid-template-columns: 1fr 186px;
+    align-items: center;
+  }
 }
 
 .country-card__img {
   width: 270px;
   height: 110px;
+
+  @media (min-width: $mobilexl) {
+    order: 2;
+    width: 186px;
+    height: 140px;
+  }
 }
 
 .country-card__descr {
@@ -17,8 +29,27 @@
   background-color: var(--background-white);
   border-radius: 10px;
 
+  @media (min-width: $mobilexl) {
+    order: 1;
+    grid-template-columns: 1fr;
+    height: 140px;
+    margin-top: 0;
+    padding: 30px 50px 20px 30px;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
   &--padding-xs {
     padding-bottom: 3px;
+
+    @media (min-width: $mobilexl) {
+      padding-bottom: 22px;
+
+      .country-card__slogan {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -29,6 +60,12 @@
   font-size: 21px;
   line-height: 21px;
   color: var(--text-900);
+
+  @media (min-width: $mobilexl) {
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .country-card__slogan {
@@ -39,6 +76,26 @@
   font-size: 16px;
   line-height: 18px;
   color: var(--text-fade);
+
+  @media (min-width: $mobilexl) {
+    margin-bottom: 19px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  br:first-child {
+    display: none;
+
+    @media (min-width: $mobilexl) {
+      display: block;
+    }
+  }
+
+  br:nth-child(2) {
+    @media (min-width: $mobilexl) {
+      display: none;
+    }
+  }
 }
 
 .country-card__rating {
@@ -49,6 +106,12 @@
   line-height: 20px;
   color: var(--basic-fade);
 
+  @media (min-width: $mobilexl) {
+    padding-left: 29px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -57,11 +120,28 @@
     width: 14px;
     height: 14px;
     background-image: url("../img/icons/icon-user.svg");
+
+    @media (min-width: $mobilexl) {
+      width: 24px;
+      height: 24px;
+      top: -3px;
+      left: -3px;
+    }
   }
 }
 
 .country-card__flag {
   position: absolute;
+  width: 35px;
+  height: 24px;
   top: 86px;
   left: 25px;
+
+  @media (min-width: $mobilexl) {
+    width: 70px;
+    height: 47px;
+    top: 17px;
+    left: auto;
+    right: 150px;
+  }
 }
