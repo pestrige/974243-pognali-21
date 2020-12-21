@@ -20,7 +20,7 @@
         </picture>
         <picture class="main-header__logo-white">
           <source srcset="./img/logo/logo-tablet-white.png 1x,
-					./img/logo/logo-tablet-white@2x.png 2x" media="(min-width: 768px)">
+            ./img/logo/logo-tablet-white@2x.png 2x" media="(min-width: 768px)">
           <img src="./img/logo/logo-mobile-white.png" srcset="./img/logo/logo-mobile-white@2x.png 2x"
             alt="Логотип сайта Погнали">
         </picture>
@@ -489,11 +489,11 @@
         скорее
         <a class="register__link" href="#">авторизуйтесь</a>.
       </p>
-      <div class="register__field">
+      <form class="register__field" action="https://echo.htmlacademy.ru" method="post">
         <input class="register__input" type="email" name="email" placeholder="E-mail"
           aria-label="Введите ваш E-mail для входа">
-        <button class="register__btn" aria-label="Отправить email для входа" type="button"></button>
-      </div>
+        <button class="register__btn" aria-label="Отправить email для входа" type="submit"></button>
+      </form>
       <p class="register__text register__text--wide">
         Остались вопросы?&nbsp;<br>
         Мы с радостью на них ответим!
@@ -534,20 +534,42 @@
       <address class="address__text">
         ул. Большая Конюшенная,&nbsp;19/8
       </address>
-      <button class="address__btn btn btn--big btn--border">Проложить маршрут</button>
+      <a class="address__btn btn btn--big btn--border" href="https://www.google.ru/maps/dir/Ковалёво/Большая+Конюшенная+ул.,+19%2F8,+Санкт-Петербург,+191186/@59.9264387,30.3122562,12.43z/data=!4m14!4m13!1m5!1m1!1s0x46962d12297f2555:0x1b95b366bedc42e2!2m2!1d30.5625784!2d59.9804815!1m5!1m1!1s0x4696310fca145cc1:0x42b32648d8238007!2m2!1d30.3230474!2d59.9387165!3e0?utm_medium=s2email&shorturl=1"
+        target="_blank">Проложить маршрут</a>
     </section>
 
     <section class="map">
       <div class="map__google" id="map"></div>
     </section>
+
+      <div class="modal">
+        <div class="modal__wrapper">
+          <h2 class="modal__title">Бизнес-тарифы</h2>
+          <ul class="modal__rates-list">
+            <li class="modal__list-row">
+              <h3 class="modal__rates-title">Реклама у блоггера</h3>
+              <p class="modal__price">300 000 руб./пост</p>
+            </li>
+            <li class="modal__list-row">
+              <h3 class="modal__rates-title">Накрутка подписчиков</h3>
+              <p class="modal__price">от 1 руб./шт.</p>
+            </li>
+            <li class="modal__list-row">
+              <h3 class="modal__rates-title">Ваш продакт-плейсмент</h3>
+              <p class="modal__price">Индивидуально</p>
+            </li>
+          </ul>
+          <button class="modal__btn" type="button">Закрыть окно</button>
+        </div>
+      </div>
   </main>
 
   <footer class="main-footer container">
     <picture class="main-footer__logo">
       <source srcset="./img/logo/logo-tablet-black.png 1x,
       ./img/logo/logo-tablet-black@2x.png 2x" media="(min-width: 768px)">
-      <img src="./img/logo/logo-mobile-black.png"
-      srcset="./img/logo/logo-mobile-black@2x.png 2x" alt="Логотип сайта Погнали">
+      <img src="./img/logo/logo-mobile-black.png" srcset="./img/logo/logo-mobile-black@2x.png 2x"
+        alt="Логотип сайта Погнали">
     </picture>
     <ul class="main-footer__socials socials socials--circle">
       <li class="socials__item">
@@ -590,6 +612,7 @@
   </footer>
 
   <script src="./js/mobile-menu.min.js"></script>
+  <script src="./js/modal.min.js"></script>
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvUyg_3R7p3709v3z5ZHpIhiyHty4cymo&map_ids=1edc6f337d15f752&callback=initMap"
     defer></script>

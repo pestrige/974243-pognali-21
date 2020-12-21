@@ -59,9 +59,27 @@
   font-family: $font-bold;
   font-size: 16px;
   line-height: 16px;
-  color: var(--basic-200);
+  color: #132576;
+  transition: color 0.3s;
+
+  &:hover {
+    color: rgba(#132576, 0.7);
+  }
+
+  &:hover::after {
+    opacity: 0.7;
+  }
+
+  &:active {
+    color: rgba(#132576, 0.3);
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet) {
+    position: relative;
     margin-top: -11px;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
@@ -72,16 +90,27 @@
     line-height: 20px;
     text-align: left;
 
-    &::before {
+    &::before,
+    &::after {
       content: "";
-      top: 0;
-      left: 0;
       margin-right: 21px;
       width: 68px;
       height: 68px;
+    }
+
+    &::before {
+      background-color: var(--background-600);
+      border-radius: 50%;
+    }
+
+    &::after {
+      position: absolute;
+      top: 14px;
+      left: 0;
       background-image: url("../img/icons/icon-business.svg");
       background-repeat: no-repeat;
       background-position: center center;
+      transition: opacity 0.3s;
     }
   }
 }
