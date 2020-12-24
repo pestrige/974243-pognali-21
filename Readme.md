@@ -24,7 +24,7 @@
 
 ### Опубликованная версия доступна по ссылке:
 
-https://pestrige.github.io/974243-cat-energy-21/
+https://pestrige.github.io/974243-pognali-21/
 
 ---
 

@@ -42,6 +42,15 @@ input[type="radio"].visually-hidden {
 
   @media (min-width: $tablet) {
     font-size: 28px;
+  }
+}
+
+.text-block {
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (min-width: $tablet) {
+    font-size: 28px;
     line-height: 33px;
   }
 }
@@ -55,6 +64,11 @@ input[type="radio"].visually-hidden {
   @media (min-width: $tablet) {
     padding-left: var(--padding-tablet);
     padding-right: var(--padding-tablet);
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: var(--padding-desktop);
+    padding-right: var(--padding-desktop);
   }
 }
 
