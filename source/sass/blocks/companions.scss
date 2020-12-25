@@ -20,7 +20,7 @@
 
   @media (min-width: $desktop) {
     padding-bottom: 134px;
-    background-position: 16% 447px;
+    background-position: calc((100% - 778px) / 2) 447px;
   }
 
   &::before {
@@ -43,7 +43,7 @@
     }
 
     @media (min-width: $desktop) {
-      left: 60px;
+      left: calc((100% - 1320px) / 2); //60px;
     }
   }
 }
@@ -176,7 +176,7 @@
   @media (min-width: $tablet) {
     width: auto;
     margin-left: 34px;
-    margin-right: 34px;
+    margin-right: 38px;
   }
 
   @media (min-width: $desktop) {

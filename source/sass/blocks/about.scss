@@ -6,6 +6,11 @@
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
 
+  @media (min-width: $desktop) {
+    margin-top: -60px;
+    padding-top: 60px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -25,9 +30,9 @@
 
     @media (min-width: $desktop) {
       width: 212px;
-      top: 70px;
+      top: 130px;
       margin-right: auto;
-      margin-left: var(--padding-desktop);
+      margin-left: calc((100% - 1320px) / 2); //1320 = max-width - 60px * 2
     }
   }
 }
@@ -35,7 +40,7 @@
 .about__wrapper {
   position: relative;
   z-index: 1;
-  padding: 33px 60px 82px 49px;
+  padding: 51px 60px 82px 49px;
   background-image: url("../img/bg/about-bg-mobile.png");
   background-repeat: no-repeat;
   background-position: 17px top;
@@ -48,10 +53,12 @@
   }
 
   @media (min-width: $desktop) {
-    margin-right: 60px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 132px 0 163px 130px;
     background-image: url("../img/bg/about-bg-desktop.png");
-    background-position: right 85px;
+    background-position: 750px 85px;
   }
 }
 
@@ -69,7 +76,7 @@
 
 .about__text {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   @media (min-width: $tablet) {
     width: 310px;

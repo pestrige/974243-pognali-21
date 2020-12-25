@@ -1,6 +1,12 @@
 .pricing {
   position: relative;
   z-index: 7;
+  background-color: var(--background);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.pricing__wrapper {
   padding-top: 37px;
   padding-bottom: 36px;
   display: grid;

@@ -1,61 +1,61 @@
 .promo {
   position: relative;
-  padding-top: 95px;
-  display: grid;
+  z-index: 11;
+  padding-top: 94px;
   color: var(--contrast-text);
   background-color: var(--basic);
+  background-image: url("../img/bg/promo-bg-mobile-crop.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: auto;
 
   @media (min-width: $tablet) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 2fr auto;
     padding-top: 162px;
+    padding-bottom: 96px;
     background-color: var(--basic-550);
-  }
-
-  @media (min-width: $desktop) {
-    padding-top: 28px;
-    grid-template-columns: 1fr 405px;
-    grid-template-rows: 1fr auto;
-    background-color: #171c32;
-  }
-}
-
-.promo__title-wrapper {
-  min-height: 382px;
-  margin-bottom: 49px;
-  background-image:
-    url("../img/bg/promo-bg-man-mobile.png"),
-    url("../img/bg/promo-bg-mobile.jpg");
-  background-position: 62% bottom, center center;
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto auto, cover;
-
-  @media (min-width: $tablet) {
-    min-height: 693px;
-    grid-column: 1 / -1;
-    grid-row: 1 / 3;
-    margin-bottom: 0;
-    background-image:
-      url("../img/bg/promo-bg-man-tablet.png"),
-      url("../img/bg/promo-bg-tablet.jpg");
-    background-position: 72% bottom, center center;
+    background-image: url("../img/bg/promo-bg-tablet.jpg");
+    background-position: center 218px;
     background-size: auto;
   }
 
   @media (min-width: $desktop) {
-    grid-row: 1 / 2;
-    min-height: 722px;
-    background-image:
-      url("../img/bg/promo-bg-man-desktop.png"),
-      url("../img/bg/promo-bg-desktop.jpg");
-    background-position: 60% bottom, center bottom;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: var(--basic-400);
+    background-image: url("../img/bg/promo-bg-desktop.jpg");
+    background-position: center top;
+    background-size: cover;
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
   }
 }
 
+.promo__wrapper {
+  min-height: 929px;
+  background-image: url("../img/bg/promo-bg-man-mobile.png");
+  background-position: 62% 128px;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet) {
+    min-height: 964px;
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+    background-image: url("../img/bg/promo-bg-man-tablet.png");
+    background-position: 72% 242px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 750px;
+    display: grid;
+    grid-template-columns: 1fr 343px;
+    background-image: url("../img/bg/promo-bg-man-desktop.png");
+    background-position: 604px bottom;
+  }
+}
+
 .promo__title {
   max-width: 270px;
+  min-height: 431px;
   margin-left: auto;
   margin-right: auto;
   font-family: $font-bold;
@@ -67,36 +67,38 @@
 
   @media (min-width: $tablet) {
     max-width: 450px;
+    min-height: auto;
+    margin-bottom: 87px;
     font-size: 60px;
     line-height: 70px;
     text-align: center;
   }
 
   @media (min-width: $desktop) {
+    margin: 209px 0 0 67px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     text-align: left;
-    margin-left: 127px;
-    margin-top: 181px;
   }
 }
 
 .promo__quote {
-  padding-left: 50px;
-  padding-right: 100px;
-  margin: 0;
-  margin-bottom: 29px;
+  margin: 0 0 30px 26px;
+  max-width: 161px;
 
   @media (min-width: $tablet) {
-    padding-top: 66px;
-    padding-left: 72px;
-    padding-right: 20px;
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    max-width: 265px;
+    min-height: 370px;
+    margin-left: calc((100% - 622px) / 2);
+    margin-bottom: 26px;
   }
 
   @media (min-width: $desktop) {
-    padding-top: 193px;
-    padding-right: var(--padding-desktop);
+    max-width: none;
+    min-height: auto;
+    padding-top: 221px;
     padding-left: 58px;
+    margin-left: 0;
     margin-bottom: 0;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -108,7 +110,7 @@
   margin-bottom: 17px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 46px;
+    margin-bottom: 44px;
   }
 
   @media (min-width: $desktop) {
@@ -129,20 +131,21 @@
 
 .promo__steps {
   width: 100%;
-  padding-bottom: 39px;
   background-image: linear-gradient(180deg, var(--basic) 25%, var(--basic-400) 25%);
 
   @media (min-width: $tablet) {
-    grid-column: 1 / -1;
-    grid-row: 3 / 4;
-    padding-bottom: 96px;
+    bottom: 0;
+    background-image: none;
+    background-color: var(--basic-400);
   }
 
   @media (min-width: $desktop) {
-    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
     align-self: end;
     padding-bottom: 0;
     margin-bottom: 123px;
+    background-color: transparent;
   }
 }
 
