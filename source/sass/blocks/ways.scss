@@ -1,24 +1,29 @@
 .ways {
   position: relative;
   z-index: 9;
-  padding-bottom: 33px;
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
   background-color: var(--background);
-
-  @media (min-width: $tablet) {
-    padding-bottom: 80px;
-  }
 }
 
 .ways__wrapper {
   padding-top: 70px;
+  padding-bottom: 33px;
 
   @media (min-width: $tablet) {
     padding-top: 73px;
+    padding-bottom: 80px;
     background-image: url("../img/bg/ways-bg-tablet.png");
     background-repeat: no-repeat;
     background-position: 92% 81px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 90px;
+    padding-bottom: 138px;
+    display: grid;
+    grid-template-columns: 630px 1fr;
+    column-gap: 138px;
   }
 }
 
@@ -29,6 +34,14 @@
   @media (min-width: $mobilexl) {
     margin-bottom: 58px;
     margin-left: 33px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    order: 2;
+    margin-top: 76px;
+    margin-bottom: 58px;
   }
 }
 
@@ -42,6 +55,13 @@
     width: 350px;
     margin-left: 35px;
     margin-bottom: 103px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    order: 3;
+    margin-bottom: 93px;
   }
 }
 
@@ -68,13 +88,52 @@
       height: 141px;
       background-color: var(--background-600);
       border-radius: 20px;
+
+      @media (min-width: $desktop) {
+        top: -67px;
+        left: -71px;
+      }
     }
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    order: 1;
+    display: block;
+    margin-top: 71px;
+    margin-left: 70px;
+    margin-right: 0;
+    margin-bottom: 0;
   }
 }
 
 .ways__countries-item {
   display: flex;
   justify-content: center;
+
+  @media (min-width: $desktop) {
+    & + & {
+      margin-top: 10px;
+    }
+  }
+
+  &:last-child {
+    @media (min-width: $desktop) {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 20px;
+        background-image: linear-gradient(180deg, transparent 40%, var(--background) 95%);
+      }
+    }
+  }
 }
 
 .ways__btn {
@@ -82,5 +141,12 @@
     width: auto;
     margin-left: 35px;
     margin-right: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 275px;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    order: 4;
   }
 }

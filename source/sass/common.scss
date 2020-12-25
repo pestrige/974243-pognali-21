@@ -53,6 +53,25 @@ input[type="radio"].visually-hidden {
     font-size: 28px;
     line-height: 33px;
   }
+
+  @media (min-width: $desktop) {
+    line-height: 34px;
+  }
+}
+
+.text-bold {
+  font-family: $font-bold;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (min-width: $tablet) {
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $tablet) {
+    line-height: 24px;
+  }
 }
 
 .container {

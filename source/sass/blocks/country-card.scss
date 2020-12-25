@@ -40,6 +40,10 @@
     border-bottom-right-radius: 0;
   }
 
+  @media (min-width: $desktop) {
+    padding: 24px 50px 20px 30px;
+  }
+
   &--padding-xs {
     padding-bottom: 3px;
 
@@ -48,6 +52,12 @@
 
       .country-card__slogan {
         margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      .country-card__slogan {
+        margin-bottom: 25px;
       }
     }
   }
@@ -66,6 +76,10 @@
     font-size: 24px;
     line-height: 24px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 3px;
+  }
 }
 
 .country-card__slogan {
@@ -83,11 +97,19 @@
     line-height: 20px;
   }
 
+  @media (min-width: $desktop) {
+    margin-bottom: 25px;
+  }
+
   br:first-child {
     display: none;
 
     @media (min-width: $mobilexl) {
       display: block;
+    }
+
+    @media (min-width: $desktop) {
+      display: none;
     }
   }
 
@@ -143,5 +165,10 @@
     top: 17px;
     left: auto;
     right: 150px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 23px;
+    right: 152px;
   }
 }

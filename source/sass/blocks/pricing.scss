@@ -15,6 +15,13 @@
     padding-bottom: 45px;
     grid-template-columns: 1fr 145px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 91px;
+    padding-bottom: 163px;
+    grid-template-columns: 1fr 271px;
+    gap: 0;
+  }
 }
 
 .pricing__title {
@@ -28,6 +35,10 @@
     margin-bottom: 41px;
     text-align: center;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 133px;
+  }
 }
 
 .pricing__currency {
@@ -35,9 +46,19 @@
   height: 100px;
 
   @media (min-width: $tablet) {
+    position: relative;
+    z-index: 8;
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     margin-top: -11px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 198px;
+    height: 198px;
+    margin-top: -33px;
+    grid-row: 2 / 3;
+    align-self: center;
   }
 }
 
@@ -51,6 +72,12 @@
     padding-left: 0;
     grid-row: 2 / 3;
   }
+
+  @media (min-width: $desktop) {
+    padding-left: 72px;
+    padding-right: 184px;
+    margin-bottom: 32px;
+  }
 }
 
 .pricing__business-link {
@@ -61,22 +88,6 @@
   line-height: 16px;
   color: #132576;
   transition: color 0.3s;
-
-  &:hover {
-    color: rgba(#132576, 0.7);
-  }
-
-  &:hover::after {
-    opacity: 0.7;
-  }
-
-  &:active {
-    color: rgba(#132576, 0.3);
-  }
-
-  &:active::after {
-    opacity: 0.3;
-  }
 
   @media (min-width: $tablet) {
     position: relative;
@@ -111,6 +122,32 @@
       background-repeat: no-repeat;
       background-position: center center;
       transition: opacity 0.3s;
+
+      @media (min-width: $desktop) {
+        top: 0;
+        left: 72px;
+      }
     }
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 0;
+    padding-left: 72px;
+  }
+
+  &:hover {
+    color: rgba(#132576, 0.7);
+  }
+
+  &:hover::after {
+    opacity: 0.7;
+  }
+
+  &:active {
+    color: rgba(#132576, 0.3);
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 }

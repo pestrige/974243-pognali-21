@@ -4,10 +4,22 @@
   padding-left: 0;
   list-style: none;
 
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &--contrast {
     .contacts-list__link {
       color: var(--accent);
     }
+  }
+}
+
+.contacts-list__item {
+  @media (min-width: $desktop) {
+    margin-right: 110px;
   }
 }
 
@@ -35,6 +47,12 @@
     width: 68px;
     height: 68px;
     margin-right: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 90px;
+    height: 90px;
+    margin-right: 31px;
   }
 
   circle {

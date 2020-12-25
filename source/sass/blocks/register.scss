@@ -13,6 +13,11 @@
     padding-top: 136px;
     padding-bottom: 57px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 169px;
+    padding-bottom: 101px;
+  }
 }
 
 .register__title {
@@ -21,6 +26,10 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 59px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 58px;
   }
 }
 
@@ -37,6 +46,14 @@
     }
   }
 
+  @media (min-width: $desktop) {
+    width: 670px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 59px;
+    line-height: 31px;
+  }
+
   &--wide {
     margin-left: 20px;
     margin-right: 20px;
@@ -44,6 +61,12 @@
 
     @media (min-width: $tablet) {
       margin-bottom: 47px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 44px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
@@ -74,6 +97,13 @@
     margin-right: 35px;
     margin-bottom: 64px;
     grid-template-columns: 1fr 80px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 75px;
+    margin-right: 73px;
+    margin-bottom: 71px;
+    grid-template-columns: 1fr 323px;
   }
 }
 
@@ -121,6 +151,10 @@
     border-bottom-left-radius: 0;
   }
 
+  @media (min-width: $desktop) {
+    justify-content: space-between;
+  }
+
   &:hover {
     background-color: var(--accent-600);
   }
@@ -139,11 +173,33 @@
     border: 6px solid transparent;
     border-left: 10px solid var(--basic-300);
     transition: opacity 0.3s;
+
+    @media (min-width: $desktop) {
+      margin-right: 28px;
+      border-left: 14px solid var(--basic-300);
+    }
+  }
+}
+
+.register__btn-text {
+  display: none;
+
+  @media (min-width: $desktop) {
+    margin-left: 36px;
+    display: inline-block;
+    font-family: $font-bold;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--basic-300);
   }
 }
 
 .register__contacts {
   @media (min-width: $tablet) {
     padding-left: 34px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 108px;
   }
 }

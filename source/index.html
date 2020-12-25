@@ -130,7 +130,7 @@
           «Лучшее приложение,
           что&nbsp;я видел в жизни!»
         </p>
-        <cite class="promo__quote-author">
+        <cite class="promo__quote-author text-bold">
           Мурат Эльтазин&nbsp;<br>
           главный редактор&nbsp;<br>
           газеты «гаджетлайф»
@@ -169,7 +169,7 @@
           идеями путешествий и&nbsp;<br>
           черпайте вдохновение в&nbsp;чужих.
         </p>
-        <p class="about__text-strong">
+        <p class="about__text-strong text-bold">
           А если найдете кого-то близкого по духу &mdash; скорее зовите в совместный трип!
         </p>
         <a class="about__btn btn btn--big" href="#">Подробнее</a>
@@ -266,7 +266,7 @@
             нужен пляж и коктейль,&nbsp;<br>а
             другому маршрут для хайкинга.
           </p>
-          <p class="companions__text-strong">
+          <p class="companions__text-strong text-bold">
             Теперь можно легко&nbsp;<br>найти
             единомышленников!
           </p>
@@ -464,8 +464,12 @@
 
     <section class="pricing container">
       <h2 class="pricing__title section-title">Добавьте свой профиль</h2>
-      <img class="pricing__currency" src="./img/content/currency.png" srcset="./img/content/currency@2x.png 2x"
+      <picture class="pricing__currency">
+        <source srcset="./img/content/currency-desktop@2x.png 1x,
+        ./img/content/currency-desktop@2x.png 2x" media="(min-width: 1440px)">
+        <img src="./img/content/currency.png" srcset="./img/content/currency@2x.png 2x"
         alt="Значок рубля с фоном">
+      </picture>
       <div class="pricing__rates rates">
         <ol class="rates__list">
           <li class="rates__item">
@@ -499,7 +503,9 @@
       <form class="register__field" action="https://echo.htmlacademy.ru" method="post">
         <input class="register__input" type="email" name="email" placeholder="E-mail"
           aria-label="Введите ваш E-mail для входа">
-        <button class="register__btn" aria-label="Отправить email для входа" type="submit"></button>
+        <button class="register__btn" aria-label="Отправить email для входа" type="submit">
+          <span class="register__btn-text">Регистрация</span>
+        </button>
       </form>
       <p class="register__text register__text--wide">
         Остались вопросы?&nbsp;<br>
@@ -562,6 +568,10 @@
               <p class="modal__price">от 1 руб./шт.</p>
             </li>
             <li class="modal__list-row">
+              <h3 class="modal__rates-title">Лайки от ботов</h3>
+              <p class="modal__price">от 20 коп./лайк</p>
+            </li>
+            <li class="modal__list-row">
               <h3 class="modal__rates-title">Ваш продакт-плейсмент</h3>
               <p class="modal__price">Индивидуально</p>
             </li>
@@ -573,6 +583,8 @@
 
   <footer class="main-footer container">
     <picture class="main-footer__logo">
+      <source srcset="./img/logo/logo-desktop-black.png 1x,
+            ./img/logo/logo-desktop-black@2x.png 2x" media="(min-width: 1440px)">
       <source srcset="./img/logo/logo-tablet-black.png 1x,
       ./img/logo/logo-tablet-black@2x.png 2x" media="(min-width: 768px)">
       <img src="./img/logo/logo-mobile-black.png" srcset="./img/logo/logo-mobile-black@2x.png 2x"

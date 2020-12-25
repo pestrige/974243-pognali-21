@@ -21,6 +21,13 @@
     column-gap: 26px;
     row-gap: 42px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 116px;
+    padding-bottom: 55px;
+    grid-template-columns: 315px 1fr 400px;
+    column-gap: 31px;
+  }
 }
 
 .address__marker {
@@ -31,6 +38,12 @@
     width: 68px;
     height: 68px;
     margin-left: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 90px;
+    height: 90px;
+    justify-self: end;
   }
 }
 
@@ -57,5 +70,13 @@
     width: auto;
     margin-left: 35px;
     margin-right: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 26px 62px 24px 35px;
+    margin-left: 0;
+    margin-right: 75px;
+    grid-column: 3 / 4;
+    justify-self: end;
   }
 }

@@ -18,6 +18,11 @@
     background-position: 85% 140px;
   }
 
+  @media (min-width: $desktop) {
+    padding-bottom: 134px;
+    background-position: 16% 447px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -36,6 +41,10 @@
       top: 131px;
       border-radius: 20px;
     }
+
+    @media (min-width: $desktop) {
+      left: 60px;
+    }
   }
 }
 
@@ -49,6 +58,14 @@
     padding-top: 201px;
     background-position: 6% 487px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 194px;
+    display: grid;
+    grid-template-columns: 1fr 630px;
+    column-gap: 190px;
+    background-position: 42% 195px;
+  }
 }
 
 .companions__title {
@@ -58,6 +75,14 @@
   @media (min-width: $tablet) {
     margin-left: 33px;
     margin-bottom: 56px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 69px;
+    margin-top: -4px;
+    margin-bottom: 12px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
   }
 }
 
@@ -69,7 +94,15 @@
   @media (min-width: $tablet) {
     width: 430px;
     margin-left: 35px;
-    margin-bottom: 58px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 70px;
+    margin-right: 0;
+    margin-bottom: 0;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
   }
 }
 
@@ -88,17 +121,15 @@
       display: block;
     }
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 38px;
+  }
 }
 
 .companions__text-strong {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: $font-bold;
-
-  @media (min-width: $tablet) {
-    font-size: 21px;
-    line-height: 25px;
-  }
 
   br {
     display: none;
@@ -127,6 +158,13 @@
   @media (min-width: $tablet) {
     gap: 50px;
   }
+
+  @media (min-width: $desktop) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    margin-bottom: 0;
+    gap: 60px;
+  }
 }
 
 .companions__item {
@@ -139,5 +177,14 @@
     width: auto;
     margin-left: 34px;
     margin-right: 34px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 280px;
+    margin-left: 71px;
+    margin-right: 0;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    align-self: end;
   }
 }

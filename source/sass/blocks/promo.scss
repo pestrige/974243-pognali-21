@@ -43,13 +43,14 @@
   }
 
   @media (min-width: $desktop) {
+    grid-row: 1 / 2;
     min-height: 722px;
     background-image:
       url("../img/bg/promo-bg-man-desktop.png"),
       url("../img/bg/promo-bg-desktop.jpg");
     background-position: 60% bottom, center bottom;
-    border-bottom-left-radius: calc(var(--border-radius) + 5px);
-    border-bottom-right-radius: calc(var(--border-radius) + 5px);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
   }
 }
 
@@ -111,7 +112,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 45px;
+    margin-bottom: 41px;
   }
 }
 
@@ -120,16 +121,9 @@
   font-style: normal;
 
   @media (min-width: $tablet) {
-    font-size: 21px;
-    line-height: 25px;
-
-    & br:nth-child(2) {
+    br:nth-child(2) {
       display: none;
     }
-  }
-
-  @media (min-width: $desktop) {
-    line-height: 24px;
   }
 }
 
@@ -142,6 +136,13 @@
     grid-column: 1 / -1;
     grid-row: 3 / 4;
     padding-bottom: 96px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-row: 1 / 2;
+    align-self: end;
+    padding-bottom: 0;
+    margin-bottom: 123px;
   }
 }
 
@@ -187,10 +188,10 @@
 
   @media (min-width: $desktop) {
     margin-right: -30px;
-    padding-left: 34px;
-    padding-top: 29px;
-    padding-bottom: 29px;
-    padding-right: 80px;
+    padding: 27px 80px 29px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
@@ -255,6 +256,7 @@
     }
 
     @media (min-width: $desktop) {
+      margin-left: -15px;
       border-top-right-radius: 0;
     }
   }
@@ -262,6 +264,11 @@
   &:nth-child(3) {
     @media (min-width: $tablet) {
       margin-right: -20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-right: -47px;
       border-bottom-left-radius: 20px;
     }
   }
@@ -280,7 +287,12 @@
 
     @media (min-width: $desktop) {
       margin-right: 0;
+      margin-left: 15px;
       border-top-right-radius: 20px;
+
+      &::after {
+        right: 33px;
+      }
     }
   }
 }

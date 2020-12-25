@@ -14,6 +14,11 @@
       margin-bottom: -46px;
       background-color: var(--background-600);
       border-radius: 20px;
+
+      @media (min-width: $desktop) {
+        width: 446px;
+        margin-top: -48px;
+      }
     }
   }
 }
@@ -45,6 +50,12 @@
     grid-template-columns: 1fr 198px;
   }
 
+  @media (min-width: $desktop) {
+    padding-top: 19px;
+    padding-bottom: 19px;
+    grid-template-columns: 1fr 446px;
+  }
+
   &:first-child {
     border-top: 1px solid #e1e3e9;
   }
@@ -73,6 +84,10 @@
       font-size: 28px;
       line-height: 28px;
     }
+
+    @media (min-width: $desktop) {
+      left: -91px;
+    }
   }
 
   &:nth-child(3n+1)::before {
@@ -99,6 +114,10 @@
   @media (min-width: $tablet) {
     font-size: 28px;
     line-height: 28px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
   }
 }
 
