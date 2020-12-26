@@ -35,6 +35,9 @@
   background-image:
     url("../img/bg/promo-bg-man-mobile.png"),
     linear-gradient(180deg, transparent 72%, var(--basic-400) 72%);
+  -webkit-background-image:
+    url("../img/bg/promo-bg-man-mobile.png"),
+    -webkit-linear-gradient(270deg, transparent 72%, var(--basic-400) 72%);
   background-position: 62% 128px, center top;
   background-repeat: no-repeat;
 
