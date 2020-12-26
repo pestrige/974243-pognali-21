@@ -34,8 +34,8 @@
   min-height: 929px;
   background-image:
     url("../img/bg/promo-bg-man-mobile.png"),
-    linear-gradient(180deg, transparent 58%, var(--basic-400) 58%);
-  background-position: 62% 128px;
+    linear-gradient(180deg, transparent 72%, var(--basic-400) 72%);
+  background-position: 62% 128px, center top;
   background-repeat: no-repeat;
 
   @media (min-width: $tablet) {
