@@ -1,7 +1,12 @@
-.rates {
-  @media (min-width: $tablet) {
-    position: relative;
+.rates__list {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: rates-number;
 
+  @media (min-width: $tablet) {
     ::after {
       content: "";
       position: absolute;
@@ -21,15 +26,6 @@
       }
     }
   }
-}
-
-.rates__list {
-  position: relative;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-  counter-reset: rates-number;
 }
 
 .rates__item {

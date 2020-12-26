@@ -4,9 +4,6 @@
   margin-top: -60px;
   padding-top: 38px;
   padding-bottom: 17px;
-  display: grid;
-  row-gap: 35px;
-  justify-items: center;
   background-color: var(--background-white);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
@@ -15,6 +12,15 @@
     margin-top: -117px;
     padding-top: 46px;
     padding-bottom: 32px;
+  }
+}
+
+.main-footer__wrapper {
+  display: grid;
+  row-gap: 35px;
+  justify-items: center;
+
+  @media (min-width: $tablet) {
     padding-left: var(--padding-tablet);
     padding-right: var(--padding-tablet);
     grid-template-columns: repeat(3, 1fr);
