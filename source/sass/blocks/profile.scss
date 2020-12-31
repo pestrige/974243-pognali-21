@@ -1,0 +1,132 @@
+.profile {
+  position: relative;
+  margin-top: calc(var(--inner-border-radius) * -1);
+  padding-top: 44px;
+  padding-bottom: 17px;
+  background-color: var(--background);
+}
+
+.profile__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  justify-content: center;
+  column-gap: 35px;
+}
+
+.profile__level {
+  margin-bottom: 5px;
+  top: -3px;
+  right: -2px;
+  justify-self: end;
+  text-align: right;
+}
+
+.profile__photo {
+  width: 100px;
+  height: 100px;
+  grid-column: 2 / 3;
+}
+
+.profile__btn {
+  margin-bottom: 25px;
+  padding: 0;
+  grid-column: 1 / -1;
+  width: 100%;
+  min-height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--background-700);
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #d1d7e9;
+  }
+
+  &:active {
+    background-color: var(--background-700);
+
+    .profile__btn-text {
+      color: var(--basic-fade);
+    }
+  }
+}
+
+.profile__btn-text {
+  font-family: $font-bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--basic);
+  text-align: center;
+  text-transform: uppercase;
+  transition: color 0.3s;
+
+  &--small {
+    display: none;
+  }
+}
+
+.profile__block {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 17px;
+  grid-column: 1 / -1;
+  display: grid;
+
+  &--border {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+  }
+}
+
+.profile__text-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -8px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-shrink: 1;
+}
+
+.profile__block-title {
+  display: inline-block;
+  padding-left: 14px;
+  padding-right: 14px;
+  margin: 0 auto;
+  font-family: $font-bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-300);
+  background-color: var(--background);
+}
+
+.profile__tags {
+  padding: 26px 28px 25px 24px;
+  font-family: $font-regular;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--text);
+  background-color: transparent;
+  resize: none;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  transition: border-color 0.3s;
+
+  &:hover {
+    border-color: #aeb4cb;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--basic);
+  }
+}
+
+.profile__icons-list {
+  margin-top: 15px;
+  margin-bottom: 14px;
+}

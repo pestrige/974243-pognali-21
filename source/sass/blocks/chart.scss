@@ -1,6 +1,42 @@
-// .chart {
-//   --chart-persent: 99;
-// }
+.chart {
+  position: absolute;
+  display: inline-block;
+
+  &--profile {
+    position: relative;
+
+    .chart__svg {
+      width: 106px;
+      height: 106px;
+    }
+
+    .chart__circle {
+      fill: none;
+      stroke-width: 1;
+    }
+
+    .chart__persent {
+      top: -7px;
+      font-size: 38px;
+      line-height: 38px;
+      color: var(--basic);
+
+      &::after {
+        bottom: -1px;
+        left: -5px;
+        width: 51px;
+        height: 2px;
+        background-color: var(--text-fade);
+      }
+    }
+
+    .chart__level {
+      font-size: 18px;
+      line-height: 18px;
+      color: var(--text);
+    }
+  }
+}
 
 .chart__svg {
   width: 60px;
@@ -12,7 +48,6 @@
   stroke-width: 2;
   stroke: var(--accent-800);
   stroke-linecap: round;
-  //stroke-dasharray: var(--chart-persent) 100;
   transform-origin: center center;
   transform: rotate(270deg);
 }

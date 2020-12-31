@@ -1,0 +1,63 @@
+.transport-icons {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.transport-icons__checkbox {
+  &:checked + .transport-icons__icon svg path {
+    fill: var(--basic-300);
+  }
+
+  &:hover + .transport-icons__icon,
+  &:checked:hover + .transport-icons__icon {
+    box-shadow: 0 2px 6px rgba(22, 28, 53, 0.17);
+  }
+
+  &:hover + .transport-icons__icon svg path {
+    fill: #b2b2b2;
+  }
+
+  &:checked:hover + .transport-icons__icon svg path {
+    fill: var(--basic-300);
+    opacity: 0.7;
+  }
+
+  &:active + .transport-icons__icon {
+    background-color: #e2e5f1;
+  }
+
+  &:checked:active + .transport-icons__icon svg path {
+    opacity: 0.3;
+  }
+
+  &:active + .transport-icons__icon svg path {
+    fill: var(--basic-300);
+    opacity: 0.1;
+  }
+}
+
+.transport-icons__icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-white);
+  border-radius: 50%;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+
+  svg {
+    width: 17px;
+    height: 16px;
+
+    path {
+      fill: #d9d9d9;
+      transition: opacity 0.2s, fill 0.2s;
+    }
+  }
+}

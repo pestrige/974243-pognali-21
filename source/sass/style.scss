@@ -13,6 +13,7 @@
 @import "blocks/socials.scss";
 
 /* Main-content */
+@import "blocks/main-content.scss";
 @import "blocks/promo.scss";
 @import "blocks/about.scss";
 @import "blocks/ways.scss";
@@ -29,3 +30,13 @@
 
 /* Footer */
 @import "blocks/main-footer.scss";
+
+/* Form Page */
+@import "blocks/page-title.scss";
+@import "blocks/profile.scss";
+@import "blocks/transport-icons.scss";
+@import "blocks/plans.scss";
+@import "blocks/plan-card.scss";
+@import "blocks/add-plan.scss";
+@import "blocks/steps-slider.scss";
+@import "blocks/calendar.scss";

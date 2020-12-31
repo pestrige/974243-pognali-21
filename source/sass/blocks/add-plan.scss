@@ -1,0 +1,13 @@
+.add-plan {
+  margin-top: calc(var(--border-radius) * -1);
+  padding-top: 30px;
+  padding-bottom: 100px;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  background-color: var(--background-800);
+}
+
+.add-plan__title {
+  margin-top: 0;
+  margin-bottom: 29px;
+}

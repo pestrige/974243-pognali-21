@@ -1,0 +1,28 @@
+.plans {
+  padding-top: 28px;
+  padding-bottom: 60px;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  background-color: var(--background-700);
+}
+
+.plans__title {
+  margin-top: 0;
+  margin-bottom: 29px;
+}
+
+.plans__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: plan-number;
+}
+
+.plans__item {
+  counter-increment: plan-number;
+
+  & + & {
+    margin-top: 10px;
+  }
+}

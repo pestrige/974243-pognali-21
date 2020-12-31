@@ -193,6 +193,18 @@ input[type="radio"].visually-hidden {
   }
 }
 
+.inner-title {
+  font-family: $font-bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--basic-300);
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
 .animation-in {
   animation: menu-in 1s forwards;
 

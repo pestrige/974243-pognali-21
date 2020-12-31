@@ -1,0 +1,29 @@
+.page-title {
+  padding-top: 95px;
+  padding-bottom: 12px;
+  background-color: var(--basic-550);
+  border-bottom-left-radius: var(--inner-border-radius);
+  border-bottom-right-radius: var(--inner-border-radius);
+}
+
+.page-title__text {
+  display: inline-block;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-bold;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--contrast-text);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -14px;
+    height: 5px;
+    background-color: var(--accent-800);
+    border-radius: 4px;
+  }
+}

@@ -11,6 +11,7 @@
   --basic-600: #121936;
   --basic-700: #141b3b;
   --basic-fade: rgba(22, 28, 53, 0.3); // #161c35 in RGB
+  --basic-300-fade: rgba(29, 46, 91, 0.3); // #1d2e5b in RGB
 
   --accent: #ffd74b;
   --accent-600: #ffbd30;
@@ -21,14 +22,17 @@
 
   --background: #edeff6;
   --background-600: #e2e5f2;
-  --backrgound-700: #dfe3f0;
-  --backrgound-800: #d4d9eb;
+  --background-700: #dfe3f0;
+  --background-800: #d4d9eb;
   --background-white: #ffffff;
 
   --text: #444444;
   --text-fade: rgba(68, 68, 68, 0.3); // #444444 in RGB
+  --text-half-fade: rgba(68, 68, 68, 0.6);
   --text-900: #000000;
   --contrast-text: #ffffff;
+
+  --border-color: #cbced9;
 
   --warning: #f97676;
   --okay: #81e31e;
@@ -46,6 +50,8 @@
   @media (min-width: 768px) {
     --border-radius: 60px;
   }
+
+  --inner-border-radius: 20px;
 }
 
 /* Break points */
