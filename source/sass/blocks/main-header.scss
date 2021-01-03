@@ -3,9 +3,12 @@
   top: 0;
   width: 100%;
   min-width: 320px;
-
   background-color: var(--basic);
-  transition: background-color 0.5s, padding 0.5s;
+  transition: padding 0.5s;
+
+  &--inner-page {
+    background-color: var(--basic-550);
+  }
 
   &--fixed {
     @media (min-width: $desktop) {
@@ -18,10 +21,6 @@
       height: 89px;
       background-color: white;
     }
-  }
-
-  &--inner-page {
-    background-color: var(--basic-550);
   }
 }
 
@@ -169,7 +168,7 @@
   z-index: 99;
   top: 19px;
   right: 26px;
-  transition: top 0.3s;
+  //transition: top 0.3s;
 
   @media (min-width: $tablet) {
     top: 57px;
