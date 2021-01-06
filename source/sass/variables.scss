@@ -47,12 +47,12 @@
   /* Section border radius */
 
   --border-radius: 30px;
+  --inner-border-radius: 20px;
 
   @media (min-width: 768px) {
     --border-radius: 60px;
+    --inner-border-radius: 60px;
   }
-
-  --inner-border-radius: 20px;
 }
 
 /* Break points */

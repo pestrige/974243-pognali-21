@@ -248,6 +248,15 @@
   color: var(--basic-300);
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: var(--accent-600);
+  }
+
+  &:active {
+    color: var(--basic-300-fade);
+  }
 
   &--next {
     background-color: var(--accent);

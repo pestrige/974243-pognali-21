@@ -4,6 +4,17 @@
   background-color: var(--basic-550);
   border-bottom-left-radius: var(--inner-border-radius);
   border-bottom-right-radius: var(--inner-border-radius);
+
+  @media (min-width: $tablet) {
+    padding-top: 224px;
+    padding-bottom: 66px;
+  }
+}
+
+.page-title__wrapper {
+  @media (min-width: $tablet) {
+    padding-left: 75px;
+  }
 }
 
 .page-title__text {
@@ -16,6 +27,11 @@
   line-height: 36px;
   color: var(--contrast-text);
 
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -25,5 +41,10 @@
     height: 5px;
     background-color: var(--accent-800);
     border-radius: 4px;
+
+    @media (min-width: $tablet) {
+      bottom: -70px;
+      height: 8px;
+    }
   }
 }

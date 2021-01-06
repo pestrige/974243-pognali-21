@@ -107,6 +107,8 @@
     height: 1px;
     background-color: var(--background-white);
     border-radius: 2px;
+    opacity: 0.3;
+    transition: opacity 0.3s;
   }
 
   &::before {
@@ -115,5 +117,15 @@
 
   &::after {
     transform: translateX(-50%) rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.1;
   }
 }

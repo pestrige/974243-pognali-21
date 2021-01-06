@@ -36,7 +36,7 @@
     window.addEventListener('scroll', () => {
       const isFixed = mainHeader.classList.contains(fixedClass) || header.classList.contains(fixedHeaderClass);
       const isClose = mainNav.classList.contains('main-nav--close');
-      const isInnerPage = header.classList.contains('main-header--inner-page');
+      // const isInnerPage = header.classList.contains('main-header--inner-page');
       const pageWidth = body.scrollWidth;
       const isTablet = (pageWidth >= 768 && pageWidth < 1440);
       const isMobile = pageWidth < 768;
@@ -54,30 +54,30 @@
             mainHeader.classList.add(fixedClass);
             mainHeader.classList.remove(animationClassOut);
             mainHeader.classList.add(animationClassIn);
-            if (!isMobile && !isInnerPage) userLinks.classList.add(animationClassIn);
+            if (!isMobile) userLinks.classList.add(animationClassIn);
           }
         };
         const delFixed = () => {
           if (isDesktop) {
             header.classList.remove(animationClassIn);
             mainHeader.classList.remove(animationClassIn);
-            if (!isInnerPage) userLinks.classList.remove(animationClassIn);
+            userLinks.classList.remove(animationClassIn);
             header.classList.add(animationClassOut);
             setTimeout(() => {
               header.classList.remove(fixedHeaderClass);
               mainHeader.classList.remove(fixedClass);
               header.classList.remove(animationClassOut);
-              if (!isInnerPage) userLinks.classList.remove(animationClassOut);
+              userLinks.classList.remove(animationClassOut);
             }, 500);
           } else {
             mainHeader.classList.remove(animationClassIn);
-            if (isTablet && !isInnerPage) userLinks.classList.remove(animationClassIn);
+            if (isTablet) userLinks.classList.remove(animationClassIn);
             mainHeader.classList.add(animationClassOut);
-            if (isTablet && !isInnerPage) userLinks.classList.add(animationClassOut);
+            if (isTablet) userLinks.classList.add(animationClassOut);
             setTimeout(() => {
               mainHeader.classList.remove(fixedClass);
               mainHeader.classList.remove(animationClassOut);
-              if (!isInnerPage) userLinks.classList.remove(animationClassOut);
+              userLinks.classList.remove(animationClassOut);
             }, 500);
           }
         };

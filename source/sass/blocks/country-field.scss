@@ -92,6 +92,11 @@
   overflow: hidden;
   appearance: none;
   cursor: pointer;
+  transition: border-color 0.3s;
+
+  &:hover {
+    border-color: var(--border-color-600);
+  }
 }
 
 .country-field__flag {

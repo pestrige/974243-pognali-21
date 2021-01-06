@@ -8,6 +8,14 @@
 
   &--inner-page {
     background-color: var(--basic-550);
+
+    .main-header__user-links {
+      display: none;
+
+      @media (min-width: $tablet) {
+        display: flex;
+      }
+    }
   }
 
   &--fixed {
