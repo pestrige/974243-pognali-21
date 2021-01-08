@@ -2,8 +2,8 @@
   padding-top: 95px;
   padding-bottom: 12px;
   background-color: var(--basic-550);
-  border-bottom-left-radius: var(--inner-border-radius);
-  border-bottom-right-radius: var(--inner-border-radius);
+  border-bottom-left-radius: var(--header-border-radius);
+  border-bottom-right-radius: var(--header-border-radius);
 
   @media (min-width: $tablet) {
     padding-top: 224px;
@@ -13,7 +13,7 @@
 
 .page-title__wrapper {
   @media (min-width: $tablet) {
-    padding-left: 75px;
+    padding-left: var(--double-padding);
   }
 }
 

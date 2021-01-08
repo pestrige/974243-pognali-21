@@ -1,17 +1,37 @@
 .profile {
   position: relative;
-  margin-top: calc(var(--inner-border-radius) * -1);
+  margin-top: calc(var(--header-border-radius) * -1);
   padding-top: 44px;
   padding-bottom: 17px;
   background-color: var(--background);
+
+  @media (min-width: $tablet) {
+    padding-top: 126px;
+  }
 }
 
 .profile__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "level photo"
+    "button button"
+    "tags tags"
+    "transport transport";
   align-items: start;
   justify-content: center;
   column-gap: 35px;
+
+  @media (min-width: $tablet) {
+    padding-left: var(--double-padding);
+    padding-right: var(--double-padding);
+    grid-template-columns: 94px 1fr 94px;
+    grid-template-areas:
+      "level transport photo"
+      "button button button"
+      "tags tags tags";
+    column-gap: 0;
+  }
 }
 
 .profile__level {
@@ -19,19 +39,26 @@
   top: -3px;
   right: -2px;
   justify-self: end;
+  grid-area: level;
   text-align: right;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    top: -6px;
+    right: -5px;
+  }
 }
 
 .profile__photo {
   width: 100px;
   height: 100px;
-  grid-column: 2 / 3;
+  grid-area: photo;
 }
 
 .profile__btn {
   margin-bottom: 25px;
   padding: 0;
-  grid-column: 1 / -1;
+  grid-area: button;
   width: 100%;
   min-height: 40px;
   border: none;
@@ -39,6 +66,12 @@
   background-color: var(--background-700);
   cursor: pointer;
   transition: background-color 0.3s;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 44px;
+    min-height: 60px;
+    border-radius: 10px;
+  }
 
   &:hover {
     background-color: #d1d7e9;
@@ -62,6 +95,10 @@
   text-transform: uppercase;
   transition: color 0.3s;
 
+  @media (min-width: $tablet) {
+    letter-spacing: 0.09em;
+  }
+
   &--small {
     display: none;
   }
@@ -71,12 +108,25 @@
   position: relative;
   margin-top: 8px;
   margin-bottom: 17px;
-  grid-column: 1 / -1;
   display: grid;
 
-  &--border {
+  &--tags {
+    margin-bottom: 17px;
+    grid-area: tags;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 42px;
+    }
+  }
+
+  &--transport {
     border: 1px solid var(--border-color);
     border-radius: 10px;
+    grid-area: transport;
+
+    @media (min-width: $tablet) {
+      margin: 0 63px 50px 59px;
+    }
   }
 }
 
@@ -89,6 +139,10 @@
   justify-content: center;
   align-items: start;
   flex-shrink: 1;
+
+  @media (min-width: $tablet) {
+    grid-row: 2 / 3;
+  }
 }
 
 .profile__block-title {
@@ -102,6 +156,14 @@
   text-transform: uppercase;
   color: var(--basic-300);
   background-color: var(--background);
+
+  @media (min-width: $tablet) {
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+  }
 }
 
 .profile__tags {
@@ -116,6 +178,12 @@
   border-radius: 10px;
   transition: border-color 0.3s;
 
+  @media (min-width: $tablet) {
+    padding: 35px 28px 13px 39px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
   &:hover {
     border-color: #aeb4cb;
   }
@@ -129,4 +197,8 @@
 .profile__icons-list {
   margin-top: 15px;
   margin-bottom: 14px;
+
+  @media (min-width: $tablet) {
+    margin: 25px 0 24px;
+  }
 }

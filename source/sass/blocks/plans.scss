@@ -1,14 +1,30 @@
 .plans {
   padding-top: 28px;
   padding-bottom: 60px;
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--inner-border-radius);
+  border-top-right-radius: var(--inner-border-radius);
   background-color: var(--background-700);
+
+  @media (min-width: $tablet) {
+    padding-top: 57px;
+    padding-bottom: 107px;
+  }
+}
+
+.plans__wrapper {
+  @media (min-width: $tablet) {
+    padding-left: var(--double-padding);
+    padding-right: var(--double-padding);
+  }
 }
 
 .plans__title {
   margin-top: 0;
   margin-bottom: 29px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 48px;
+  }
 }
 
 .plans__list {

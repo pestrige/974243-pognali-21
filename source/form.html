@@ -137,20 +137,24 @@
             <span class="chart__level">level</span>
           </div>
         </div>
-        <img class="profile__photo" src="./img/content/profile-demin-mobile.png"
-          srcset="./img/content/profile-demin-mobile@2x.png 2x" alt="Фото Демин">
+        <picture class="profile__photo">
+          <source srcset="./img/content/profile-demin-tablet.png 1x, ./img/content/profile-demin-tablet@2x.png 2x"
+            media="(min-width: 768px)">
+          <img src="./img/content/profile-demin-mobile.png" srcset="./img/content/profile-demin-mobile@2x.png 2x"
+            alt="Фото Демин">
+        </picture>
         <button class="profile__btn" type="button">
           <span class="profile__btn-text profile__btn-text--full">Сменить фото</span>
           <span class="profile__btn-text profile__btn-text--small">Фото</span>
         </button>
-        <div class="profile__block">
+        <div class="profile__block profile__block--tags">
           <div class="profile__text-wrapper">
             <h3 class="profile__block-title">Тэги</h3>
           </div>
           <textarea class="profile__tags" name="profile-tags" id="profile-tags"
             placeholder="#бургер #бар #футбол #концерт #крафт"></textarea>
         </div>
-        <div class="profile__block profile__block--border">
+        <div class="profile__block profile__block--transport">
           <div class="profile__text-wrapper">
             <h3 class="profile__block-title">Транспорт</h3>
           </div>
@@ -266,7 +270,7 @@
                 <h3 class="steps-slider__title">Шаг 1. Даты&nbsp;пребывания</h3>
                 <p class="steps-silder__text">
                   Укажите предпочтительное количество попутчиков, которых
-                  вы хотели бы позвать в поездку, и ее предполагаемую длительность.
+                  вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую длительность.
                 </p>
                 <fieldset class="steps-slider__inputs-group">
                   <label for="companions-count" class="steps-slider__label" aria-label="Количество попутчиков">
@@ -383,9 +387,9 @@
             <li class="steps-slider__item" id="second-step">
               <div class="steps-slider__wrapper">
                 <h3 class="steps-slider__title">Шаг 2.&nbsp;<br>Маршрут</h3>
-                <p class="steps-silder__text">
+                <p class="steps-silder__text steps-silder__text--contries">
                   Укажите страны, которые вы
-                  хотели бы посетить. Это может
+                  хотели бы посетить. Это&nbsp;может
                   быть одна или сразу несколько.
                 </p>
                 <fieldset class="step-slider__counties-set">
@@ -397,8 +401,13 @@
                         </select>
                       </label>
                       <div class="country-field__flag">
-                        <img class="country-field__flag-img" src="./img/content/flag-bosnia-mobile.png"  srcset="./img/content/flag-bosnia-mobile@2x.png 2x"
-                          alt="Флаг Боснии и Герцеговины">
+                        <picture class="country-field__flag-img">
+                          <source
+                            srcset="./img/content/flag-bosnia-tablet.png 1x, ./img/content/flag-bosnia-tablet@2x.png 2x"
+                            media="(min-width: 768px)">
+                          <img src="./img/content/flag-bosnia-mobile.png"
+                            srcset="./img/content/flag-bosnia-mobile@2x.png 2x" alt="Флаг Боснии и Герцеговины">
+                        </picture>
                       </div>
                       <button class="country-field__close" type="button"></button>
                     </li>
@@ -409,7 +418,13 @@
                         </select>
                       </label>
                       <div class="country-field__flag">
-                        <img class="country-field__flag-img" src="./img/content/flag-czech-mobile.png" srcset="./img/content/flag-czech-mobile@2x.png 2x" alt="Флаг Чехии">
+                        <picture class="country-field__flag-img">
+                          <source
+                            srcset="./img/content/flag-czech-tablet.png 1x, ./img/content/flag-czech-tablet@2x.png 2x"
+                            media="(min-width: 768px)">
+                          <img src="./img/content/flag-czech-mobile.png"
+                            srcset="./img/content/flag-czech-mobile@2x.png 2x" alt="Флаг Чехии">
+                        </picture>
                       </div>
                       <button class="country-field__close" type="button" aria-label="Убрать страну"></button>
                     </li>
@@ -514,8 +529,10 @@
                     </li>
                   </ul>
                 </fieldset>
-                <a class="step-slider__step-link step-slider__step-link--next" href="#third-step">Следующий шаг</a>
-                <a class="step-slider__step-link step-slider__step-link--prev" href="#first-step">На шаг назад</a>
+                <div class="step-slider__buttons-wrapper">
+                  <a class="step-slider__step-link step-slider__step-link--next" href="#third-step">Следующий шаг</a>
+                  <a class="step-slider__step-link step-slider__step-link--prev" href="#first-step">На шаг назад</a>
+                </div>
               </div>
             </li>
 
@@ -525,32 +542,48 @@
                 <p class="steps-silder__text">
                   Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
                 </p>
-                <fieldset class="steps-slider__fun-group"></fieldset>
+                <fieldset class="steps-slider__fun-group">
                   <ul class="steps-slider__fun-list">
                     <li class="steps-slider__fun-item">
                       <label class="steps-slider__fun-label">
                         <h4 class="steps-slider__fun-title">Босния и Герцеговина</h4>
                         <div class="steps-slider__fun-flag">
-                          <img class="steps-slider__fun-flag-img" src="./img/content/flag-bosnia-mobile.png" srcset="./img/content/flag-bosnia-mobile@2x.png 2x" alt="Флаг Боснии и Герцеговины">
+                          <picture class="steps-slider__fun-flag-img">
+                            <source
+                              srcset="./img/content/flag-bosnia-tablet.png 1x, ./img/content/flag-bosnia-tablet@2x.png 2x"
+                              media="(min-width: 768px)">
+                            <img src="./img/content/flag-bosnia-mobile.png"
+                              srcset="./img/content/flag-bosnia-mobile@2x.png 2x" alt="Флаг Боснии и Герцеговины">
+                          </picture>
                         </div>
-                        <textarea class="steps-slider__fun-descr" name="activity-plan-for-bosnia" placeholder="План действий"></textarea>
+                        <textarea class="steps-slider__fun-descr" name="activity-plan-for-bosnia"
+                          placeholder="План действий"></textarea>
                       </label>
                     </li>
                     <li class="steps-slider__fun-item">
                       <label class="steps-slider__fun-label">
                         <h4 class="steps-slider__fun-title">Чехия</h4>
                         <div class="steps-slider__fun-flag">
-                          <img class="steps-slider__fun-flag-img" src="./img/content/flag-czech-mobile.png" srcset="./img/content/flag-czech-mobile@2x.png 2x" alt="Флаг Боснии и Герцеговины">
+                          <picture class="steps-slider__fun-flag-img">
+                            <source
+                              srcset="./img/content/flag-czech-tablet.png 1x, ./img/content/flag-czech-tablet@2x.png 2x"
+                              media="(min-width: 768px)">
+                            <img src="./img/content/flag-czech-mobile.png"
+                              srcset="./img/content/flag-czech-mobile@2x.png 2x" alt="Флаг Боснии и Герцеговины">
+                          </picture>
                         </div>
-                        <textarea class="steps-slider__fun-descr" name="activity-plan-for-bosnia" placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.
+                        <textarea class="steps-slider__fun-descr" name="activity-plan-for-czech"
+                          placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и вот это все.
                         </textarea>
                       </label>
                     </li>
                   </ul>
                 </fieldset>
               </div>
-              <button class="step-slider__step-link step-slider__step-link--next" type="submit">Отправить</button>
+              <div class="step-slider__buttons-wrapper">
+                <button class="step-slider__step-link step-slider__step-link--next" type="submit">Отправить</button>
                 <a class="step-slider__step-link step-slider__step-link--prev" href="#second-step">На шаг назад</a>
+              </div>
             </li>
           </ol>
           <ul class="step-slider__pagination">

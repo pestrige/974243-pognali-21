@@ -5,6 +5,10 @@
   line-height: 18px;
   color: var(--text);
   border-collapse: collapse;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+  }
 }
 
 .calendar__month-wrapper {
@@ -13,6 +17,11 @@
   padding: 12px 0 10px;
   border-top: 1px solid #d6d9e6;
   border-bottom: 1px solid #d6d9e6;
+
+  @media (min-width: $tablet) {
+    padding: 27px 0 22px;
+    margin-bottom: 31px;
+  }
 }
 
 .calendar__month {
@@ -23,6 +32,11 @@
   line-height: 20px;
   color: var(--basic-300);
   text-align: center;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .calendar__month-control {
@@ -36,6 +50,10 @@
   overflow: hidden;
   transform: translateY(-50%);
   cursor: pointer;
+
+  @media (min-width: $tablet) {
+    width: 29px;
+  }
 
   &:hover::after {
     opacity: 0.5;
@@ -59,10 +77,19 @@
     transform: translateY(-50%);
     opacity: 0.3;
     transition: opacity 0.3s;
+
+    @media (min-width: $tablet) {
+      width: 29px;
+      height: 36px;
+    }
   }
 
   &--prev {
     left: 0;
+
+    @media (min-width: $tablet) {
+      left: 13px;
+    }
 
     &::after {
       transform: translateY(-50%) rotate(-180deg);
@@ -71,12 +98,20 @@
 
   &--next {
     right: 0;
+
+    @media (min-width: $tablet) {
+      right: 13px;
+    }
   }
 }
 
 .calendar__day-name {
   padding: 7px;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    padding: 8px;
+  }
 
   &--holiday {
     color: #ff5c23;
@@ -101,6 +136,13 @@
   background-color: var(--background);
   transition: outline-color 0.4s color 0.3s background-color 0.3s;
 
+  @media (min-width: $tablet) {
+    padding: 25px 0;
+    font-family: $font-medium;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   &:hover:not(&--disabled) {
     outline: 4px solid #ff5c23;
     outline-offset: -3px;
@@ -112,6 +154,12 @@
   &--disabled {
     color: var(--text-fade);
     background-color: var(--background-white);
+
+    @media (min-width: $tablet) {
+      font-family: $font-regular;
+      font-size: 18px;
+      line-height: 18px;
+    }
   }
 
   &--chosen {

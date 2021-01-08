@@ -33,6 +33,7 @@
   --contrast-text: #ffffff;
 
   --border-color: #cbced9;
+  --border-color-400: #e1e3e9;
   --border-color-600: #959bb2;
 
   --warning: #f97676;
@@ -42,16 +43,18 @@
 
   --padding-mobile: 25px;
   --padding-tablet: 40px;
+  --double-padding: 75px;
   --padding-desktop: 60px;
 
   /* Section border radius */
 
   --border-radius: 30px;
-  --inner-border-radius: 20px;
+  --header-border-radius: 20px;
+  --inner-border-radius: 30px;
 
   @media (min-width: 768px) {
     --border-radius: 60px;
-    --inner-border-radius: 60px;
+    --header-border-radius: 60px;
   }
 }
 

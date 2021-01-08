@@ -3,6 +3,10 @@
   background-color: var(--background-white);
   border-radius: 10px;
   color: var(--basic-300);
+
+  @media (min-width: $tablet) {
+    padding: 40px 0 0;
+  }
 }
 
 .plan-card__title {
@@ -15,16 +19,39 @@
   line-height: 16px;
   letter-spacing: 0.038em;
 
+  @media (min-width: $tablet) {
+    margin-bottom: 34px;
+    padding-left: 41px;
+    padding-right: 32px;
+    grid-template-columns: 1fr 20px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
   &::after {
     content: counter(plan-number) ". ";
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    justify-self: start;
+
+    @media (min-width: $tablet) {
+      grid-column: 2 / 3;
+      font-size: 20px;
+      line-height: 20px;
+      justify-self: end;
+    }
   }
 }
 
-// .plan-card__descr {
-
-// }
+.plan-card__descr {
+  @media (min-width: $tablet) {
+    padding: 20px 40px 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+  }
+}
 
 .plan-card__companions,
 .plan-card__date {
@@ -35,14 +62,30 @@
   line-height: 14px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .plan-card__companions {
   margin-bottom: 5px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    letter-spacing: 0.1em;
+  }
 }
 
 .plan-card__date {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    margin-left: -20px;
+    letter-spacing: 0.06em;
+  }
 }
 
 .plan-card__change {
@@ -53,6 +96,12 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   transition: color 0.3s;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
 
   &:hover {
     color: rgba(#000000, 0.6);

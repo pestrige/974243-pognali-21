@@ -15,6 +15,12 @@
       stroke-width: 1;
     }
 
+    .chart__text {
+      @media (min-width: $tablet) {
+        top: 53%;
+      }
+    }
+
     .chart__persent {
       top: -7px;
       font-size: 38px;

@@ -10,12 +10,31 @@
   background-color: var(--background-white);
   border-radius: 10px;
 
+  @media (min-width: $tablet) {
+    padding: 48px 40px 56px;
+    border-radius: 30px;
+  }
+
   &--first {
     padding-bottom: 23px;
+
+    @media (min-width: $tablet) {
+      padding-bottom: 56px;
+    }
   }
 
   & + & {
     margin-top: 10px;
+
+    @media (min-width: $tablet) {
+      margin-top: 39px;
+    }
+  }
+
+  &:last-child {
+    @media (min-width: $tablet) {
+      margin-top: 49px;
+    }
   }
 }
 
@@ -26,6 +45,13 @@
   font-size: 20px;
   line-height: 20px;
   color: var(--basic-300);
+
+  @media (min-width: $tablet) {
+    width: 300px;
+    margin-bottom: 35px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .steps-silder__text {
@@ -34,21 +60,44 @@
   font-family: $font-regular;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: $tablet) {
+    width: 500px;
+    margin-bottom: 37px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &--contries {
+    @media (min-width: $tablet) {
+      margin-bottom: 31px;
+    }
+  }
 }
 
 .steps-slider__inputs-group {
-  margin: 0;
-  margin-bottom: 23px;
+  margin: 0 0 23px;
   padding: 0;
   display: grid;
   row-gap: 20px;
   border: none;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 59px;
+    row-gap: 25px;
+  }
 }
 
 .steps-slider__label {
   display: grid;
   grid-template-columns: 1fr auto;
   row-gap: 8px;
+
+  @media (min-width: $tablet) {
+    padding-top: 26px;
+    row-gap: 22px;
+    border-top: 1px solid var(--border-color-400);
+  }
 }
 
 .steps-slider__label-title,
@@ -57,6 +106,12 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
 }
 
 .steps-slider__label-title {
@@ -77,6 +132,10 @@
   margin: 0;
   display: grid;
   grid-template-columns: 42px 1fr 42px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 66px 1fr 66px;
+  }
 
   &:hover {
     .steps-slider__input {
@@ -135,6 +194,12 @@
   border: 1px solid var(--border-color);
   border-radius: 4px;
   transition: border-color 0.3s;
+
+  @media (min-width: $tablet) {
+    min-height: 70px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .steps-slider__input-btn {
@@ -147,6 +212,10 @@
   background-color: transparent;
   cursor: pointer;
 
+  @media (min-width: $tablet) {
+    width: 66px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -156,6 +225,11 @@
     top: calc(50% - 1px);
     background-color: #cccccc;
     transition: background-color 0.3s;
+
+    @media (min-width: $tablet) {
+      width: 20px;
+      left: 23px;
+    }
   }
 
   &--minus {
@@ -175,6 +249,11 @@
       background-color: #cccccc;
       transform: rotate(90deg);
       transition: background-color 0.3s;
+
+      @media (min-width: $tablet) {
+        width: 20px;
+        left: 23px;
+      }
     }
   }
 }
@@ -187,6 +266,16 @@
   font-size: 15px;
   line-height: 15px;
   color: var(--basic-300);
+
+  @media (min-width: $tablet) {
+    grid-row: 2 / 3;
+    gap: 22px;
+    font-family: $font-medium;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 }
 
 .steps-slider__checkbox {
@@ -207,6 +296,11 @@
   border: 1px solid var(--border-color);
   border-radius: 4px;
   transition: border-color 0.2s, background-color 0.2s;
+
+  @media (min-width: $tablet) {
+    width: 36px;
+    height: 36px;
+  }
 
   &:hover {
     border-color: var(--border-color-600);
@@ -233,6 +327,21 @@
 
 .steps-slider__calendar {
   margin-bottom: 22px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 43px;
+  }
+}
+
+/* NEXT PREV BUTTONS */
+
+.step-slider__buttons-wrapper {
+  @media (min-width: $tablet) {
+    margin-left: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .step-slider__step-link {
@@ -250,21 +359,70 @@
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 
-  &:hover {
-    background-color: var(--accent-600);
-  }
+  @media (min-width: $tablet) {
+    position: relative;
+    width: 284px;
+    padding: 29px 60px 27px 33px;
+    justify-content: flex-start;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
 
-  &:active {
-    color: var(--basic-300-fade);
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      content: "";
+      width: 1px;
+      height: 1px;
+      border: 6px solid transparent;
+      border-left: 11px solid var(--basic-300);
+      transform: translateY(-50%);
+      transition: opacity 0.3s;
+    }
   }
 
   &--next {
     background-color: var(--accent);
     border-radius: 20px;
+
+    &:hover {
+      background-color: var(--accent-600);
+    }
+
+    &:active {
+      color: var(--basic-300-fade);
+
+      &::after {
+        opacity: 0.3;
+      }
+    }
   }
 
   &--prev {
     margin-top: 6px;
+    transition: filter 0.3s;
+
+    @media (min-width: $tablet) {
+      width: 219px;
+      margin-top: 0;
+      padding: 11px 2px 8px 70px;
+      justify-content: flex-end;
+
+      &::after {
+        right: auto;
+        left: 30px;
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    &:hover {
+      filter: opacity(0.7);
+    }
+
+    &:active {
+      filter: opacity(0.3);
+    }
   }
 }
 
@@ -275,6 +433,12 @@
   margin-bottom: 26px;
   padding: 0;
   border: 0;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 51px;
+    padding-top: 42px;
+    border-top: 1px solid var(--border-color-400);
+  }
 }
 
 .step-slider__counties-list {
@@ -284,6 +448,10 @@
 
 .step-slider__country + .step-slider__country {
   margin-top: 22px;
+
+  @media (min-width: $tablet) {
+    margin-top: 15px;
+  }
 }
 
 /* 3 slide FUN */
@@ -292,6 +460,12 @@
   margin: 0;
   padding: 0;
   border: none;
+
+  @media (min-width: $tablet) {
+    margin: -2px 0 2px 3px;
+    padding-top: 23px;
+    border-top: 1px solid var(--border-color-400);
+  }
 }
 
 .steps-slider__fun-list {
@@ -303,31 +477,51 @@
   position: relative;
   padding-bottom: 25px;
 
+  @media (min-width: $tablet) {
+    padding-bottom: 42px;
+  }
+
   &:not(:last-child)::before {
     position: absolute;
     content: "";
-    top: 10px;
-    bottom: -10px;
+    top: 12px;
+    bottom: -12px;
     left: -13px;
     width: 2px;
     background-color: var(--basic-300);
+
+    @media (min-width: $tablet) {
+      left: auto;
+      right: 6px;
+      top: 22px;
+      bottom: -22px;
+    }
   }
 
   &:last-child {
     padding-bottom: 22px;
+
+    @media (min-width: $tablet) {
+      padding-bottom: 45px;
+    }
   }
 }
 
 .steps-slider__fun-label {
   display: grid;
   grid-template-columns: 1fr 75px;
-  row-gap: 12px;
+  row-gap: 5px;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 103px;
+    row-gap: 26px;
+  }
 }
 
 .steps-slider__fun-title {
   position: relative;
-  margin-top: 0;
+  margin-top: -4px;
   margin-bottom: 0;
   padding-left: 11px;
   grid-column: 1 / -1;
@@ -338,6 +532,13 @@
   letter-spacing: 0.01em;
   color: var(--basic-300);
 
+  @media (min-width: $tablet) {
+    padding-left: 0;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0.017em;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -347,6 +548,14 @@
     height: 6px;
     border-radius: 50%;
     background-color: var(--basic-300);
+
+    @media (min-width: $tablet) {
+      width: 14px;
+      height: 14px;
+      left: auto;
+      right: 0;
+      top: 9px;
+    }
   }
 
   &::after {
@@ -357,6 +566,10 @@
     width: 12px;
     height: 2px;
     background-color: var(--basic-300);
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
   }
 }
 
@@ -368,6 +581,11 @@
   justify-content: flex-end;
   align-items: center;
   background-image: linear-gradient(90deg, transparent 0, white 24px);
+
+  @media (min-width: $tablet) {
+    justify-content: start;
+    background-image: none;
+  }
 }
 
 .steps-slider__fun-descr {
@@ -381,6 +599,14 @@
   border-radius: 4px;
   resize: none;
   overflow-y: auto;
+
+  @media (min-width: $tablet) {
+    height: 142px;
+    margin-right: 33px;
+    padding: 17px 19px;
+    font-size: 20px;
+    line-height: 23px;
+  }
 }
 
 /* pagination section */
@@ -396,6 +622,11 @@
   justify-content: center;
   align-items: center;
   list-style: none;
+
+  @media (min-width: $tablet) {
+    top: 66px;
+    right: 79px;
+  }
 }
 
 .step-slider__pagination-item {
@@ -403,6 +634,10 @@
 
   & + & {
     margin-left: 21px;
+
+    @media (min-width: $tablet) {
+      margin-left: 35px;
+    }
   }
 
   &::before {
@@ -415,6 +650,11 @@
     border-radius: 50%;
     background-color: var(--basic-300);
     opacity: 0.3;
+
+    @media (min-width: $tablet) {
+      width: 6px;
+      height: 6px;
+    }
   }
 
   &--active::before {

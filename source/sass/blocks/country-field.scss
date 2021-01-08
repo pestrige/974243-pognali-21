@@ -3,6 +3,11 @@
   display: grid;
   grid-template-columns: 1fr 53px;
 
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 158px;
+    column-gap: 8px;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -13,6 +18,13 @@
     background-color: var(--basic-300);
     border-radius: 50%;
     transform: translateY(-50%);
+
+    @media (min-width: $tablet) {
+      width: 14px;
+      height: 14px;
+      top: 47%;
+      right: 133px;
+    }
   }
 
   &:not(:last-child)::before {
@@ -25,15 +37,41 @@
     background-image: url("../img/icons/arrow-long.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-width: $tablet) {
+      width: 1px;
+      height: auto;
+      right: 139px;
+      top: -42px;
+      bottom: 0;
+      background-color: var(--border-color-400);
+      background-image: none;
+    }
+  }
+
+  &:last-child::before {
+    @media (min-width: $tablet) {
+      position: absolute;
+      content: "";
+      width: 1px;
+      right: 139px;
+      top: -20px;
+      bottom: -40px;
+      background-image: linear-gradient(180deg, #e1e3e9 60%, transparent 90%);
+    }
   }
 
   &--not-selected,
   &--add {
     grid-template-columns: 1fr;
 
+    @media (min-width: $tablet) {
+      grid-template-columns: 1fr 158px;
+    }
+
     &::after {
       border: 1px solid var(--border-color);
-      background-color: transparent;
+      background-color: var(--background-white);
     }
 
     .country-field__flag {
@@ -42,10 +80,19 @@
   }
 
   &--add {
+    &::after {
+      background-color: var(--background);
+    }
+
     .country-field__select-wrapper {
       &::after {
         background-image: url("../img/icons/icon-plus.svg");
         background-position: right 9px center;
+
+        @media (min-width: $tablet) {
+          background-image: url("../img/icons/icon-plus-tablet.svg");
+          background-position: center center;
+        }
       }
     }
 
@@ -74,6 +121,13 @@
     background-repeat: no-repeat;
     background-position: right 9px center, right center;
     cursor: pointer;
+
+    @media (min-width: $tablet) {
+      width: 60px;
+      right: 6px;
+      background-image: url("../img/icons/arrow-down-tablet.svg");
+      background-position: center center;
+    }
   }
 }
 
@@ -94,6 +148,13 @@
   cursor: pointer;
   transition: border-color 0.3s;
 
+  @media (min-width: $tablet) {
+    padding: 27px 27px 21px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+
   &:hover {
     border-color: var(--border-color-600);
   }
@@ -105,11 +166,20 @@
   align-items: center;
   border: 1px solid var(--border-color);
   border-radius: 4px;
+
+  @media (min-width: $tablet) {
+    border: none;
+  }
 }
 
 .country-field__flag-img {
   width: 35px;
   height: 24px;
+
+  @media (min-width: $tablet) {
+    width: 70px;
+    height: 47px;
+  }
 }
 
 .country-field__close {
@@ -124,6 +194,23 @@
   border-radius: 50%;
   cursor: pointer;
 
+  @media (min-width: $tablet) {
+    top: 47%;
+    right: 0;
+    background-color: transparent;
+    transform: translateY(-50%);
+
+    &:hover::before,
+    &:hover::after {
+      background-color: rgba(#000000, 0.3);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: rgba(#000000, 0.05);
+    }
+  }
+
   &::before,
   &::after {
     position: absolute;
@@ -134,6 +221,12 @@
     height: 1px;
     background-color: #afb0b5;
     border-radius: 2px;
+    transition: background-color 0.3s;
+
+    @media (min-width: $tablet) {
+      width: 25px;
+      background-color: rgba(#000000, 0.1);
+    }
   }
 
   &::before {

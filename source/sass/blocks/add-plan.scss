@@ -1,14 +1,30 @@
 .add-plan {
   position: relative;
-  margin-top: calc(var(--border-radius) * -1);
+  margin-top: calc(var(--inner-border-radius) * -1);
   padding-top: 30px;
   padding-bottom: 102px;
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--inner-border-radius);
+  border-top-right-radius: var(--inner-border-radius);
   background-color: var(--background-800);
+
+  @media (min-width: $tablet) {
+    padding-top: 53px;
+    padding-bottom: 177px;
+  }
+}
+
+.add-plan__wrapper {
+  @media (min-width: $tablet) {
+    padding-left: var(--double-padding);
+    padding-right: var(--double-padding);
+  }
 }
 
 .add-plan__title {
   margin-top: 0;
   margin-bottom: 29px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 56px;
+  }
 }

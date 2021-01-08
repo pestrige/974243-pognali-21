@@ -100,7 +100,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-left: 75px;
+    margin-left: var(--double-padding);
     margin-right: 73px;
     margin-bottom: 71px;
     grid-template-columns: 1fr 323px;
