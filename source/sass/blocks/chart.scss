@@ -27,12 +27,23 @@
       line-height: 38px;
       color: var(--basic);
 
+      @media (min-width: $desktop) {
+        top: -2px;
+        color: var(--contrast-text);
+      }
+
       &::after {
         bottom: -1px;
         left: -5px;
         width: 51px;
         height: 2px;
         background-color: var(--text-fade);
+
+        @media (min-width: $desktop) {
+          bottom: 2px;
+          background-color: var(--background-white);
+          filter: opacity(0.3);
+        }
       }
     }
 
@@ -40,6 +51,10 @@
       font-size: 18px;
       line-height: 18px;
       color: var(--text);
+
+      @media (min-width: $desktop) {
+        color: var(--contrast-text);
+      }
     }
   }
 }

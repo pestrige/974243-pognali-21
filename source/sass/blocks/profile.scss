@@ -8,6 +8,11 @@
   @media (min-width: $tablet) {
     padding-top: 126px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 60px;
+    background-color: transparent;
+  }
 }
 
 .profile__wrapper {
@@ -32,6 +37,17 @@
       "tags tags tags";
     column-gap: 0;
   }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    padding-right: var(--padding-desktop);
+    grid-template-columns: 1fr 384px;
+    grid-template-areas:
+      "level photo"
+      ". button"
+      "tags transport";
+    column-gap: 140px;
+  }
 }
 
 .profile__level {
@@ -47,12 +63,28 @@
     top: -6px;
     right: -5px;
   }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    z-index: 2;
+    top: -152px;
+    right: -201px;
+  }
 }
 
 .profile__photo {
   width: 100px;
   height: 100px;
   grid-area: photo;
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    z-index: 2;
+    width: 190px;
+    height: 190px;
+    right: 97px;
+    top: -190px;
+  }
 }
 
 .profile__btn {
@@ -71,6 +103,15 @@
     margin-bottom: 44px;
     min-height: 60px;
     border-radius: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 27px;
+    justify-self: center;
+    width: 190px;
+    min-height: 47px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   &:hover {
@@ -96,11 +137,22 @@
   transition: color 0.3s;
 
   @media (min-width: $tablet) {
+    font-family: $font-medium;
     letter-spacing: 0.09em;
   }
 
   &--small {
     display: none;
+
+    @media (min-width: $desktop) {
+      display: block;
+    }
+  }
+
+  &--full {
+    @media (min-width: $desktop) {
+      display: none;
+    }
   }
 }
 
@@ -117,6 +169,14 @@
     @media (min-width: $tablet) {
       margin-bottom: 42px;
     }
+
+    @media (min-width: $desktop) {
+      margin: 0;
+
+      .profile__block-title {
+        margin-left: 20px;
+      }
+    }
   }
 
   &--transport {
@@ -126,6 +186,10 @@
 
     @media (min-width: $tablet) {
       margin: 0 63px 50px 59px;
+    }
+
+    @media (min-width: $desktop) {
+      margin: 0 0 48px;
     }
   }
 }

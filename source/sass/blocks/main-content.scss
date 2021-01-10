@@ -5,6 +5,11 @@
 
 .main-content__profile {
   z-index: 1;
+
+  @media (min-width: $desktop) {
+    z-index: auto;
+    background-color: transparent;
+  }
 }
 
 // .main-content__plans {
