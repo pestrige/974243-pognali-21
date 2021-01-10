@@ -48,6 +48,7 @@
   }
 
   @media (min-width: $desktop) {
+    margin-top: 8px;
     margin-bottom: 0;
     justify-self: start;
     display: flex;
@@ -62,12 +63,15 @@
 }
 
 .main-nav__link {
+  position: relative;
+  display: inline-block;
   font-family: $font-medium;
   font-size: 30px;
   line-height: 35px;
   color: inherit;
   text-transform: uppercase;
   transition: color 0.3s;
+  overflow: hidden;
 
   @media (min-width: $tablet) {
     font-size: 60px;
@@ -79,6 +83,25 @@
     line-height: 20px;
     //color: var(--contrast-text);
     color: inherit;
+  }
+
+  &:hover {
+    .main-nav__link-text {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+.main-nav__link-text {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s;
+
+  &::before {
+    position: absolute;
+    content: attr(data-hover);
+    top: 100%;
+    color: var(--accent);
   }
 }
 
