@@ -112,7 +112,7 @@
   br {
     display: none;
 
-    @media (min-width: $desktop) {
+    @media (min-width: $tablet) {
       display: block;
     }
   }
