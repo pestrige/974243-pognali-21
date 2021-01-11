@@ -22,6 +22,11 @@
     padding: 27px 0 22px;
     margin-bottom: 31px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 10px;
+    padding: 28px 0 21px;
+  }
 }
 
 .calendar__month {
@@ -82,6 +87,11 @@
       width: 29px;
       height: 36px;
     }
+
+    @media (min-width: $desktop) {
+      width: 29px;
+      height: 28px;
+    }
   }
 
   &--prev {
@@ -89,6 +99,10 @@
 
     @media (min-width: $tablet) {
       left: 13px;
+    }
+
+    @media (min-width: $desktop) {
+      left: -3px;
     }
 
     &::after {
@@ -102,6 +116,10 @@
     @media (min-width: $tablet) {
       right: 13px;
     }
+
+    @media (min-width: $desktop) {
+      right: -5px;
+    }
   }
 }
 
@@ -111,6 +129,11 @@
 
   @media (min-width: $tablet) {
     padding: 8px;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: left;
+    padding: 8px 16px 19px;
   }
 
   &--holiday {
@@ -143,6 +166,14 @@
     line-height: 20px;
   }
 
+  @media (min-width: $desktop) {
+    padding: 14px 0 38px 15px;
+    font-family: $font-regular;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: left;
+  }
+
   &:hover:not(&--disabled) {
     outline: 4px solid #ff5c23;
     outline-offset: -3px;
@@ -165,5 +196,43 @@
   &--chosen {
     color: var(--contrast-text);
     background-color: var(--basic-300);
+  }
+
+  &--checkin,
+  &--checkout {
+    position: relative;
+
+    @media (min-width: $desktop) {
+      &::after {
+        position: absolute;
+        content: "Заезд";
+        left: 15px;
+        bottom: 12px;
+      }
+    }
+  }
+
+  &--checkin {
+    @media (min-width: $desktop) {
+      &::after {
+        content: "Заезд";
+      }
+    }
+  }
+
+  &--checkout {
+    @media (min-width: $desktop) {
+      &::after {
+        content: "Выезд";
+      }
+    }
+  }
+}
+
+.calendar__month-name {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: inline-block;
   }
 }

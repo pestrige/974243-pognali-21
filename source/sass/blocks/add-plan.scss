@@ -11,12 +11,22 @@
     padding-top: 53px;
     padding-bottom: 177px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 55px;
+    padding-bottom: 188px;
+  }
 }
 
 .add-plan__wrapper {
   @media (min-width: $tablet) {
     padding-left: var(--double-padding);
     padding-right: var(--double-padding);
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: var(--padding-desktop);
+    padding-right: var(--padding-desktop);
   }
 }
 
@@ -26,5 +36,10 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 56px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 69px;
+    margin-bottom: 54px;
   }
 }

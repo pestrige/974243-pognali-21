@@ -8,6 +8,10 @@
     column-gap: 8px;
   }
 
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 263px;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -24,6 +28,11 @@
       height: 14px;
       top: 47%;
       right: 133px;
+    }
+
+    @media (min-width: $desktop) {
+      z-index: 2;
+      right: 219px;
     }
   }
 
@@ -47,6 +56,11 @@
       background-color: var(--border-color-400);
       background-image: none;
     }
+
+    @media (min-width: $desktop) {
+      top: -63px;
+      right: 225px;
+    }
   }
 
   &:last-child::before {
@@ -59,6 +73,11 @@
       bottom: -40px;
       background-image: linear-gradient(180deg, #e1e3e9 60%, transparent 90%);
     }
+
+    @media (min-width: $desktop) {
+      bottom: -170px;
+      right: 225px;
+    }
   }
 
   &--not-selected,
@@ -67,6 +86,10 @@
 
     @media (min-width: $tablet) {
       grid-template-columns: 1fr 158px;
+    }
+
+    @media (min-width: $desktop) {
+      grid-template-columns: 1fr 263px;
     }
 
     &::after {
@@ -170,6 +193,10 @@
   @media (min-width: $tablet) {
     border: none;
   }
+
+  @media (min-width: $desktop) {
+    justify-content: flex-start;
+  }
 }
 
 .country-field__flag-img {
@@ -179,6 +206,10 @@
   @media (min-width: $tablet) {
     width: 70px;
     height: 47px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 77px;
   }
 }
 
@@ -209,6 +240,10 @@
     &:active::after {
       background-color: rgba(#000000, 0.05);
     }
+  }
+
+  @media (min-width: $desktop) {
+    right: 6px;
   }
 
   &::before,

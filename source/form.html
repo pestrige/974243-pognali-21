@@ -339,7 +339,7 @@
                       <td class="calendar__day calendar__day--disabled">26</td>
                       <td class="calendar__day calendar__day--disabled">27</td>
                       <td class="calendar__day calendar__day--disabled">28</td>
-                      <td class="calendar__day calendar__day--disabled">1</td>
+                      <td class="calendar__day calendar__day--disabled">1<span class="calendar__month-name">&nbsp;мар</span></td>
                     </tr>
                     <tr class="calendar__week-row">
                       <td class="calendar__day calendar__day--disabled">2</td>
@@ -372,15 +372,15 @@
                       <td class="calendar__day calendar__day--disabled">23</td>
                       <td class="calendar__day calendar__day--disabled">24</td>
                       <td class="calendar__day calendar__day--disabled">25</td>
-                      <td class="calendar__day calendar__day--chosen">26</td>
+                      <td class="calendar__day calendar__day--chosen calendar__day--checkin">26</td>
                       <td class="calendar__day calendar__day--chosen">27</td>
-                      <td class="calendar__day calendar__day--chosen">28</td>
+                      <td class="calendar__day calendar__day--chosen calendar__day--checkout">28</td>
                       <td class="calendar__day">29</td>
                     </tr>
                     <tr class="calendar__week-row">
                       <td class="calendar__day">30</td>
                       <td class="calendar__day">31</td>
-                      <td class="calendar__day">1</td>
+                      <td class="calendar__day">1<span class="calendar__month-name">&nbsp;апр</span></td>
                       <td class="calendar__day">2</td>
                       <td class="calendar__day">3</td>
                       <td class="calendar__day">4</td>
@@ -390,6 +390,23 @@
                 </div>
                 <a class="step-slider__step-link step-slider__step-link--next" href="#second-step">Следующий шаг</a>
               </div>
+              <ul class="step-slider__nav">
+                <li class="step-slider__nav-item">
+                  <a class="step-slider__nav-link step-slider__nav-link--active">
+                    Даты
+                  </a>
+                </li>
+                <li class="step-slider__nav-item">
+                  <a href="#second-step" class="step-slider__nav-link">
+                    Маршрут
+                  </a>
+                </li>
+                <li class="step-slider__nav-item">
+                  <a href="#third-step" class="step-slider__nav-link">
+                    Развлечения
+                  </a>
+                </li>
+              </ul>
             </li>
 
             <li class="steps-slider__item" id="second-step">
@@ -397,7 +414,8 @@
                 <h3 class="steps-slider__title">Шаг 2.&nbsp;<br>Маршрут</h3>
                 <p class="steps-silder__text steps-silder__text--contries">
                   Укажите страны, которые вы
-                  хотели бы посетить. Это&nbsp;может
+                  хотели бы посетить. <br>
+                  Это&nbsp;может
                   быть одна или сразу несколько.
                 </p>
                 <fieldset class="step-slider__counties-set">
@@ -542,13 +560,30 @@
                   <a class="step-slider__step-link step-slider__step-link--prev" href="#first-step">На шаг назад</a>
                 </div>
               </div>
+              <ul class="step-slider__nav">
+                <li class="step-slider__nav-item">
+                  <a href="#first-step" class="step-slider__nav-link">
+                    Даты
+                  </a>
+                </li>
+                <li class="step-slider__nav-item">
+                  <a class="step-slider__nav-link step-slider__nav-link--active">
+                    Маршрут
+                  </a>
+                </li>
+                <li class="step-slider__nav-item">
+                  <a href="#third-step" class="step-slider__nav-link">
+                    Развлечения
+                  </a>
+                </li>
+              </ul>
             </li>
 
             <li class="steps-slider__item" id="third-step">
               <div class="steps-slider__wrapper">
                 <h3 class="steps-slider__title">Шаг 3.&nbsp;<br>Развлечения</h3>
                 <p class="steps-silder__text">
-                  Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+                  Наконец, расскажите о своих планах времяпровождения.&nbsp;<br> Можно писать в свободной форме и ставить тэги.
                 </p>
                 <fieldset class="steps-slider__fun-group">
                   <ul class="steps-slider__fun-list">
@@ -592,6 +627,23 @@
                 <button class="step-slider__step-link step-slider__step-link--next" type="submit">Отправить</button>
                 <a class="step-slider__step-link step-slider__step-link--prev" href="#second-step">На шаг назад</a>
               </div>
+              <ul class="step-slider__nav">
+                <li class="step-slider__nav-item">
+                  <a href="#first-step" class="step-slider__nav-link">
+                    Даты
+                  </a>
+                </li>
+                <li class="step-slider__nav-item">
+                  <a href="#second-step" class="step-slider__nav-link">
+                    Маршрут
+                  </a>
+                </li>
+                <li class="step-slider__nav-item">
+                  <a class="step-slider__nav-link step-slider__nav-link--active">
+                    Развлечения
+                  </a>
+                </li>
+              </ul>
             </li>
           </ol>
           <ul class="step-slider__pagination">

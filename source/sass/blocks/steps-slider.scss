@@ -6,6 +6,7 @@
 }
 
 .steps-slider__item {
+  position: relative;
   padding: 24px 24px 6px;
   background-color: var(--background-white);
   border-radius: 10px;
@@ -15,11 +16,20 @@
     border-radius: 30px;
   }
 
+  @media (min-width: $desktop) {
+    padding: 101px 159px 104px;
+    border-radius: 60px;
+  }
+
   &--first {
     padding-bottom: 23px;
 
     @media (min-width: $tablet) {
       padding-bottom: 56px;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 101px 161px 106px 159px;
     }
   }
 
@@ -29,11 +39,19 @@
     @media (min-width: $tablet) {
       margin-top: 39px;
     }
+
+    @media (min-width: $desktop) {
+      margin-top: 42px;
+    }
   }
 
   &:last-child {
     @media (min-width: $tablet) {
       margin-top: 49px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 43px;
     }
   }
 }
@@ -52,6 +70,14 @@
     font-size: 36px;
     line-height: 36px;
   }
+
+  @media (min-width: $desktop) {
+    width: 450px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .steps-silder__text {
@@ -68,12 +94,31 @@
     line-height: 24px;
   }
 
+  @media (min-width: $desktop) {
+    width: 589px;
+    margin-bottom: 55px;
+  }
+
   &--contries {
     @media (min-width: $tablet) {
       margin-bottom: 31px;
     }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 53px;
+    }
+  }
+
+  br {
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: block;
+    }
   }
 }
+
+/* INPUTS FIRST STEP */
 
 .steps-slider__inputs-group {
   margin: 0 0 23px;
@@ -86,6 +131,15 @@
     margin-bottom: 59px;
     row-gap: 25px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 28px;
+    margin-bottom: 31px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    row-gap: 14px;
+    border-top: 1px solid var(--border-color-400);
+  }
 }
 
 .steps-slider__label {
@@ -97,6 +151,13 @@
     padding-top: 26px;
     row-gap: 22px;
     border-top: 1px solid var(--border-color-400);
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 0;
+    grid-template-columns: 220px 180px auto;
+    align-items: center;
+    border-top: none;
   }
 }
 
@@ -118,12 +179,24 @@
   grid-row: 1 / 2;
   color: var(--basic-300);
   letter-spacing: 0.09em;
+
+  @media (min-width: $desktop) {
+    grid-column: 1 / 2;
+    justify-self: start;
+    letter-spacing: 0;
+  }
 }
 
 .steps-slider__label-subtitle {
   grid-row: 1 / 2;
   color: var(--basic-300-fade);
   letter-spacing: 0.07em;
+
+  @media (min-width: $desktop) {
+    grid-column: 3 / 4;
+    justify-self: center;
+    letter-spacing: 0;
+  }
 }
 
 .steps-slider__field {
@@ -135,6 +208,12 @@
 
   @media (min-width: $tablet) {
     grid-template-columns: 66px 1fr 66px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    justify-self: center;
   }
 
   &:hover {
@@ -276,6 +355,13 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
+
+  @media (min-width: $desktop) {
+    margin-right: -2px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: end;
+  }
 }
 
 .steps-slider__checkbox {
@@ -330,6 +416,10 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 43px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 57px;
   }
 }
 
@@ -439,6 +529,11 @@
     padding-top: 42px;
     border-top: 1px solid var(--border-color-400);
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 60px;
+    padding-top: 62px;
+  }
 }
 
 .step-slider__counties-list {
@@ -466,11 +561,20 @@
     padding-top: 23px;
     border-top: 1px solid var(--border-color-400);
   }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    padding-top: 69px;
+  }
 }
 
 .steps-slider__fun-list {
   padding-left: 0;
   list-style: none;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 13px;
+  }
 }
 
 .steps-slider__fun-item {
@@ -479,6 +583,10 @@
 
   @media (min-width: $tablet) {
     padding-bottom: 42px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 45px;
   }
 
   &:not(:last-child)::before {
@@ -495,6 +603,10 @@
       right: 6px;
       top: 22px;
       bottom: -22px;
+    }
+
+    @media (min-width: $desktop) {
+      right: 226px;
     }
   }
 
@@ -516,6 +628,11 @@
   @media (min-width: $tablet) {
     grid-template-columns: 1fr 103px;
     row-gap: 26px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 272px;
+    row-gap: 21px;
   }
 }
 
@@ -539,6 +656,10 @@
     letter-spacing: 0.017em;
   }
 
+  @media (min-width: $desktop) {
+    grid-column: 1 / 2;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -555,6 +676,11 @@
       left: auto;
       right: 0;
       top: 9px;
+    }
+
+    @media (min-width: $desktop) {
+      right: -52px;
+      top: 7px;
     }
   }
 
@@ -586,6 +712,11 @@
     justify-content: start;
     background-image: none;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 3px;
+    margin-left: 86px;
+  }
 }
 
 .steps-slider__fun-descr {
@@ -607,6 +738,12 @@
     font-size: 20px;
     line-height: 23px;
   }
+
+  @media (min-width: $desktop) {
+    margin-right: 0;
+    padding: 23px 15px 23px 26px;
+    grid-column: 1 / 2;
+  }
 }
 
 /* pagination section */
@@ -626,6 +763,10 @@
   @media (min-width: $tablet) {
     top: 66px;
     right: 79px;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
   }
 }
 
@@ -664,4 +805,62 @@
 
 .step-slider__pagination-text {
   display: none;
+}
+
+/* Desktop Navigation section */
+
+.step-slider__nav {
+  display: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+    position: absolute;
+    top: 106px;
+    right: 204px;
+  }
+}
+
+.step-slider__nav-item:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+.step-slider__nav-link {
+  position: relative;
+  padding-left: 42px;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.11em;
+  color: var(--text-900);
+  text-transform: uppercase;
+  filter: opacity(0.6);
+  transition: filter 0.3s;
+
+  &--active {
+    filter: opacity(1);
+  }
+
+  &:hover {
+    filter: opacity(1);
+  }
+
+  &:active {
+    filter: opacity(0.3);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 35%;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--basic-300);
+    transform: translateY(-50%);
+    filter: opacity(0.6);
+  }
 }

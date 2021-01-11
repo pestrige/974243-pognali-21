@@ -43,8 +43,8 @@
 
   --padding-mobile: 25px;
   --padding-tablet: 40px;
-  --double-padding: 75px;
   --padding-desktop: 60px;
+  --double-padding: 75px;
 
   /* Section border radius */
 
@@ -55,6 +55,7 @@
   @media (min-width: 768px) {
     --border-radius: 60px;
     --header-border-radius: 60px;
+    --inner-border-radius: 60px;
     --double-padding: 124px;
   }
 }
