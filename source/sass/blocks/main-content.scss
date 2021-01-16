@@ -12,6 +12,7 @@
   }
 }
 
-// .main-content__plans {
-//   z-index: 2;
-// }
+.main-content__filter {
+  margin-top: calc(var(--header-border-radius) * -1);
+  margin-bottom: 19px;
+}

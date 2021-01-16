@@ -13,6 +13,7 @@
   }
 
   &:hover + .transport-icons__icon,
+  &:focus + .transport-icons__icon,
   &:checked:hover + .transport-icons__icon {
     box-shadow: 0 2px 6px rgba(22, 28, 53, 0.17);
   }

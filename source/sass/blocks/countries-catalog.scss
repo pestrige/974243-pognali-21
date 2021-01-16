@@ -1,0 +1,127 @@
+/* ALPHABET SECTION */
+
+.countries-catalog__alphabet {
+  margin: -1px 25px 13px 26px;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  list-style: none;
+}
+
+.countries-catalog__letter {
+  margin-top: -1px;
+  margin-left: -1px;
+  border: 1px solid var(--border-color);
+  transition: border-color 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--border-color-600);
+  }
+
+  &--active,
+  &:active {
+    position: relative;
+    z-index: 1;
+    border-color: var(--basic-300);
+
+    .countries-catalog__letter-link {
+      color: var(--contrast-text);
+      background-color: var(--basic-300);
+    }
+  }
+}
+
+.countries-catalog__letter-link {
+  display: block;
+  padding: 13px 0;
+  font-family: $font-medium;
+  font-size: 14px;
+  line-height: 14px;
+  color: var(--basic-300);
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--background-white);
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* COUNTRIES LIST */
+
+.countries-catalog__countries-set {
+  margin-bottom: 28px;
+}
+
+.countries-catalog__countries-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 25px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.countries-catalog__country-link {
+  font-family: $font-regular;
+  color: inherit;
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--basic-300);
+  }
+
+  &:active {
+    color: var(--basic-300-fade);
+  }
+}
+
+/* CLOSE BUTTON */
+
+.countries-catalog__close {
+  width: 100%;
+  padding: 12px 12px 7px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--background-800);
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #c8cee8;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:active {
+    .countries-catalog__close-text {
+      filter: opacity(0.3);
+    }
+  }
+}
+
+.countries-catalog__close-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--basic-400);
+  text-align: center;
+  transition: filter 0.3s;
+
+  &::before {
+    content: "";
+    margin-top: -3px;
+    margin-right: 11px;
+    width: 14px;
+    height: 14px;
+    background-image: url("../img/icons/icon-close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: filter 0.3s;
+  }
+}
