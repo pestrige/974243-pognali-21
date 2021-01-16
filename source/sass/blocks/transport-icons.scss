@@ -7,6 +7,10 @@
   flex-wrap: wrap;
 }
 
+.transport-icons__item {
+  padding-bottom: 5px;
+}
+
 .transport-icons__checkbox {
   &:checked + .transport-icons__icon svg path {
     fill: var(--basic-300);
