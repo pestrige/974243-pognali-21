@@ -23,14 +23,22 @@
 .form-search__legend {
   position: relative;
   width: 100%;
-  padding: 12px 0 9px;
+  padding: 12px 5px 9px;
   font-family: $font-bold;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basic-300);
   cursor: pointer;
-  transition: color 0.2s;
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: opacity(0.6);
+  }
+
+  &:active {
+    filter: opacity(0.3);
+  }
 
   &--closed::after {
     transform: translateY(5px) rotate(180deg);
@@ -40,7 +48,7 @@
     content: "";
     position: absolute;
     top: 13px;
-    right: 2px;
+    right: 5px;
     width: 1px;
     height: 1px;
     border: 4px solid transparent;
@@ -55,7 +63,7 @@
   position: relative;
   margin-top: 5px;
   margin-bottom: 19px;
-  padding-left: 0;
+  padding-left: 5px;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 12px;
@@ -79,6 +87,12 @@
 
   &--level {
     margin-top: 3px;
+    padding-left: 0;
+
+    .form-search__options-wrapper {
+      padding-left: 5px;
+      padding-right: 4px;
+    }
   }
 
   &--closed {
@@ -176,6 +190,7 @@
   &:last-child::after {
     content: "";
     position: absolute;
+    z-index: 2;
     left: -8px;
     width: 16px;
   }
@@ -194,11 +209,25 @@
 }
 
 .form-search__input {
+  position: relative;
   width: 100%;
   min-height: 35px;
   text-align: center;
   border: 1px solid var(--border-color);
   appearance: textfield;
+  transition: border-color 0.3s;
+
+  &:hover {
+    z-index: 1;
+    border-color: var(--border-color-600);
+  }
+
+  &:active,
+  &:focus {
+    z-index: 1;
+    border-color: var(--basic);
+    outline: none;
+  }
 
   &--min {
     border-top-left-radius: 4px;
@@ -215,7 +244,7 @@
 /* Range */
 
 .form-search__range-wrapper {
-  padding: 24px 0 10px;
+  padding: 24px 5px 10px;
 }
 
 .form-search__range-line {
@@ -243,6 +272,18 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: scale(1.4);
+  }
+
+  &:active,
+  &:focus {
+    transform: scale(1.4);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+    outline: none;
+  }
 
   &--min {
     left: 0;
@@ -250,10 +291,6 @@
 
   &--max {
     right: 0;
-  }
-
-  &:focus:not(:focus-visible) {
-    outline: none;
   }
 }
 
@@ -276,11 +313,9 @@
   cursor: pointer;
   transition: box-shadow 0.3s, filter 0.3s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14);
-  }
-
-  &:focus:not(:focus-visible) {
     outline: none;
   }
 

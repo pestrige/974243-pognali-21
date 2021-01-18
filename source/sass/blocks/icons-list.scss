@@ -4,13 +4,36 @@
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
+
+  &--circle {
+    justify-content: start;
+
+    .icons-list__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: var(--background);
+
+      svg {
+        width: 14px;
+        height: auto;
+      }
+    }
+
+    .icons-list__item:not(:first-child) {
+      margin-left: 1px;
+    }
+  }
+}
+
+.icons-list__item:not(:first-child) {
+  margin-left: 12px;
 }
 
 .icons-list__item {
-  & + & {
-    margin-left: 12px;
-  }
-
   svg path {
     fill: #101d41;
     opacity: 0.15;

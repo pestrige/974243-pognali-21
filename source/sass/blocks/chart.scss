@@ -57,6 +57,29 @@
       }
     }
   }
+
+  &--small {
+    .chart__svg {
+      width: 45px;
+      height: 45px;
+    }
+
+    .chart__circle {
+      fill: none;
+    }
+
+    .chart__persent {
+      color: var(--basic-300);
+
+      &::after {
+        height: 0;
+      }
+    }
+
+    .chart__level {
+      display: none;
+    }
+  }
 }
 
 .chart__svg {
