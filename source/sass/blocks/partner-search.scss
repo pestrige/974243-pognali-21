@@ -2,6 +2,10 @@
   padding: 26px 20px 22px;
   border-radius: 20px;
   background-color: var(--accent);
+
+  @media (min-width: $tablet) {
+    padding: 37px 29px 37px;
+  }
 }
 
 .partner-search__title {
@@ -11,4 +15,11 @@
   line-height: 22px;
   letter-spacing: 0.02em;
   color: var(--basic-300);
+
+  @media (min-width: $tablet) {
+    margin-bottom: 37px;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 0;
+  }
 }

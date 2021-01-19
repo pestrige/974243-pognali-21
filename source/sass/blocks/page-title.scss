@@ -9,10 +9,23 @@
     padding-top: 224px;
     padding-bottom: 66px;
   }
+
+  .page-title__index-link {
+    display: none;
+  }
+
+  &--catalog .page-title__index-link {
+    @media (min-width: $tablet) {
+      display: inline-block;
+    }
+  }
 }
 
 .page-title__wrapper {
   @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-left: var(--double-padding);
   }
 }
@@ -46,5 +59,37 @@
       bottom: -70px;
       height: 8px;
     }
+  }
+}
+
+.page-title__index-link {
+  position: relative;
+  padding-right: 60px;
+  margin-right: 34px;
+  font-family: $font-bold;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--contrast-text);
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: opacity(0.6);
+  }
+
+  &:active {
+    filter: opacity(0.3);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 16px;
+    background-image: url("../img/icons/icon-arrow-bend.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }

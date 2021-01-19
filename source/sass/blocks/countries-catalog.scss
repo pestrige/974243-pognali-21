@@ -1,11 +1,23 @@
 /* ALPHABET SECTION */
 
+.countries-catalog {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 385px 235px;
+    justify-content: space-between;
+  }
+}
+
 .countries-catalog__alphabet {
   margin: -1px 25px 13px 26px;
   padding-left: 0;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   list-style: none;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
 }
 
 .countries-catalog__letter {
@@ -15,8 +27,17 @@
   transition: border-color 0.3s;
   cursor: pointer;
 
+  @media (min-width: $tablet) {
+    margin: 0;
+    border: none;
+  }
+
   &:hover {
     border-color: var(--border-color-600);
+
+    @media (min-width: $tablet) {
+      border: none;
+    }
   }
 
   &--active,
@@ -25,9 +46,20 @@
     z-index: 1;
     border-color: var(--basic-300);
 
+    @media (min-width: $tablet) {
+      border: none;
+    }
+
     .countries-catalog__letter-link {
       color: var(--contrast-text);
       background-color: var(--basic-300);
+
+      @media (min-width: $tablet) {
+        color: var(--basic-300);
+        border: none;
+        background-color: transparent;
+        filter: opacity(1);
+      }
     }
   }
 }
@@ -43,12 +75,31 @@
   text-align: center;
   background-color: var(--background-white);
   transition: color 0.3s, background-color 0.3s;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 10px;
+    font-family: $font-bold;
+    font-size: 60px;
+    line-height: 60px;
+    //color: var(--basic-300-fade);
+    background-color: transparent;
+    filter: opacity(0.3);
+    transition: filter 0.3s;
+
+    &:hover {
+      filter: opacity(0.6);
+    }
+  }
 }
 
 /* COUNTRIES LIST */
 
 .countries-catalog__countries-set {
   margin-bottom: 28px;
+
+  @media (min-width: $tablet) {
+    margin-top: 10px;
+  }
 }
 
 .countries-catalog__countries-list {
@@ -63,6 +114,11 @@
   font-family: $font-regular;
   color: inherit;
   transition: color 0.3s;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &:hover {
     color: var(--basic-300);
@@ -83,6 +139,13 @@
   background-color: var(--background-800);
   cursor: pointer;
   transition: background-color 0.3s;
+
+  @media (min-width: $tablet) {
+    width: auto;
+    margin: 54px 37px 0 22px;
+    padding: 43px 12px 37px;
+    grid-column: 1 / -1;
+  }
 
   &:hover {
     background-color: #c8cee8;
@@ -112,6 +175,11 @@
   text-align: center;
   transition: filter 0.3s;
 
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    letter-spacing: 0;
+  }
+
   &::before {
     content: "";
     margin-top: -3px;
@@ -123,5 +191,13 @@
     background-position: center;
     background-size: contain;
     transition: filter 0.3s;
+
+    @media (min-width: $tablet) {
+      margin-top: -6px;
+      margin-right: 20px;
+      width: 22px;
+      height: 22px;
+      background-size: cover;
+    }
   }
 }

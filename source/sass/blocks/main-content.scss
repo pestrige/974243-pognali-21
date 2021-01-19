@@ -19,4 +19,9 @@
 
 .main-content__partner-search {
   margin-bottom: 28px;
+
+  @media (min-width: $tablet) {
+    margin-top: 100px;
+    margin-bottom: 41px;
+  }
 }

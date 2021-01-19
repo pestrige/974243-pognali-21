@@ -3,8 +3,11 @@
 {
   const formSearch = document.querySelector('.form-search');
   const listToggles = formSearch.querySelectorAll('.form-search__legend');
+  const optionLists = formSearch.querySelectorAll('.form-search__options-list');
   const classTrigger = 'form-search__options-list--closed';
+  const tabletWidth = '768';
 
+  const isMobile = () => document.body.clientWidth < tabletWidth;
   const toggleList = (toggle, list) => {
     toggle.classList.toggle('form-search__legend--closed');
 
@@ -28,12 +31,22 @@
 
   for (let listToggle of listToggles) {
     listToggle.addEventListener('click', (evt) => {
-      evt.preventDefault();
-      const attribute = evt.target.getAttribute('data-name');
-      const optionsList = formSearch.querySelector(`[data-list = ${attribute}]`);
-      toggleList(listToggle, optionsList);
+      if (isMobile()) {
+        evt.preventDefault();
+        const attribute = evt.target.getAttribute('data-name');
+        const optionsList = formSearch.querySelector(`[data-list = ${attribute}]`);
+        toggleList(listToggle, optionsList);
+      };
     });
   };
+
+  window.addEventListener('resize', () => {
+    if (!isMobile()) {
+      for (let optionsList of optionLists) {
+        optionsList.removeAttribute('style');
+      };
+    };
+  });
 }
 
 // {

@@ -17,10 +17,16 @@
       menuBtnToggle.classList.add('filter__region-btn--open');
     } else closeMenu();
   };
+  const changeBtnText = () => {
+    if (menuBtnToggle.classList.contains('filter__region-btn--open')) {
+      menuBtnToggleText.textContent = 'Свернуть';
+    } else menuBtnToggleText.textContent = 'Показать все';
+  };
 
   menuBtnToggle.addEventListener('click', (evt) => {
     evt.preventDefault();
     toggleMenu();
+    changeBtnText();
   });
 
   menuBtnClose.addEventListener('click', (evt) => {

@@ -7,11 +7,21 @@
   margin-bottom: 20px;
   padding-left: 0;
   list-style: none;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 50px;
+  }
 }
 
 .search-results__partner-item:not(:last-child) {
   margin-bottom: 10px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 39px;
+  }
 }
+
+/* Button Show More */
 
 .search-results__show-more {
   position: relative;
@@ -27,6 +37,13 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 53px;
+    padding-left: 51px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   &:hover::before,
   &:hover::after {
@@ -50,6 +67,11 @@
     background-color: var(--basic-300);
     transform: translateY(-50%);
     transition: filter 0.3s;
+
+    @media (min-width: $tablet) {
+      width: 26px;
+      left: -1px;
+    }
   }
 
   &::after {
@@ -59,15 +81,60 @@
 
 /* Pagination */
 
+.search-results__pagination-wrapper {
+  @media (min-width: $tablet) {
+    margin-bottom: 73px;
+    padding-right: 17px;
+    padding-left: 28px;
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 89px;
+    border-radius: 20px;
+    background-color: var(--background-white);
+  }
+}
+
 .search-results__pagination-list {
   display: none;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+
+  @media (min-width: $tablet) {
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.search-results__pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-family: $font-bold;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--basic-300);
+  border-radius: 50%;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: var(--basic-300-halffade);
+  }
+
+  &--active,
+  &:active {
+    color: var(--basic-300);
+    background-color: var(--accent);
+  }
 }
 
 .search-results__controls-wrapper {
+  grid-column: 2 / 3;
   display: grid;
   justify-content: space-between;
   align-items: center;
@@ -89,10 +156,11 @@
 
   &:hover {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14);
+    filter: opacity(0.6);
   }
 
   &:active {
-    filter: opacity(0.6);
+    filter: opacity(0.3);
   }
 
   &::after {
