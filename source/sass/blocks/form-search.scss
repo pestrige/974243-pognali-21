@@ -12,7 +12,7 @@
   border-top: 1px solid #f3c72b;
   overflow-y: hidden;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: 1439px) {
     margin-bottom: 9px;
     display: grid;
     grid-template-columns: 126px 1fr;
@@ -37,6 +37,14 @@
       margin-bottom: 36px;
       padding-bottom: 21px;
       border-bottom: 1px solid #f3c72b;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    border-top: none;
+
+    &:nth-child(4) {
+      margin-bottom: 16px;
     }
   }
 
@@ -73,6 +81,10 @@
     cursor: default;
   }
 
+  @media (min-width: $desktop) {
+    cursor: pointer;
+  }
+
   &:hover {
     filter: opacity(0.6);
 
@@ -84,7 +96,7 @@
   &:active {
     filter: opacity(0.3);
 
-    @media (min-width: $tablet) {
+    @media (min-width: $tablet) and (max-width: 1439px) {
       filter: opacity(1);
     }
   }
@@ -116,7 +128,7 @@
     border-bottom: 5px solid var(--basic-400);
     transition: transform 0.3s, top 0.3s;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $tablet) and (max-width: 1439px) {
       display: none;
     }
   }
@@ -125,7 +137,7 @@
 .form-search__legend-symbol {
   display: none;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: 1439px) {
     display: inline;
   }
 }
@@ -147,12 +159,17 @@
   overflow-y: hidden;
   transition: opacity 0.5s, visibility 0.5s, transform 0.5s, margin 0.5s, height 0.5s;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: 1439px) {
     margin-top: 9px;
     grid-template-columns: unset;
     grid-auto-flow: column;
     justify-content: start;
     align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 15px;
+    row-gap: 16px;
   }
 
   &--row {
@@ -167,6 +184,11 @@
       margin-bottom: 0;
     }
 
+    @media (min-width: $desktop) {
+      margin-top: 6px;
+      margin-left: 0;
+    }
+
     li {
       margin-right: 1px;
     }
@@ -176,9 +198,14 @@
     margin-top: 3px;
     padding-left: 0;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $tablet) and (max-width: 1439px) {
       grid-template-columns: 1fr;
       margin-top: 0;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 10px;
+      margin-left: 7px;
     }
 
     .form-search__options-wrapper {
@@ -188,6 +215,10 @@
       @media (min-width: $tablet) {
         padding-left: 0;
         padding-right: 6px;
+      }
+
+      @media (min-width: $desktop) {
+        margin-bottom: 26px;
       }
     }
   }
@@ -200,7 +231,7 @@
     opacity: 0;
     transform: translateY(-40px);
 
-    @media (min-width: $tablet) {
+    @media (min-width: $tablet) and (max-width: 1439px) {
       height: auto;
       visibility: visible;
       opacity: 1;
@@ -222,6 +253,10 @@
       grid-template-columns: 293px 155px;
       column-gap: 56px;
       align-items: center;
+    }
+
+    @media (min-width: $desktop) {
+      grid-template-columns: 1fr;
     }
   }
 }
@@ -311,6 +346,10 @@
 
   @media (min-width: $tablet) {
     order: 2;
+  }
+
+  @media (min-width: $desktop) {
+    order: 0;
   }
 }
 
@@ -408,6 +447,11 @@
   @media (min-width: $tablet) {
     padding-top: 9px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 18px;
+    padding-left: 0;
+  }
 }
 
 .form-search__range-line {
@@ -433,6 +477,10 @@
     left: 36%;
     height: 3px;
     border-radius: 2px;
+  }
+
+  @media (min-width: $desktop) {
+    left: 30%;
   }
 }
 
@@ -500,6 +548,11 @@
     padding: 18px 25px 12px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 5px;
+    margin-right: 2px;
   }
 
   &:hover,

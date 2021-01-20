@@ -13,6 +13,11 @@
       align-items: end;
     }
 
+    @media (min-width: $desktop) {
+      flex-direction: row;
+      align-items: start;
+    }
+
     .icons-list__item {
       display: flex;
       justify-content: center;

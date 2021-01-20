@@ -11,7 +11,7 @@
     "btn btn btn";
   border-radius: 20px;
   background-color: var(--background-white);
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition: box-shadow 0.3s;
 
   @media (min-width: $tablet) {
     padding: 17px 0 18px;
@@ -21,17 +21,36 @@
       "userpic tags tags transport"
       "userpic btn rating level"
       "ways ways ways ways";
+
+    &:hover .partner__userpic img {
+      transform: scale(1.2);
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    grid-template-columns: 285px 204px 185px 1fr 105px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "userpic name name ways ways"
+      "userpic tags tags ways ways"
+      "userpic btn rating transport chart";
+    align-items: start;
+    align-content: start;
   }
 
   &:hover {
     box-shadow: 0 4px 9px rgba(0, 0, 0, 0.16);
-    transform: scale(1.01);
   }
 
   /* For Pixel Perfect */
   &--demin {
     @media (min-width: $tablet) {
       padding-top: 18px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-top: 0;
     }
 
     .partner__ways-wrapper {
@@ -95,12 +114,27 @@
   height: 70px;
   margin-left: 18px;
   grid-area: userpic;
+  overflow: hidden;
 
   @media (min-width: $tablet) {
     width: 190px;
     height: 190px;
     margin-left: 35px;
     margin-top: 18px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 285px;
+    height: 285px;
+    margin-left: 0;
+    margin-top: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  img {
+    transition: transform 0.3s;
   }
 }
 
@@ -124,6 +158,12 @@
     align-items: center;
     font-size: 30px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 46px;
+    margin-left: 36px;
+    margin-bottom: 21px;
   }
 
   &:hover {
@@ -150,6 +190,12 @@
       right: auto;
       width: 8px;
       height: 8px;
+    }
+
+    @media (min-width: $desktop) {
+      order: -1;
+      margin-left: 0;
+      margin-right: 18px;
     }
   }
 
@@ -192,6 +238,11 @@
     line-height: 23px;
     padding: 0 5px 2px 3px;
   }
+
+  @media (min-width: $desktop) {
+    margin-left: 59px;
+    margin-right: 65px;
+  }
 }
 
 /* Ways countries block */
@@ -207,8 +258,10 @@
 
   @media (min-width: $tablet) {
     display: none;
+  }
 
-    &--show {
+  &--show {
+    @media (min-width: $tablet) and (max-width: 1439px) {
       display: block;
       margin-top: 16px;
       margin-bottom: 18px;
@@ -265,6 +318,13 @@
     display: flex;
     align-items: center;
   }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+    align-items: start;
+    margin-left: 0;
+    margin-top: 49px;
+  }
 }
 
 .partner__ways-item {
@@ -279,6 +339,11 @@
     margin-bottom: 0;
     margin-right: 27px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 14px;
+    margin-right: 0;
+  }
 }
 
 .partner__country-flag {
@@ -290,6 +355,10 @@
     width: 35px;
     height: 24px;
     margin-right: 11px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 18px;
   }
 }
 
@@ -327,6 +396,11 @@
     margin-left: 15px;
     margin-top: 16px;
   }
+
+  @media (min-width: $desktop) {
+    margin-left: -4px;
+    margin-top: 11px;
+  }
 }
 
 /* Level Block */
@@ -344,6 +418,11 @@
   @media (min-width: $tablet) {
     top: -4px;
     left: 0;
+  }
+
+  @media (min-width: $desktop) {
+    top: -105px;
+    left: -106px;
   }
 }
 
@@ -374,6 +453,10 @@
     line-height: 20px;
   }
 
+  @media (min-width: $desktop) {
+    margin: 0 0 48px 54px;
+  }
+
   &:hover {
     background-color: var(--accent-600);
   }
@@ -398,6 +481,10 @@
     margin-bottom: 0;
     margin-left: 1px;
     align-self: end;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 47px;
   }
 }
 

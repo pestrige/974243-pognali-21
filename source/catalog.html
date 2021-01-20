@@ -60,7 +60,7 @@
           <ul class="main-nav__contacts-list contacts-list">
             <li class="contacts-list__item">
               <a class="contacts-list__link" href="tel:+78005558628">
-                <svg class="contacts-list__svg" viewBox="0 0 45 45">
+                <svg class="contacts-list__svg" width="45" height="45" viewBox="0 0 45 45">
                   <circle cx="22.5" cy="22.5" r="22.5" />
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M22.4999 15.0862C19.7035 15.0862 16.9003 15.5588 15.8832 16.5009C15.0393 17.2825 14.758 18.6633 14.6632 19.5375C14.6632 19.5375 14.6501 19.6239 14.6501 19.6611C14.6501 20.0039 14.9444 20.2789 15.3043 20.2789C15.3468 20.2789 16.92 20.1584 17.8685 20.0843C17.8913 20.0811 17.9143 20.0781 17.9372 20.0719C18.2904 20.0627 18.575 19.7908 18.575 19.4541L18.5782 18.237C18.5782 17.8601 18.9021 17.5574 19.3012 17.5574H25.6987C26.0978 17.5574 26.4218 17.8601 26.4218 18.237L26.425 19.4541C26.425 19.7908 26.7095 20.0627 27.0628 20.0719C27.0854 20.0781 27.1085 20.0811 27.1315 20.0843C28.0801 20.1583 29.6533 20.2789 29.6957 20.2789C30.0553 20.2789 30.3499 20.0039 30.3499 19.6611C30.3499 19.6239 30.3368 19.5375 30.3368 19.5375C30.2419 18.6633 29.9609 17.2826 29.117 16.5009C28.0996 15.5588 25.2964 15.0862 22.4999 15.0862ZM22.4999 23.1177C21.7771 23.1177 21.1916 23.6706 21.1916 24.3533C21.1916 25.036 21.7771 25.5889 22.4999 25.5889C23.2228 25.5889 23.8082 25.036 23.8082 24.3533C23.8082 23.6706 23.2228 23.1177 22.4999 23.1177ZM21.5187 20.3375V19.5653C21.5187 19.139 21.1524 18.793 20.7011 18.793C20.2498 18.793 19.8834 19.1391 19.8834 19.5653V20.3375L15.4709 24.7889C15.1669 25.07 14.9771 25.4622 14.9771 25.8948V27.1335C14.9771 27.8162 15.5626 28.3691 16.2854 28.3691H16.6125V29.1414C16.6125 29.5677 16.979 29.9136 17.4302 29.9136C17.8815 29.9136 18.2479 29.5677 18.2479 29.1414V28.3691H26.752V29.1414C26.752 29.5677 27.1182 29.9136 27.5697 29.9136C28.021 29.9136 28.3873 29.5677 28.3873 29.1414V28.3691H28.7144C29.4373 28.3691 30.0227 27.8162 30.0227 27.1335V25.8948C30.0227 25.4622 29.833 25.07 29.5289 24.7889L25.1166 20.3375V19.5653C25.1166 19.139 24.7502 18.793 24.2989 18.793C23.8476 18.793 23.4812 19.1391 23.4812 19.5653V20.3375H21.5187ZM22.4999 21.8821C23.9456 21.8821 25.1166 22.988 25.1166 24.3533C25.1166 25.7187 23.9457 26.8247 22.4999 26.8247C21.0543 26.8247 19.8834 25.7187 19.8834 24.3533C19.8834 22.988 21.0543 21.8821 22.4999 21.8821Z" />
@@ -70,7 +70,7 @@
             </li>
             <li class="contacts-list__item">
               <a class="contacts-list__link" href="mailto:mail@htmlacademy.ru">
-                <svg class="contacts-list__svg" viewBox="0 0 45 45">
+                <svg class="contacts-list__svg" width="45" height="45" viewBox="0 0 45 45">
                   <circle cx="22.5" cy="22.5" r="22.5" />
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M30.1393 27.4663L25.8089 23.5L30.1393 19.5337L29.5488 18.9026L23.25 24.6719L16.9512 18.9026L16.3607 19.5337L20.6911 23.5L16.3607 27.4663L16.9512 28.0974L21.3308 24.0859L23.25 25.8438L25.1691 24.0859L29.5488 28.0974L30.1393 27.4663ZM15.5759 17.25C14.7669 17.25 14.1111 17.9488 14.1111 18.8079V28.1921C14.1111 29.0525 14.7616 29.75 15.5759 29.75H30.924C31.733 29.75 32.3889 29.0512 32.3889 28.1921V18.8079C32.3889 17.9475 31.7383 17.25 30.924 17.25H15.5759Z" />
@@ -124,13 +124,14 @@
     </div>
   </header>
 
-  <main class="main-content">
+  <main class="main-content main-content--catalog">
     <div class="main-content__title page-title page-title--catalog">
       <div class="page-title__wrapper container">
         <h1 class="page-title__text">Попутчики</h1>
         <a class="page-title__index-link" href="./index.html">На главную</a>
       </div>
     </div>
+
     <section class="main-content__filter filter">
       <div class="filter__wrapper container">
         <h2 class="filter__title">Фильтрация по странам:</h2>
@@ -232,8 +233,8 @@
                     <a href="#" class="countries-catalog__letter-link" data-letter="Р">Я</a>
                   </li>
                 </ul>
-                <div class="countries-catalog__countries-set">
-                  <ul class="countries-catalog__countries-list" data-countries="А">
+                <ul class="countries-catalog__countries-set">
+                  <ul class="countries-catalog__countries-list countries-catalog__countries-list--show" data-countries="А">
                     <li class="countries-catalog__country">
                       <a class="countries-catalog__country-link" href="#">Австралия</a>
                     </li>
@@ -268,7 +269,511 @@
                       <a class="countries-catalog__country-link" href="#">Афганистан</a>
                     </li>
                   </ul>
-                </div>
+                  <ul class="countries-catalog__countries-list" data-countries="Б">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Багамские Острова</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Бангладеш</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Барбадос</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Бахрейн</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Белоруссия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Белиз</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Бельгия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Бенин</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Болгария</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Боливия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Босния и Герцеговина</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Ботсвана</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Бразилия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Бруней</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Буркина-Фасо</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Бурунди</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Бутан</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="В">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Вануату</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Великобритания</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Венгрия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Венесуэла</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Восточный Тимор</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Вьетнам</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="Г">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Габон</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Гаити</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Гайана</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Гамбия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Гана</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Гватемала</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Гвинея</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Гвинея-Бисау</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Германия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Гондурас</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Гренада</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Греция</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Грузия</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="Д">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Дания</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Джибути</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Доминика</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Доминикана</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="Е">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Египет</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="З">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Замбия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Зимбабве</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="И">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Израиль</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Индия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Индонезия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Иордания</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Ирак</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Иран</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Ирландия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Исландия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Испания</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Италия</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="К">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Кабо-Верде</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Казахстан</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Камбоджа</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Камерун</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Канада</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Катар</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Кения</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Кипр</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Киргизия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Кирибати</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Китай</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Колумбия</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="Л">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Лаос</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Латвия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Лесото</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Либерия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Ливан</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Ливия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Литва</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Лихтенштейн</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Люксембург</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="М">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Маврикий</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Мавритания</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Мадагаскар</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Малави</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Малайзия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Мали</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Мальдивы</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Мальта</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Марокко</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="Н">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Намибия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Науру</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Непал</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Нигер</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Нигерия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Нидерланды</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Никарагуа</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Новая Зеландия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Норвегия</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="О">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">ОАЭ</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Оман</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="П">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Пакистан</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Палау</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Панама</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Папуа - Новая Гвинея</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Парагвай</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Перу</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Польша</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Португалия</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="Р">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Руанда</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Румыния</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Россия</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="С">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Сальвадор</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Самоа</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Сан-Марино</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Саудовская Аравия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Сейшелы</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Сенегал</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Сербия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Сингапур</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Сирия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Словакия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Словения</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">США</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="Т">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Таджикистан</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Таиланд</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Танзания</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Того</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Тонга</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Тринидад и Тобаго</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Тувалу</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Тунис</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Туркмения</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Турция</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="У">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Уганда</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Узбекистан</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Украина</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Уругвай</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="Ф">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Фиджи</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Филиппины</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Финляндия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Франция</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="Х">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Хорватия</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="Ч">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Чад</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Черногория</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Чехия</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Чили</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="Ш">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Швейцария</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Швеция</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Шри-Ланка</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="Э">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Эквадор</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Эритрея</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Эсватини</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Эстония</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Эфиопия</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="Ю">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">ЮАР</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Южный Судан</a>
+                    </li>
+                  </ul>
+                  <ul class="countries-catalog__countries-list" data-countries="Я">
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Ямайка</a>
+                    </li>
+                    <li class="countries-catalog__country">
+                      <a class="countries-catalog__country-link" href="#">Япония</a>
+                    </li>
+                  </ul>
+                </ul>
                 <button class="countries-catalog__close">
                   <span class="countries-catalog__close-text">Свернуть</span>
                 </button>
@@ -279,6 +784,7 @@
       </div>
     </section>
 
+    <div class="main-content__partner-group">
     <section class="main-content__partner-search partner-search">
       <div class="container">
         <div class="partner-search__wrapper">
@@ -360,7 +866,7 @@
                 </li>
                 <li class="form-search__options-item">
                   <label class="form-search__checkbox-label">
-                    <input class="form-search__checkbox visually-hidden" type="checkbox" name="healthy-food" checked>
+                    <input class="form-search__checkbox visually-hidden" type="checkbox" name="healthy-food">
                     <span class="form-search__custom-checkbox"></span>
                     <span class="form-search__checkbox-descr">Сидит на ПП</span>
                   </label>
@@ -481,6 +987,8 @@
           <li class="search-results__partner-item">
             <article class="partner">
               <picture class="partner__userpic">
+                <source srcset="./img/content/partner-desktop-firsova.png 1x,
+                ./img/content/partner-desktop-firsova@2x.png 2x" media="(min-width: 1440px">
                 <source srcset="./img/content/partner-tablet-firsova.png 1x,
                   ./img/content/partner-tablet-firsova@2x.png 2x" media="(min-width: 768px">
                 <img src="./img/content/partner-mobile-firsova.png"
@@ -523,19 +1031,19 @@
                   <h4 class="partner__block-title">Транспорт:</h4>
                 </div>
                 <ul class="partner__transport-list icons-list icons-list--circle">
-                  <li class="icons-list__item icons-list__item--active">
+                  <li class="icons-list__item icons-list__item--active tooltip" data-tooltip="Авиаперелет">
                     <svg width="21" height="23" viewBox="0 0 21 23">
                       <path
                         d="M16.7831 2.09314C16.0546 2.26635 15.3227 2.44038 15.0504 2.91723L12.9433 7.11585L1.62916 9.8059L1.17076 11.1474L9.82861 11.9662L8.35967 15.6009L5.07624 16.3816L4.25187 17.8101L6.62062 18.0673L6.89073 19.2357C7.01174 19.6498 7.43649 19.9263 7.79903 19.8401L8.89351 19.5799L10.1622 21.7433L10.9866 20.3148L10.1763 16.8098L12.5535 13.7795L17.0895 21.741L18.0042 20.7031L15.2128 8.62921L17.7762 4.73424C18.0519 4.25657 17.8721 3.47891 17.6914 2.69759C17.6019 2.31059 17.1457 2.00694 16.7831 2.09314Z" />
                     </svg>
                   </li>
-                  <li class="icons-list__item">
+                  <li class="icons-list__item tooltip" data-tooltip="Автотранспорт">
                     <svg viewBox="0 0 18 21" width="18" height="21">
                       <path
                         d="M4.34046 13.9485C4.34046 13.5699 4.20185 13.2467 3.92462 12.9788C3.64739 12.711 3.31288 12.5771 2.92106 12.5771C2.52925 12.5771 2.19473 12.711 1.91751 12.9788C1.64028 13.2467 1.50167 13.5699 1.50167 13.9485C1.50167 14.3271 1.64028 14.6503 1.91751 14.9181C2.19473 15.186 2.52925 15.3199 2.92106 15.3199C3.31288 15.3199 3.64739 15.186 3.92462 14.9181C4.20185 14.6503 4.34046 14.3271 4.34046 13.9485ZM15.6956 13.9485C15.6956 13.5699 15.557 13.2467 15.2798 12.9788C15.0025 12.711 14.668 12.5771 14.2762 12.5771C13.8844 12.5771 13.5499 12.711 13.2727 12.9788C12.9954 13.2467 12.8568 13.5699 12.8568 13.9485C12.8568 14.3271 12.9954 14.6503 13.2727 14.9181C13.5499 15.186 13.8844 15.3199 14.2762 15.3199C14.668 15.3199 15.0025 15.186 15.2798 14.9181C15.557 14.6503 15.6956 14.3271 15.6956 13.9485ZM15.1855 9.70563L14.3871 5.59135C14.3501 5.42706 14.267 5.29313 14.1376 5.18956C14.0082 5.08599 13.8585 5.0342 13.6885 5.0342H3.50878C3.33875 5.0342 3.18905 5.08599 3.05968 5.18956C2.9303 5.29313 2.84714 5.42706 2.81017 5.59135L2.01176 9.70563C1.9748 9.91992 2.02655 10.1092 2.16701 10.2735C2.30747 10.4378 2.48859 10.5199 2.71037 10.5199H14.4869C14.7087 10.5199 14.8898 10.4378 15.0303 10.2735C15.1707 10.1092 15.2225 9.91992 15.1855 9.70563ZM12.6794 3.14849C12.6794 3.00563 12.6276 2.88421 12.5242 2.78421C12.4207 2.68421 12.295 2.63421 12.1471 2.63421H5.05015C4.9023 2.63421 4.77663 2.68421 4.67313 2.78421C4.56963 2.88421 4.51788 3.00563 4.51788 3.14849C4.51788 3.29135 4.56963 3.41278 4.67313 3.51278C4.77663 3.61278 4.9023 3.66278 5.05015 3.66278H12.1471C12.295 3.66278 12.4207 3.61278 12.5242 3.51278C12.6276 3.41278 12.6794 3.29135 12.6794 3.14849ZM17.115 10.9163V17.3771H15.6956V18.7485C15.6956 19.1271 15.557 19.4503 15.2798 19.7181C15.0025 19.986 14.668 20.1199 14.2762 20.1199C13.8844 20.1199 13.5499 19.986 13.2727 19.7181C12.9954 19.4503 12.8568 19.1271 12.8568 18.7485V17.3771H4.34046V18.7485C4.34046 19.1271 4.20185 19.4503 3.92462 19.7181C3.64739 19.986 3.31288 20.1199 2.92106 20.1199C2.52925 20.1199 2.19473 19.986 1.91751 19.7181C1.64028 19.4503 1.50167 19.1271 1.50167 18.7485V17.3771H0.0822754V10.9163C0.0822754 10.1163 0.174684 9.31992 0.359501 8.52706L1.50167 3.66278C1.5682 3.10563 1.9286 2.61635 2.58285 2.19492C3.2371 1.77349 4.08726 1.45564 5.13332 1.24135C6.17939 1.02706 7.33449 0.919922 8.59864 0.919922C9.86279 0.919922 11.0179 1.02706 12.064 1.24135C13.11 1.45564 13.9602 1.77349 14.6144 2.19492C15.2687 2.61635 15.6291 3.10563 15.6956 3.66278L16.86 8.52706C17.03 9.25563 17.115 10.0521 17.115 10.9163Z" />
                     </svg>
                   </li>
-                  <li class="icons-list__item">
+                  <li class="icons-list__item tooltip" data-tooltip="Велоспипед">
                     <svg width="25" height="24" viewBox="0 0 25 24">
                       <path d=" M18.3075 21C17.4664 21 16.6442 20.7471 15.9449 20.2732C15.2456 19.7994 14.7005 19.1258
                       14.3786 18.3378C14.0568 17.5498 13.9726 16.6827 14.1366 15.8462C14.3007 15.0096 14.7057 14.2412
@@ -556,7 +1064,7 @@
                         d="M17.3622 9.00003H15.3395C15.3063 9.00004 15.2737 8.99099 15.2452 8.97384C15.2167 8.95668 15.1932 8.93205 15.1773 8.90253L13.7101 6.17581C13.6068 5.97318 13.4578 5.79807 13.2753 5.66467C13.0928 5.53127 12.8818 5.44333 12.6596 5.40795C12.4373 5.37258 12.21 5.39077 11.996 5.46106C11.7819 5.53135 11.5872 5.65175 11.4276 5.81253L8.19843 9.11253C7.92715 9.39333 7.77316 9.76945 7.76855 10.1625C7.76855 10.9782 8.35097 11.2688 8.62369 11.4328C9.94106 12.2025 10.8688 12.7655 11.3777 13.0782C11.4047 13.0949 11.4271 13.1183 11.4427 13.1463C11.4582 13.1743 11.4664 13.2059 11.4664 13.238V16.478C11.4664 16.8816 11.7724 17.228 12.1704 17.2482C12.2703 17.253 12.3702 17.2373 12.464 17.2019C12.5577 17.1666 12.6434 17.1123 12.7159 17.0423C12.7883 16.9724 12.8461 16.8883 12.8855 16.7951C12.925 16.7018 12.9455 16.6015 12.9456 16.5V12.4688C12.9457 12.3497 12.9178 12.2324 12.8642 12.1264C12.8107 12.0204 12.7331 11.9289 12.6377 11.8594L10.9275 10.6121C10.906 10.5965 10.8881 10.5764 10.8749 10.5532C10.8617 10.53 10.8536 10.5043 10.851 10.4776C10.8485 10.451 10.8516 10.4241 10.8602 10.3988C10.8687 10.3734 10.8825 10.3503 10.9007 10.3308L12.842 8.23128C12.862 8.20968 12.8866 8.19316 12.914 8.18307C12.9414 8.17297 12.9708 8.1696 12.9997 8.17321C13.0287 8.17682 13.0563 8.18731 13.0805 8.20384C13.1047 8.22037 13.1247 8.24246 13.1388 8.26831L14.1474 10.1143C14.2115 10.2313 14.3053 10.3288 14.4191 10.3966C14.5329 10.4644 14.6625 10.5001 14.7945 10.5H17.383C17.4832 10.5002 17.5824 10.4796 17.6745 10.4397C17.7667 10.3998 17.8498 10.3413 17.919 10.2678C17.9882 10.1942 18.0419 10.1073 18.0769 10.012C18.1119 9.91685 18.1274 9.81542 18.1226 9.71394C18.1032 9.31035 17.7602 9.00003 17.3622 9.00003Z" />
                     </svg>
                   </li>
-                  <li class="icons-list__item">
+                  <li class="icons-list__item tooltip" data-tooltip="Пешком">
                     <svg width="21" height="24" viewBox="0 0 21 24" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M14.9758 5.75992C15.9264 5.75992 16.697 4.90031 16.697 3.83992C16.697 2.77954 15.9264 1.91992 14.9758 1.91992C14.0252 1.91992 13.2546 2.77954 13.2546 3.83992C13.2546 4.90031 14.0252 5.75992 14.9758 5.75992Z" />
@@ -571,7 +1079,7 @@
                   <h4 class="partner__block-title">Левел:</h4>
                 </div>
                 <div class="partner__level chart chart--small">
-                  <svg class="chart__svg" viewBox="0 0 35 35">
+                  <svg class="chart__svg" width="45" height="45" viewBox="0 0 35 35">
                     <circle class="chart__circle" r="15.9" cx="50%" cy="50%" stroke-dasharray="95 100"></circle>
                   </svg>
                   <div class="chart__text">
@@ -597,6 +1105,8 @@
           <li class="search-results__partner-item">
             <article class="partner  partner--demin">
               <picture class="partner__userpic">
+                <source srcset="./img/content/partner-desktop-demin.png 1x,
+                ./img/content/partner-desktop-demin@2x.png 2x" media="(min-width: 1440px">
                 <source srcset="./img/content/partner-tablet-demin.png 1x,
                 ./img/content/partner-tablet-demin@2x.png 2x" media="(min-width: 768px">
                 <img src="./img/content/partner-mobile-demin.png" srcset="./img/content/partner-mobile-demin@2x.png 2x"
@@ -632,19 +1142,19 @@
                   <h4 class="partner__block-title">Транспорт:</h4>
                 </div>
                 <ul class="partner__transport-list icons-list icons-list--circle">
-                  <li class="icons-list__item icons-list__item--active">
+                  <li class="icons-list__item icons-list__item--active tooltip" data-tooltip="Авиаперелет">
                     <svg width="21" height="23" viewBox="0 0 21 23">
                       <path
                         d="M16.7831 2.09314C16.0546 2.26635 15.3227 2.44038 15.0504 2.91723L12.9433 7.11585L1.62916 9.8059L1.17076 11.1474L9.82861 11.9662L8.35967 15.6009L5.07624 16.3816L4.25187 17.8101L6.62062 18.0673L6.89073 19.2357C7.01174 19.6498 7.43649 19.9263 7.79903 19.8401L8.89351 19.5799L10.1622 21.7433L10.9866 20.3148L10.1763 16.8098L12.5535 13.7795L17.0895 21.741L18.0042 20.7031L15.2128 8.62921L17.7762 4.73424C18.0519 4.25657 17.8721 3.47891 17.6914 2.69759C17.6019 2.31059 17.1457 2.00694 16.7831 2.09314Z" />
                     </svg>
                   </li>
-                  <li class="icons-list__item icons-list__item--active">
+                  <li class="icons-list__item icons-list__item--active tooltip" data-tooltip="Автотранспорт">
                     <svg viewBox="0 0 18 21" width="18" height="21">
                       <path
                         d="M4.34046 13.9485C4.34046 13.5699 4.20185 13.2467 3.92462 12.9788C3.64739 12.711 3.31288 12.5771 2.92106 12.5771C2.52925 12.5771 2.19473 12.711 1.91751 12.9788C1.64028 13.2467 1.50167 13.5699 1.50167 13.9485C1.50167 14.3271 1.64028 14.6503 1.91751 14.9181C2.19473 15.186 2.52925 15.3199 2.92106 15.3199C3.31288 15.3199 3.64739 15.186 3.92462 14.9181C4.20185 14.6503 4.34046 14.3271 4.34046 13.9485ZM15.6956 13.9485C15.6956 13.5699 15.557 13.2467 15.2798 12.9788C15.0025 12.711 14.668 12.5771 14.2762 12.5771C13.8844 12.5771 13.5499 12.711 13.2727 12.9788C12.9954 13.2467 12.8568 13.5699 12.8568 13.9485C12.8568 14.3271 12.9954 14.6503 13.2727 14.9181C13.5499 15.186 13.8844 15.3199 14.2762 15.3199C14.668 15.3199 15.0025 15.186 15.2798 14.9181C15.557 14.6503 15.6956 14.3271 15.6956 13.9485ZM15.1855 9.70563L14.3871 5.59135C14.3501 5.42706 14.267 5.29313 14.1376 5.18956C14.0082 5.08599 13.8585 5.0342 13.6885 5.0342H3.50878C3.33875 5.0342 3.18905 5.08599 3.05968 5.18956C2.9303 5.29313 2.84714 5.42706 2.81017 5.59135L2.01176 9.70563C1.9748 9.91992 2.02655 10.1092 2.16701 10.2735C2.30747 10.4378 2.48859 10.5199 2.71037 10.5199H14.4869C14.7087 10.5199 14.8898 10.4378 15.0303 10.2735C15.1707 10.1092 15.2225 9.91992 15.1855 9.70563ZM12.6794 3.14849C12.6794 3.00563 12.6276 2.88421 12.5242 2.78421C12.4207 2.68421 12.295 2.63421 12.1471 2.63421H5.05015C4.9023 2.63421 4.77663 2.68421 4.67313 2.78421C4.56963 2.88421 4.51788 3.00563 4.51788 3.14849C4.51788 3.29135 4.56963 3.41278 4.67313 3.51278C4.77663 3.61278 4.9023 3.66278 5.05015 3.66278H12.1471C12.295 3.66278 12.4207 3.61278 12.5242 3.51278C12.6276 3.41278 12.6794 3.29135 12.6794 3.14849ZM17.115 10.9163V17.3771H15.6956V18.7485C15.6956 19.1271 15.557 19.4503 15.2798 19.7181C15.0025 19.986 14.668 20.1199 14.2762 20.1199C13.8844 20.1199 13.5499 19.986 13.2727 19.7181C12.9954 19.4503 12.8568 19.1271 12.8568 18.7485V17.3771H4.34046V18.7485C4.34046 19.1271 4.20185 19.4503 3.92462 19.7181C3.64739 19.986 3.31288 20.1199 2.92106 20.1199C2.52925 20.1199 2.19473 19.986 1.91751 19.7181C1.64028 19.4503 1.50167 19.1271 1.50167 18.7485V17.3771H0.0822754V10.9163C0.0822754 10.1163 0.174684 9.31992 0.359501 8.52706L1.50167 3.66278C1.5682 3.10563 1.9286 2.61635 2.58285 2.19492C3.2371 1.77349 4.08726 1.45564 5.13332 1.24135C6.17939 1.02706 7.33449 0.919922 8.59864 0.919922C9.86279 0.919922 11.0179 1.02706 12.064 1.24135C13.11 1.45564 13.9602 1.77349 14.6144 2.19492C15.2687 2.61635 15.6291 3.10563 15.6956 3.66278L16.86 8.52706C17.03 9.25563 17.115 10.0521 17.115 10.9163Z" />
                     </svg>
                   </li>
-                  <li class="icons-list__item">
+                  <li class="icons-list__item tooltip" data-tooltip="Велосипед">
                     <svg width="25" height="24" viewBox="0 0 25 24">
                       <path d=" M18.3075 21C17.4664 21 16.6442 20.7471 15.9449 20.2732C15.2456 19.7994 14.7005 19.1258
                       14.3786 18.3378C14.0568 17.5498 13.9726 16.6827 14.1366 15.8462C14.3007 15.0096 14.7057 14.2412
@@ -665,7 +1175,7 @@
                         d="M17.3622 9.00003H15.3395C15.3063 9.00004 15.2737 8.99099 15.2452 8.97384C15.2167 8.95668 15.1932 8.93205 15.1773 8.90253L13.7101 6.17581C13.6068 5.97318 13.4578 5.79807 13.2753 5.66467C13.0928 5.53127 12.8818 5.44333 12.6596 5.40795C12.4373 5.37258 12.21 5.39077 11.996 5.46106C11.7819 5.53135 11.5872 5.65175 11.4276 5.81253L8.19843 9.11253C7.92715 9.39333 7.77316 9.76945 7.76855 10.1625C7.76855 10.9782 8.35097 11.2688 8.62369 11.4328C9.94106 12.2025 10.8688 12.7655 11.3777 13.0782C11.4047 13.0949 11.4271 13.1183 11.4427 13.1463C11.4582 13.1743 11.4664 13.2059 11.4664 13.238V16.478C11.4664 16.8816 11.7724 17.228 12.1704 17.2482C12.2703 17.253 12.3702 17.2373 12.464 17.2019C12.5577 17.1666 12.6434 17.1123 12.7159 17.0423C12.7883 16.9724 12.8461 16.8883 12.8855 16.7951C12.925 16.7018 12.9455 16.6015 12.9456 16.5V12.4688C12.9457 12.3497 12.9178 12.2324 12.8642 12.1264C12.8107 12.0204 12.7331 11.9289 12.6377 11.8594L10.9275 10.6121C10.906 10.5965 10.8881 10.5764 10.8749 10.5532C10.8617 10.53 10.8536 10.5043 10.851 10.4776C10.8485 10.451 10.8516 10.4241 10.8602 10.3988C10.8687 10.3734 10.8825 10.3503 10.9007 10.3308L12.842 8.23128C12.862 8.20968 12.8866 8.19316 12.914 8.18307C12.9414 8.17297 12.9708 8.1696 12.9997 8.17321C13.0287 8.17682 13.0563 8.18731 13.0805 8.20384C13.1047 8.22037 13.1247 8.24246 13.1388 8.26831L14.1474 10.1143C14.2115 10.2313 14.3053 10.3288 14.4191 10.3966C14.5329 10.4644 14.6625 10.5001 14.7945 10.5H17.383C17.4832 10.5002 17.5824 10.4796 17.6745 10.4397C17.7667 10.3998 17.8498 10.3413 17.919 10.2678C17.9882 10.1942 18.0419 10.1073 18.0769 10.012C18.1119 9.91685 18.1274 9.81542 18.1226 9.71394C18.1032 9.31035 17.7602 9.00003 17.3622 9.00003Z" />
                     </svg>
                   </li>
-                  <li class="icons-list__item icons-list__item--active">
+                  <li class="icons-list__item icons-list__item--active tooltip" data-tooltip="Пешком">
                     <svg width="21" height="24" viewBox="0 0 21 24" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M14.9758 5.75992C15.9264 5.75992 16.697 4.90031 16.697 3.83992C16.697 2.77954 15.9264 1.91992 14.9758 1.91992C14.0252 1.91992 13.2546 2.77954 13.2546 3.83992C13.2546 4.90031 14.0252 5.75992 14.9758 5.75992Z" />
@@ -680,7 +1190,7 @@
                   <h4 class="partner__block-title">Левел:</h4>
                 </div>
                 <div class="partner__level chart chart--small">
-                  <svg class="chart__svg" viewBox="0 0 35 35">
+                  <svg class="chart__svg" width="45" height="45" viewBox="0 0 35 35">
                     <circle class="chart__circle" r="15.9" cx="50%" cy="50%" stroke-dasharray="80 100"></circle>
                   </svg>
                   <div class="chart__text">
@@ -714,6 +1224,8 @@
           <li class="search-results__partner-item">
             <article class="partner partner--smolov">
               <picture class="partner__userpic">
+                <source srcset="./img/content/partner-desktop-smolov.png 1x,
+                ./img/content/partner-desktop-smolov@2x.png 2x" media="(min-width: 1440px">
                 <source srcset="./img/content/partner-tablet-smolov.png 1x,
                 ./img/content/partner-tablet-smolov@2x.png 2x" media="(min-width: 768px">
                 <img src="./img/content/partner-mobile-smolov.png"
@@ -756,19 +1268,19 @@
                   <h4 class="partner__block-title">Транспорт:</h4>
                 </div>
                 <ul class="partner__transport-list icons-list icons-list--circle">
-                  <li class="icons-list__item icons-list__item--active">
+                  <li class="icons-list__item icons-list__item--active tooltip" data-tooltip="Авиаперелет">
                     <svg width="21" height="23" viewBox="0 0 21 23">
                       <path
                         d="M16.7831 2.09314C16.0546 2.26635 15.3227 2.44038 15.0504 2.91723L12.9433 7.11585L1.62916 9.8059L1.17076 11.1474L9.82861 11.9662L8.35967 15.6009L5.07624 16.3816L4.25187 17.8101L6.62062 18.0673L6.89073 19.2357C7.01174 19.6498 7.43649 19.9263 7.79903 19.8401L8.89351 19.5799L10.1622 21.7433L10.9866 20.3148L10.1763 16.8098L12.5535 13.7795L17.0895 21.741L18.0042 20.7031L15.2128 8.62921L17.7762 4.73424C18.0519 4.25657 17.8721 3.47891 17.6914 2.69759C17.6019 2.31059 17.1457 2.00694 16.7831 2.09314Z" />
                     </svg>
                   </li>
-                  <li class="icons-list__item">
+                  <li class="icons-list__item tooltip" data-tooltip="Автотранспорт">
                     <svg viewBox="0 0 18 21" width="18" height="21">
                       <path
                         d="M4.34046 13.9485C4.34046 13.5699 4.20185 13.2467 3.92462 12.9788C3.64739 12.711 3.31288 12.5771 2.92106 12.5771C2.52925 12.5771 2.19473 12.711 1.91751 12.9788C1.64028 13.2467 1.50167 13.5699 1.50167 13.9485C1.50167 14.3271 1.64028 14.6503 1.91751 14.9181C2.19473 15.186 2.52925 15.3199 2.92106 15.3199C3.31288 15.3199 3.64739 15.186 3.92462 14.9181C4.20185 14.6503 4.34046 14.3271 4.34046 13.9485ZM15.6956 13.9485C15.6956 13.5699 15.557 13.2467 15.2798 12.9788C15.0025 12.711 14.668 12.5771 14.2762 12.5771C13.8844 12.5771 13.5499 12.711 13.2727 12.9788C12.9954 13.2467 12.8568 13.5699 12.8568 13.9485C12.8568 14.3271 12.9954 14.6503 13.2727 14.9181C13.5499 15.186 13.8844 15.3199 14.2762 15.3199C14.668 15.3199 15.0025 15.186 15.2798 14.9181C15.557 14.6503 15.6956 14.3271 15.6956 13.9485ZM15.1855 9.70563L14.3871 5.59135C14.3501 5.42706 14.267 5.29313 14.1376 5.18956C14.0082 5.08599 13.8585 5.0342 13.6885 5.0342H3.50878C3.33875 5.0342 3.18905 5.08599 3.05968 5.18956C2.9303 5.29313 2.84714 5.42706 2.81017 5.59135L2.01176 9.70563C1.9748 9.91992 2.02655 10.1092 2.16701 10.2735C2.30747 10.4378 2.48859 10.5199 2.71037 10.5199H14.4869C14.7087 10.5199 14.8898 10.4378 15.0303 10.2735C15.1707 10.1092 15.2225 9.91992 15.1855 9.70563ZM12.6794 3.14849C12.6794 3.00563 12.6276 2.88421 12.5242 2.78421C12.4207 2.68421 12.295 2.63421 12.1471 2.63421H5.05015C4.9023 2.63421 4.77663 2.68421 4.67313 2.78421C4.56963 2.88421 4.51788 3.00563 4.51788 3.14849C4.51788 3.29135 4.56963 3.41278 4.67313 3.51278C4.77663 3.61278 4.9023 3.66278 5.05015 3.66278H12.1471C12.295 3.66278 12.4207 3.61278 12.5242 3.51278C12.6276 3.41278 12.6794 3.29135 12.6794 3.14849ZM17.115 10.9163V17.3771H15.6956V18.7485C15.6956 19.1271 15.557 19.4503 15.2798 19.7181C15.0025 19.986 14.668 20.1199 14.2762 20.1199C13.8844 20.1199 13.5499 19.986 13.2727 19.7181C12.9954 19.4503 12.8568 19.1271 12.8568 18.7485V17.3771H4.34046V18.7485C4.34046 19.1271 4.20185 19.4503 3.92462 19.7181C3.64739 19.986 3.31288 20.1199 2.92106 20.1199C2.52925 20.1199 2.19473 19.986 1.91751 19.7181C1.64028 19.4503 1.50167 19.1271 1.50167 18.7485V17.3771H0.0822754V10.9163C0.0822754 10.1163 0.174684 9.31992 0.359501 8.52706L1.50167 3.66278C1.5682 3.10563 1.9286 2.61635 2.58285 2.19492C3.2371 1.77349 4.08726 1.45564 5.13332 1.24135C6.17939 1.02706 7.33449 0.919922 8.59864 0.919922C9.86279 0.919922 11.0179 1.02706 12.064 1.24135C13.11 1.45564 13.9602 1.77349 14.6144 2.19492C15.2687 2.61635 15.6291 3.10563 15.6956 3.66278L16.86 8.52706C17.03 9.25563 17.115 10.0521 17.115 10.9163Z" />
                     </svg>
                   </li>
-                  <li class="icons-list__item icons-list__item--active">
+                  <li class="icons-list__item icons-list__item--active tooltip" data-tooltip="Велосипед">
                     <svg width="25" height="24" viewBox="0 0 25 24">
                       <path d=" M18.3075 21C17.4664 21 16.6442 20.7471 15.9449 20.2732C15.2456 19.7994 14.7005 19.1258
                       14.3786 18.3378C14.0568 17.5498 13.9726 16.6827 14.1366 15.8462C14.3007 15.0096 14.7057 14.2412
@@ -789,7 +1301,7 @@
                         d="M17.3622 9.00003H15.3395C15.3063 9.00004 15.2737 8.99099 15.2452 8.97384C15.2167 8.95668 15.1932 8.93205 15.1773 8.90253L13.7101 6.17581C13.6068 5.97318 13.4578 5.79807 13.2753 5.66467C13.0928 5.53127 12.8818 5.44333 12.6596 5.40795C12.4373 5.37258 12.21 5.39077 11.996 5.46106C11.7819 5.53135 11.5872 5.65175 11.4276 5.81253L8.19843 9.11253C7.92715 9.39333 7.77316 9.76945 7.76855 10.1625C7.76855 10.9782 8.35097 11.2688 8.62369 11.4328C9.94106 12.2025 10.8688 12.7655 11.3777 13.0782C11.4047 13.0949 11.4271 13.1183 11.4427 13.1463C11.4582 13.1743 11.4664 13.2059 11.4664 13.238V16.478C11.4664 16.8816 11.7724 17.228 12.1704 17.2482C12.2703 17.253 12.3702 17.2373 12.464 17.2019C12.5577 17.1666 12.6434 17.1123 12.7159 17.0423C12.7883 16.9724 12.8461 16.8883 12.8855 16.7951C12.925 16.7018 12.9455 16.6015 12.9456 16.5V12.4688C12.9457 12.3497 12.9178 12.2324 12.8642 12.1264C12.8107 12.0204 12.7331 11.9289 12.6377 11.8594L10.9275 10.6121C10.906 10.5965 10.8881 10.5764 10.8749 10.5532C10.8617 10.53 10.8536 10.5043 10.851 10.4776C10.8485 10.451 10.8516 10.4241 10.8602 10.3988C10.8687 10.3734 10.8825 10.3503 10.9007 10.3308L12.842 8.23128C12.862 8.20968 12.8866 8.19316 12.914 8.18307C12.9414 8.17297 12.9708 8.1696 12.9997 8.17321C13.0287 8.17682 13.0563 8.18731 13.0805 8.20384C13.1047 8.22037 13.1247 8.24246 13.1388 8.26831L14.1474 10.1143C14.2115 10.2313 14.3053 10.3288 14.4191 10.3966C14.5329 10.4644 14.6625 10.5001 14.7945 10.5H17.383C17.4832 10.5002 17.5824 10.4796 17.6745 10.4397C17.7667 10.3998 17.8498 10.3413 17.919 10.2678C17.9882 10.1942 18.0419 10.1073 18.0769 10.012C18.1119 9.91685 18.1274 9.81542 18.1226 9.71394C18.1032 9.31035 17.7602 9.00003 17.3622 9.00003Z" />
                     </svg>
                   </li>
-                  <li class="icons-list__item">
+                  <li class="icons-list__item tooltip" data-tooltip="Пешком">
                     <svg width="21" height="24" viewBox="0 0 21 24" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M14.9758 5.75992C15.9264 5.75992 16.697 4.90031 16.697 3.83992C16.697 2.77954 15.9264 1.91992 14.9758 1.91992C14.0252 1.91992 13.2546 2.77954 13.2546 3.83992C13.2546 4.90031 14.0252 5.75992 14.9758 5.75992Z" />
@@ -804,7 +1316,7 @@
                   <h4 class="partner__block-title">Левел:</h4>
                 </div>
                 <div class="partner__level chart chart--small">
-                  <svg class="chart__svg" viewBox="0 0 35 35">
+                  <svg class="chart__svg" width="45" height="45" viewBox="0 0 35 35">
                     <circle class="chart__circle" r="15.9" cx="50%" cy="50%" stroke-dasharray="25 100"></circle>
                   </svg>
                   <div class="chart__text">
@@ -838,6 +1350,8 @@
           <li class="search-results__partner-item">
             <article class="partner partner--rogovaya">
               <picture class="partner__userpic">
+                <source srcset="./img/content/partner-desktop-rogovaya.png 1x,
+                ./img/content/partner-desktop-rogovaya@2x.png 2x" media="(min-width: 1440px">
                 <source srcset="./img/content/partner-tablet-rogovaya.png 1x,
                 ./img/content/partner-tablet-rogovaya@2x.png 2x" media="(min-width: 768px">
                 <img src="./img/content/partner-mobile-rogovaya.png"
@@ -873,19 +1387,19 @@
                   <h4 class="partner__block-title">Транспорт:</h4>
                 </div>
                 <ul class="partner__transport-list icons-list icons-list--circle">
-                  <li class="icons-list__item icons-list__item--active">
+                  <li class="icons-list__item icons-list__item--active tooltip" data-tooltip="Авиаперелет">
                     <svg width="21" height="23" viewBox="0 0 21 23">
                       <path
                         d="M16.7831 2.09314C16.0546 2.26635 15.3227 2.44038 15.0504 2.91723L12.9433 7.11585L1.62916 9.8059L1.17076 11.1474L9.82861 11.9662L8.35967 15.6009L5.07624 16.3816L4.25187 17.8101L6.62062 18.0673L6.89073 19.2357C7.01174 19.6498 7.43649 19.9263 7.79903 19.8401L8.89351 19.5799L10.1622 21.7433L10.9866 20.3148L10.1763 16.8098L12.5535 13.7795L17.0895 21.741L18.0042 20.7031L15.2128 8.62921L17.7762 4.73424C18.0519 4.25657 17.8721 3.47891 17.6914 2.69759C17.6019 2.31059 17.1457 2.00694 16.7831 2.09314Z" />
                     </svg>
                   </li>
-                  <li class="icons-list__item icons-list__item--active">
+                  <li class="icons-list__item icons-list__item--active tooltip" data-tooltip="Автотранспорт">
                     <svg viewBox="0 0 18 21" width="18" height="21">
                       <path
                         d="M4.34046 13.9485C4.34046 13.5699 4.20185 13.2467 3.92462 12.9788C3.64739 12.711 3.31288 12.5771 2.92106 12.5771C2.52925 12.5771 2.19473 12.711 1.91751 12.9788C1.64028 13.2467 1.50167 13.5699 1.50167 13.9485C1.50167 14.3271 1.64028 14.6503 1.91751 14.9181C2.19473 15.186 2.52925 15.3199 2.92106 15.3199C3.31288 15.3199 3.64739 15.186 3.92462 14.9181C4.20185 14.6503 4.34046 14.3271 4.34046 13.9485ZM15.6956 13.9485C15.6956 13.5699 15.557 13.2467 15.2798 12.9788C15.0025 12.711 14.668 12.5771 14.2762 12.5771C13.8844 12.5771 13.5499 12.711 13.2727 12.9788C12.9954 13.2467 12.8568 13.5699 12.8568 13.9485C12.8568 14.3271 12.9954 14.6503 13.2727 14.9181C13.5499 15.186 13.8844 15.3199 14.2762 15.3199C14.668 15.3199 15.0025 15.186 15.2798 14.9181C15.557 14.6503 15.6956 14.3271 15.6956 13.9485ZM15.1855 9.70563L14.3871 5.59135C14.3501 5.42706 14.267 5.29313 14.1376 5.18956C14.0082 5.08599 13.8585 5.0342 13.6885 5.0342H3.50878C3.33875 5.0342 3.18905 5.08599 3.05968 5.18956C2.9303 5.29313 2.84714 5.42706 2.81017 5.59135L2.01176 9.70563C1.9748 9.91992 2.02655 10.1092 2.16701 10.2735C2.30747 10.4378 2.48859 10.5199 2.71037 10.5199H14.4869C14.7087 10.5199 14.8898 10.4378 15.0303 10.2735C15.1707 10.1092 15.2225 9.91992 15.1855 9.70563ZM12.6794 3.14849C12.6794 3.00563 12.6276 2.88421 12.5242 2.78421C12.4207 2.68421 12.295 2.63421 12.1471 2.63421H5.05015C4.9023 2.63421 4.77663 2.68421 4.67313 2.78421C4.56963 2.88421 4.51788 3.00563 4.51788 3.14849C4.51788 3.29135 4.56963 3.41278 4.67313 3.51278C4.77663 3.61278 4.9023 3.66278 5.05015 3.66278H12.1471C12.295 3.66278 12.4207 3.61278 12.5242 3.51278C12.6276 3.41278 12.6794 3.29135 12.6794 3.14849ZM17.115 10.9163V17.3771H15.6956V18.7485C15.6956 19.1271 15.557 19.4503 15.2798 19.7181C15.0025 19.986 14.668 20.1199 14.2762 20.1199C13.8844 20.1199 13.5499 19.986 13.2727 19.7181C12.9954 19.4503 12.8568 19.1271 12.8568 18.7485V17.3771H4.34046V18.7485C4.34046 19.1271 4.20185 19.4503 3.92462 19.7181C3.64739 19.986 3.31288 20.1199 2.92106 20.1199C2.52925 20.1199 2.19473 19.986 1.91751 19.7181C1.64028 19.4503 1.50167 19.1271 1.50167 18.7485V17.3771H0.0822754V10.9163C0.0822754 10.1163 0.174684 9.31992 0.359501 8.52706L1.50167 3.66278C1.5682 3.10563 1.9286 2.61635 2.58285 2.19492C3.2371 1.77349 4.08726 1.45564 5.13332 1.24135C6.17939 1.02706 7.33449 0.919922 8.59864 0.919922C9.86279 0.919922 11.0179 1.02706 12.064 1.24135C13.11 1.45564 13.9602 1.77349 14.6144 2.19492C15.2687 2.61635 15.6291 3.10563 15.6956 3.66278L16.86 8.52706C17.03 9.25563 17.115 10.0521 17.115 10.9163Z" />
                     </svg>
                   </li>
-                  <li class="icons-list__item">
+                  <li class="icons-list__item tooltip" data-tooltip="Велосипед">
                     <svg width="25" height="24" viewBox="0 0 25 24">
                       <path d=" M18.3075 21C17.4664 21 16.6442 20.7471 15.9449 20.2732C15.2456 19.7994 14.7005 19.1258
                       14.3786 18.3378C14.0568 17.5498 13.9726 16.6827 14.1366 15.8462C14.3007 15.0096 14.7057 14.2412
@@ -906,7 +1420,7 @@
                         d="M17.3622 9.00003H15.3395C15.3063 9.00004 15.2737 8.99099 15.2452 8.97384C15.2167 8.95668 15.1932 8.93205 15.1773 8.90253L13.7101 6.17581C13.6068 5.97318 13.4578 5.79807 13.2753 5.66467C13.0928 5.53127 12.8818 5.44333 12.6596 5.40795C12.4373 5.37258 12.21 5.39077 11.996 5.46106C11.7819 5.53135 11.5872 5.65175 11.4276 5.81253L8.19843 9.11253C7.92715 9.39333 7.77316 9.76945 7.76855 10.1625C7.76855 10.9782 8.35097 11.2688 8.62369 11.4328C9.94106 12.2025 10.8688 12.7655 11.3777 13.0782C11.4047 13.0949 11.4271 13.1183 11.4427 13.1463C11.4582 13.1743 11.4664 13.2059 11.4664 13.238V16.478C11.4664 16.8816 11.7724 17.228 12.1704 17.2482C12.2703 17.253 12.3702 17.2373 12.464 17.2019C12.5577 17.1666 12.6434 17.1123 12.7159 17.0423C12.7883 16.9724 12.8461 16.8883 12.8855 16.7951C12.925 16.7018 12.9455 16.6015 12.9456 16.5V12.4688C12.9457 12.3497 12.9178 12.2324 12.8642 12.1264C12.8107 12.0204 12.7331 11.9289 12.6377 11.8594L10.9275 10.6121C10.906 10.5965 10.8881 10.5764 10.8749 10.5532C10.8617 10.53 10.8536 10.5043 10.851 10.4776C10.8485 10.451 10.8516 10.4241 10.8602 10.3988C10.8687 10.3734 10.8825 10.3503 10.9007 10.3308L12.842 8.23128C12.862 8.20968 12.8866 8.19316 12.914 8.18307C12.9414 8.17297 12.9708 8.1696 12.9997 8.17321C13.0287 8.17682 13.0563 8.18731 13.0805 8.20384C13.1047 8.22037 13.1247 8.24246 13.1388 8.26831L14.1474 10.1143C14.2115 10.2313 14.3053 10.3288 14.4191 10.3966C14.5329 10.4644 14.6625 10.5001 14.7945 10.5H17.383C17.4832 10.5002 17.5824 10.4796 17.6745 10.4397C17.7667 10.3998 17.8498 10.3413 17.919 10.2678C17.9882 10.1942 18.0419 10.1073 18.0769 10.012C18.1119 9.91685 18.1274 9.81542 18.1226 9.71394C18.1032 9.31035 17.7602 9.00003 17.3622 9.00003Z" />
                     </svg>
                   </li>
-                  <li class="icons-list__item">
+                  <li class="icons-list__item tooltip" data-tooltip="Пешком">
                     <svg width="21" height="24" viewBox="0 0 21 24" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M14.9758 5.75992C15.9264 5.75992 16.697 4.90031 16.697 3.83992C16.697 2.77954 15.9264 1.91992 14.9758 1.91992C14.0252 1.91992 13.2546 2.77954 13.2546 3.83992C13.2546 4.90031 14.0252 5.75992 14.9758 5.75992Z" />
@@ -921,7 +1435,7 @@
                   <h4 class="partner__block-title">Левел:</h4>
                 </div>
                 <div class="partner__level chart chart--small">
-                  <svg class="chart__svg" viewBox="0 0 35 35">
+                  <svg class="chart__svg" width="45" height="45" viewBox="0 0 35 35">
                     <circle class="chart__circle" r="15.9" cx="50%" cy="50%" stroke-dasharray="50 100"></circle>
                   </svg>
                   <div class="chart__text">
@@ -978,6 +1492,7 @@
         </div>
       </div>
     </section>
+  </div>
   </main>
 
   <footer class="main-footer">

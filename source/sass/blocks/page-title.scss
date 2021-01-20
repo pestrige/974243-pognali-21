@@ -73,6 +73,10 @@
   color: var(--contrast-text);
   transition: filter 0.3s;
 
+  @media (min-width: $desktop) {
+    margin-right: 63px;
+  }
+
   &:hover {
     filter: opacity(0.6);
   }

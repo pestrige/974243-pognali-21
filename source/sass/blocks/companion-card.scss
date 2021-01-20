@@ -2,19 +2,35 @@
   position: relative;
   width: 270px;
   display: grid;
+  transition: box-shadow 0.3s;
 
   @media (min-width: $tablet) {
     width: 285px;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.16);
+  }
+
+  &:hover .companion-card__img img {
+    transform: scale(1.2);
   }
 }
 
 .companion-card__img {
   width: 270px;
   height: 270px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
 
   @media (min-width: $tablet) {
     width: 285px;
     height: 285px;
+  }
+
+  img {
+    transition: transform 0.3s;
   }
 }
 

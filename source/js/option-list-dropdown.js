@@ -6,8 +6,10 @@
   const optionLists = formSearch.querySelectorAll('.form-search__options-list');
   const classTrigger = 'form-search__options-list--closed';
   const tabletWidth = '768';
+  const desktopWidth = '1440';
 
   const isMobile = () => document.body.clientWidth < tabletWidth;
+  const isDesktop = () => document.body.clientWidth >= desktopWidth;
   const toggleList = (toggle, list) => {
     toggle.classList.toggle('form-search__legend--closed');
 
@@ -31,7 +33,7 @@
 
   for (let listToggle of listToggles) {
     listToggle.addEventListener('click', (evt) => {
-      if (isMobile()) {
+      if (isMobile() || isDesktop()) {
         evt.preventDefault();
         const attribute = evt.target.getAttribute('data-name');
         const optionsList = formSearch.querySelector(`[data-list = ${attribute}]`);
@@ -41,7 +43,7 @@
   };
 
   window.addEventListener('resize', () => {
-    if (!isMobile()) {
+    if (!isMobile() || !isDesktop()) {
       for (let optionsList of optionLists) {
         optionsList.removeAttribute('style');
       };

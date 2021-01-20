@@ -5,6 +5,10 @@
     grid-template-columns: 385px 235px;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .countries-catalog__alphabet {
@@ -16,6 +20,10 @@
 
   @media (min-width: $tablet) {
     margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    display: none;
   }
 }
 
@@ -91,21 +99,65 @@
 }
 
 /* COUNTRIES LIST */
-
 .countries-catalog__countries-set {
+  margin-top: 0;
   margin-bottom: 28px;
+  padding-left: 0;
+  list-style: none;
 
   @media (min-width: $tablet) {
     margin-top: 10px;
   }
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 50px;
+    margin-bottom: 12px;
+    padding-left: 35px;
+    padding-right: 22px;
+  }
 }
 
 .countries-catalog__countries-list {
+  display: none;
+  position: relative;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 25px;
   padding-left: 0;
   list-style: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+    margin-left: 0;
+
+    &:nth-child(5n) {
+      margin-left: -5px;
+    }
+
+    &:nth-child(11) {
+      margin-bottom: 38px;
+    }
+  }
+
+  &--show {
+    display: block;
+  }
+
+  &::before {
+    display: none;
+    content: attr(data-countries);
+
+    @media (min-width: $desktop) {
+      margin-bottom: 30px;
+      display: block;
+      font-family: $font-bold;
+      font-size: 60px;
+      line-height: 60px;
+      color: var(--basic-400);
+    }
+  }
 }
 
 .countries-catalog__country-link {
@@ -143,6 +195,12 @@
     margin: 54px 37px 0 22px;
     padding: 43px 12px 37px;
     grid-column: 1 / -1;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 20px;
   }
 
   &:hover {
@@ -196,6 +254,11 @@
       width: 22px;
       height: 22px;
       background-size: cover;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: -8px;
+      margin-right: 18px;
     }
   }
 }
