@@ -81,6 +81,9 @@ input[type="radio"].visually-hidden {
   padding-right: var(--padding-mobile);
 
   @media (min-width: $tablet) {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: var(--padding-tablet);
     padding-right: var(--padding-tablet);
   }
@@ -91,6 +94,14 @@ input[type="radio"].visually-hidden {
     margin-right: auto;
     padding-left: var(--padding-desktop);
     padding-right: var(--padding-desktop);
+  }
+}
+
+.container-no-padding {
+  @media (min-width: $tablet) {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

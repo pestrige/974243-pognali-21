@@ -151,6 +151,10 @@
     padding-left: var(--padding-tablet);
   }
 
+  @media (min-width: 1024px) {
+    padding-left: calc((100% - 1024px + 80px) / 2);
+  }
+
   @media (min-width: $desktop) {
     min-height: 53px;
     padding-left: var(--padding-desktop);
@@ -212,6 +216,10 @@
     padding-right: var(--padding-tablet);
   }
 
+  @media (min-width: 1024px) {
+    padding-left: calc((100% - 1024px + 97px) / 2);
+  }
+
   @media (min-width: $desktop) {
     position: relative;
     z-index: 99;
@@ -232,6 +240,10 @@
     z-index: 99;
     right: 40px;
     left: auto;
+  }
+
+  @media (min-width: 1024px) {
+    right: calc((100% - 1024px + 78px) / 2);
   }
 
   @media (min-width: $desktop) {
