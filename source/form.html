@@ -267,30 +267,30 @@
                   вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую длительность.
                 </p>
                 <fieldset class="steps-slider__inputs-group">
-                  <label for="companions-count" class="steps-slider__label" aria-label="Количество попутчиков">
+                  <div class="steps-slider__label">
                     <span class="steps-slider__label-title">Ищу попутчиков:</span>
                     <span class="steps-slider__label-subtitle">чел.</span>
-                    <p class="steps-slider__field">
-                      <button class="steps-slider__input-btn steps-slider__input-btn--minus" type="button"
-                        aria-label="уменьшить"></button>
+                    <label for="companions-count" class="steps-slider__field">
+                      <span class="steps-slider__input-btn steps-slider__input-btn--minus"
+                        aria-label="уменьшить" role="button"></span>
                       <input class="steps-slider__input" type="number" name="companions-count" id="companions-count"
                         value="2" min="1">
-                      <button class="steps-slider__input-btn steps-slider__input-btn--plus" type="button"
-                        aria-label="увеличить"></button>
-                    </p>
-                  </label>
-                  <label for="days-count" class="steps-slider__label" aria-label="Количество попутчиков">
+                      <span class="steps-slider__input-btn steps-slider__input-btn--plus"
+                        aria-label="увеличить" role="button"></span>
+                    </label>
+                  </div>
+                  <div class="steps-slider__label">
                     <span class="steps-slider__label-title">Длительность:</span>
                     <span class="steps-slider__label-subtitle">дн.</span>
-                    <p class="steps-slider__field">
-                      <button class="steps-slider__input-btn steps-slider__input-btn--minus" type="button"
-                        aria-label="уменьшить"></button>
+                    <label for="days-count" class="steps-slider__field">
+                      <span class="steps-slider__input-btn steps-slider__input-btn--minus"
+                        aria-label="уменьшить" role="button"></span>
                       <input class="steps-slider__input" type="number" name="days-count" id="days-count" value="3"
                         min="1">
-                      <button class="steps-slider__input-btn steps-slider__input-btn--plus" type="button"
-                        aria-label="увеличить"></button>
-                    </p>
-                  </label>
+                      <span class="steps-slider__input-btn steps-slider__input-btn--plus"
+                        aria-label="увеличить" role="button"></span>
+                    </label>
+                  </div>
                   <label class="steps-slider__small-label" for="with-kids">
                     <input class="steps-slider__checkbox visually-hidden" type="checkbox" name="with-kids"
                       id="with-kids" checked>
@@ -400,7 +400,7 @@
                 <h3 class="steps-slider__title">Шаг 2.&nbsp;<br>Маршрут</h3>
                 <p class="steps-silder__text steps-silder__text--contries">
                   Укажите страны, которые вы
-                  хотели бы посетить. <br>
+                  хотели бы посетить.&nbsp;<br>
                   Это&nbsp;может
                   быть одна или сразу несколько.
                 </p>
@@ -408,9 +408,9 @@
                   <ul class="step-slider__counties-list">
                     <li class="step-slider__country country-field">
                       <label class="country-field__select-wrapper" aria-label="Выберите страну">
-                        <select class="country-field__select" name="country-select-1">
-                          <option value="Босния и Герцеговина">Босния и Герцеговина</option>
-                        </select>
+                        <button class="country-field__select" type="button" data-input="1">
+                          <span>Босния и Герцеговина</span>
+                        </button>
                       </label>
                       <div class="country-field__flag">
                         <picture class="country-field__flag-img">
@@ -425,9 +425,9 @@
                     </li>
                     <li class="step-slider__country country-field">
                       <label class="country-field__select-wrapper" aria-label="Выберите страну">
-                        <select class="country-field__select" name="country-select-2">
-                          <option value="Чехия">Чехия</option>
-                        </select>
+                        <button class="country-field__select" type="button" data-input="2">
+                          <span>Чехия</span>
+                        </button>
                       </label>
                       <div class="country-field__flag">
                         <picture class="country-field__flag-img">
@@ -442,49 +442,51 @@
                     </li>
                     <li class="step-slider__country country-field country-field--not-selected">
                       <label class="country-field__select-wrapper" aria-label="Выберите страну">
-                        <select class="country-field__select" name="country-select-3">
-                          <option value="not-selected">Выберите страну</option>
-                        </select>
+                        <button class="country-field__select" type="button" data-input="3">
+                          <span>Выберите страну</span>
+                        </button>
                       </label>
-                      <div class="country-field__choose-country choose-country">
+                      <div class="country-field__choose-country choose-country" data-list="3">
                         <h4 class="choose-country__title">Выберите страну</h4>
-                        <table class="choose-country__alphabet">
-                          <tr class="choose-country__alphabet-row">
-                            <td class="choose-country__cell choose-country__cell--selected" data-letter="а">а</td>
-                            <td class="choose-country__cell" data-letter="б">б</td>
-                            <td class="choose-country__cell" data-letter="в">в</td>
-                            <td class="choose-country__cell" data-letter="г">г</td>
-                            <td class="choose-country__cell" data-letter="д">д</td>
-                          </tr>
-                          <tr class="choose-country__alphabet-row">
-                            <td class="choose-country__cell" data-letter="е">е</td>
-                            <td class="choose-country__cell" data-letter="з">з</td>
-                            <td class="choose-country__cell" data-letter="и">и</td>
-                            <td class="choose-country__cell" data-letter="к">к</td>
-                            <td class="choose-country__cell" data-letter="л">л</td>
-                          </tr>
-                          <tr class="choose-country__alphabet-row">
-                            <td class="choose-country__cell" data-letter="м">м</td>
-                            <td class="choose-country__cell" data-letter="н">н</td>
-                            <td class="choose-country__cell" data-letter="о">о</td>
-                            <td class="choose-country__cell" data-letter="п">п</td>
-                            <td class="choose-country__cell" data-letter="р">р</td>
-                          </tr>
-                          <tr class="choose-country__alphabet-row">
-                            <td class="choose-country__cell" data-letter="с">с</td>
-                            <td class="choose-country__cell" data-letter="т">т</td>
-                            <td class="choose-country__cell" data-letter="у">у</td>
-                            <td class="choose-country__cell" data-letter="ф">ф</td>
-                            <td class="choose-country__cell" data-letter="х">х</td>
-                          </tr>
-                          <tr class="choose-country__alphabet-row">
-                            <td class="choose-country__cell" data-letter="ч">ч</td>
-                            <td class="choose-country__cell" data-letter="ш">ш</td>
-                            <td class="choose-country__cell" data-letter="э">э</td>
-                            <td class="choose-country__cell" data-letter="ю">ю</td>
-                            <td class="choose-country__cell" data-letter="я">я</td>
-                          </tr>
-                        </table>
+                        <div class="choose-country__alphabet-wrapper">
+                          <table class="choose-country__alphabet">
+                            <tr class="choose-country__alphabet-row">
+                              <td class="choose-country__cell choose-country__cell--selected" data-letter="а">а</td>
+                              <td class="choose-country__cell" data-letter="б">б</td>
+                              <td class="choose-country__cell" data-letter="в">в</td>
+                              <td class="choose-country__cell" data-letter="г">г</td>
+                              <td class="choose-country__cell" data-letter="д">д</td>
+                            </tr>
+                            <tr class="choose-country__alphabet-row">
+                              <td class="choose-country__cell" data-letter="е">е</td>
+                              <td class="choose-country__cell" data-letter="з">з</td>
+                              <td class="choose-country__cell" data-letter="и">и</td>
+                              <td class="choose-country__cell" data-letter="к">к</td>
+                              <td class="choose-country__cell" data-letter="л">л</td>
+                            </tr>
+                            <tr class="choose-country__alphabet-row">
+                              <td class="choose-country__cell" data-letter="м">м</td>
+                              <td class="choose-country__cell" data-letter="н">н</td>
+                              <td class="choose-country__cell" data-letter="о">о</td>
+                              <td class="choose-country__cell" data-letter="п">п</td>
+                              <td class="choose-country__cell" data-letter="р">р</td>
+                            </tr>
+                            <tr class="choose-country__alphabet-row">
+                              <td class="choose-country__cell" data-letter="с">с</td>
+                              <td class="choose-country__cell" data-letter="т">т</td>
+                              <td class="choose-country__cell" data-letter="у">у</td>
+                              <td class="choose-country__cell" data-letter="ф">ф</td>
+                              <td class="choose-country__cell" data-letter="х">х</td>
+                            </tr>
+                            <tr class="choose-country__alphabet-row">
+                              <td class="choose-country__cell" data-letter="ч">ч</td>
+                              <td class="choose-country__cell" data-letter="ш">ш</td>
+                              <td class="choose-country__cell" data-letter="э">э</td>
+                              <td class="choose-country__cell" data-letter="ю">ю</td>
+                              <td class="choose-country__cell" data-letter="я">я</td>
+                            </tr>
+                          </table>
+                        </div>
                         <div class="choose-country__list-wrapper">
                           <ul class="choose-country__list choose-country__list--active" data-list="а">
                             <li class="choose-country__country">
@@ -523,17 +525,17 @@
                           </ul>
                         </div>
                         <button class="choose-country__close" type="button"
-                          aria-label="Закрыть список с выбором страны"></button>
+                          aria-label="Закрыть список выбора страны"></button>
                       </div>
                       <div class="country-field__flag">
                       </div>
                       <button class="country-field__close" type="button" aria-label="Убрать страну"></button>
                     </li>
                     <li class="step-slider__country country-field country-field--add">
-                      <label for="country-select-2" class="country-field__select-wrapper">
-                        <select class="country-field__select" name="country-select-4">
-                          <option value="not-selected">Добавить страну</option>
-                        </select>
+                      <label for="country-select-4" class="country-field__select-wrapper">
+                        <button class="country-field__select" type="button" data-input="4" id="country-select-4">
+                          <span>Добавить страну</span>
+                        </button>
                       </label>
                       <div class="country-field__flag">
                       </div>
@@ -574,7 +576,7 @@
                 <fieldset class="steps-slider__fun-group">
                   <ul class="steps-slider__fun-list">
                     <li class="steps-slider__fun-item">
-                      <label class="steps-slider__fun-label">
+                      <div class="steps-slider__fun-label">
                         <h4 class="steps-slider__fun-title">Босния и Герцеговина</h4>
                         <div class="steps-slider__fun-flag">
                           <picture class="steps-slider__fun-flag-img">
@@ -585,12 +587,14 @@
                               srcset="./img/content/flag-bosnia-mobile@2x.png 2x" alt="Флаг Боснии и Герцеговины">
                           </picture>
                         </div>
-                        <textarea class="steps-slider__fun-descr" name="activity-plan-for-bosnia"
-                          placeholder="План действий"></textarea>
-                      </label>
+                        <label class="steps-slider__textarea-wrapper" aria-label="Ваши планы на страну">
+                          <textarea class="steps-slider__fun-descr" name="activity-plan-for-bosnia"
+                          placeholder="План действий" required></textarea>
+                        </label>
+                      </div>
                     </li>
                     <li class="steps-slider__fun-item">
-                      <label class="steps-slider__fun-label">
+                      <div class="steps-slider__fun-label">
                         <h4 class="steps-slider__fun-title">Чехия</h4>
                         <div class="steps-slider__fun-flag">
                           <picture class="steps-slider__fun-flag-img">
@@ -601,10 +605,11 @@
                               srcset="./img/content/flag-czech-mobile@2x.png 2x" alt="Флаг Боснии и Герцеговины">
                           </picture>
                         </div>
-                        <textarea class="steps-slider__fun-descr" name="activity-plan-for-czech"
-                          placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и вот это все.
-                        </textarea>
-                      </label>
+                        <label class="steps-slider__textarea-wrapper" aria-label="Ваши планы на страну">
+                          <textarea class="steps-slider__fun-descr" name="activity-plan-for-czech"
+                          placeholder="План действий" required>Пить пиво и лазить по&nbsp;старым замкам, наслаждаться&nbsp;архитектурой и вот это все.</textarea>
+                        </label>
+                      </div>
                     </li>
                   </ul>
                 </fieldset>
@@ -700,6 +705,7 @@
   </footer>
 
   <script src="./js/mobile-menu.min.js"></script>
+  <script src="./js/choose-country.min.js"></script>
 </body>
 
 </html>

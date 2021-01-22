@@ -1,32 +1,3 @@
-// .main-content {
-//   &--catalog {
-//     @media (min-width: $desktop) {
-//       display: grid;
-//       grid-template-columns: 1fr 345px;
-
-//       .main-content__title {
-//         grid-column: 1 / 3;
-//         grid-row: 1 / 2;
-//       }
-
-//       .main-content__filter {
-//         grid-column: 1 / 3;
-//         grid-row: 2 / 3;
-//       }
-
-//       .main-content__partner-search {
-//         grid-column: 2 / 3;
-//         grid-row: 3 / 4;
-//       }
-
-//       .main-content__search-results {
-//         grid-column: 1 / 2;
-//         grid-row: 3 / 4;
-//       }
-//     }
-//   }
-// }
-
 .main-content__title {
   position: relative;
   z-index: 2;

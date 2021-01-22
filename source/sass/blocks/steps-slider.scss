@@ -3,6 +3,7 @@
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+  scroll-behavior: smooth;
 }
 
 .steps-slider__item {
@@ -10,6 +11,7 @@
   padding: 24px 24px 6px;
   background-color: var(--background-white);
   border-radius: 10px;
+  scroll-behavior: smooth;
 
   @media (min-width: $tablet) {
     padding: 48px 40px 56px;
@@ -340,7 +342,7 @@
 .steps-slider__small-label {
   display: flex;
   align-items: center;
-  gap: 13px;
+  //gap: 13px; //changed to margin-right for Safari
   font-family: $font-regular;
   font-size: 15px;
   line-height: 15px;
@@ -348,7 +350,7 @@
 
   @media (min-width: $tablet) {
     grid-row: 2 / 3;
-    gap: 22px;
+    //gap: 22px; //changed to margin-right for Safari
     font-family: $font-medium;
     font-size: 20px;
     line-height: 20px;
@@ -375,6 +377,7 @@
 }
 
 .steps-slider__styled-checkbox {
+  margin-right: 13px;
   position: relative;
   display: inline-block;
   width: 26px;
@@ -384,6 +387,7 @@
   transition: border-color 0.2s, background-color 0.2s;
 
   @media (min-width: $tablet) {
+    margin-right: 22px;
     width: 36px;
     height: 36px;
   }
@@ -706,7 +710,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-image: linear-gradient(90deg, transparent 0, white 24px);
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, white 24px);
 
   @media (min-width: $tablet) {
     justify-content: start;
@@ -719,10 +723,60 @@
   }
 }
 
-.steps-slider__fun-descr {
+.steps-slider__textarea-wrapper {
+  position: relative;
   height: 220px;
-  padding: 10px 14px;
   grid-column: 1 / -1;
+
+  @media (min-width: $tablet) {
+    height: 142px;
+    margin-right: 33px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 0;
+    grid-column: 1 / 2;
+  }
+
+  &::after {
+    content: "Это поле должно быть заполнено";
+    position: absolute;
+    z-index: 1;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    height: 56px;
+    padding: 20px 21px 16px;
+    font-family: $font-regular;
+    font-size: 20px;
+    line-height: 20px;
+    color: #ff0000;
+    background-color: #ffefef;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: visibility 0.3s, opacity 0.3s, transform 0.3s;
+  }
+
+  &--error {
+    &::after {
+      visibility: visible;
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .steps-slider__fun-descr:invalid {
+      border: 1px solid #f47e7e;
+    }
+  }
+}
+
+.steps-slider__fun-descr {
+  width: 100%;
+  height: 100%;
+  padding: 10px 14px;
   font-family: $font-regular;
   font-size: 16px;
   line-height: 22px;
@@ -730,19 +784,26 @@
   border-radius: 4px;
   resize: none;
   overflow-y: auto;
+  transition: border-color 0.3s;
 
   @media (min-width: $tablet) {
-    height: 142px;
-    margin-right: 33px;
     padding: 17px 19px;
     font-size: 20px;
     line-height: 23px;
   }
 
   @media (min-width: $desktop) {
-    margin-right: 0;
     padding: 23px 15px 23px 26px;
-    grid-column: 1 / 2;
+  }
+
+  &:hover {
+    border: 1px solid var(--border-color-600);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border: 1px solid var(--basic);
   }
 }
 

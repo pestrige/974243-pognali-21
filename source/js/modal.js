@@ -27,4 +27,10 @@
     const target = evt.target;
     if (target == modal) modalToggle();
   });
+
+  document.addEventListener('keydown', (evt) => {
+    if (modal.classList.contains('modal--open') && evt.code == 'Escape') {
+      modalToggle();
+    }
+  });
 }

@@ -10,6 +10,7 @@
   const closeMenu = () => {
     menu.classList.remove('filter__dropdown--open');
     menuBtnToggle.classList.remove('filter__region-btn--open');
+    changeBtnText();
   };
   const toggleMenu = () => {
     if (!isMenuOpen()) {
@@ -22,6 +23,12 @@
       menuBtnToggleText.textContent = 'Свернуть';
     } else menuBtnToggleText.textContent = 'Показать все';
   };
+  const scrollToTop = () => {
+    menuBtnToggle.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end'
+    });
+  };
 
   menuBtnToggle.addEventListener('click', (evt) => {
     evt.preventDefault();
@@ -31,6 +38,16 @@
 
   menuBtnClose.addEventListener('click', (evt) => {
     evt.preventDefault();
-    if (isMenuOpen()) closeMenu();
+    if (isMenuOpen()) {
+      closeMenu();
+      scrollToTop();
+    };
+  });
+
+  document.addEventListener('keydown', (evt) => {
+    if (isMenuOpen() && evt.code == 'Escape') {
+      closeMenu();
+      scrollToTop();
+    };
   });
 }

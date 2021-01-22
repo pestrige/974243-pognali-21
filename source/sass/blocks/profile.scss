@@ -10,6 +10,7 @@
   }
 
   @media (min-width: $desktop) {
+    padding-bottom: 16px;
     padding-top: 60px;
     background-color: transparent;
   }
@@ -263,6 +264,6 @@
   margin-bottom: 9px;
 
   @media (min-width: $tablet) {
-    margin: 25px 0 24px;
+    margin: 25px 0 19px;
   }
 }
