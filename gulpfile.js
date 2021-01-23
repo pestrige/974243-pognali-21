@@ -5,10 +5,12 @@ const sourcemap = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const csso = require("postcss-csso");
-const uglify = require("gulp-uglify-es").default;
-const imagemin = require("gulp-imagemin");
-const rename = require("gulp-rename");
+const csso = require('postcss-csso');
+const uglify = require('gulp-uglify-es').default;
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const sprite = require('gulp-svgstore');
+const rename = require('gulp-rename');
 const sync = require('browser-sync').create();
 const del = require('del');
 
@@ -58,7 +60,9 @@ exports.scripts = scripts;
 // Images
 
 const images = () => {
-  return gulp.src('./source/img/**/*.{jpg,png,svg}')
+  return gulp.src([
+    './source/img/**/*.{jpg,png,svg}',
+    '!./source/img/icons/sprite/*.svg'])
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.mozjpeg({quality: 80, progressive: true}),
@@ -68,6 +72,27 @@ const images = () => {
 }
 
 exports.images = images;
+
+// webP
+
+const createWebp = () => {
+  return gulp.src('./source/img/content/**/*.{jpg,png}')
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest('./build/img/content'))
+}
+
+exports.createWebp = createWebp;
+
+// SVG Sprites
+
+const createSprite = () => {
+  return gulp.src('./source/img/icons/sprite/*.svg')
+    .pipe(sprite())
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('./build/img/icons/sprite'))
+}
+
+exports.createSprite = createSprite;
 
 // Server
 
@@ -94,7 +119,8 @@ const clean = () => del('./build');
 const copy = (done) => {
   gulp.src([
     './source/fonts/*.{woff2,woff}',
-    './source/img/**/*.{jpg,png,svg}'
+    './source/img/**/*.{jpg,png,svg}',
+    '!./source/img/icons/sprite/*.svg'
   ], {
     base: 'source'
   })
@@ -116,13 +142,16 @@ const reload = done => {
 const watcher = () => {
   gulp.watch('./source/sass/**/*.scss', gulp.series(styles, reload));
   gulp.watch('./source/*.html', gulp.series(html, reload));
-  gulp.watch("./source/js/*.js", gulp.series(scripts, reload));
+  gulp.watch('./source/js/*.js', gulp.series(scripts, reload));
+  gulp.watch('./source/img/**/*.{jpg,png,svg}', gulp.series(reload));
 }
 
 exports.default = gulp.series(
   clean,
   copy,
   gulp.parallel(
+    createSprite,
+    createWebp,
     html,
     styles,
     scripts),
@@ -137,6 +166,8 @@ const build = gulp.series(
   copy,
   gulp.parallel(
     images,
+    createWebp,
+    createSprite,
     html,
     styles,
     scripts
