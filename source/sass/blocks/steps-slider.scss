@@ -82,7 +82,7 @@
   }
 }
 
-.steps-silder__text {
+.steps-slider__text {
   margin-top: 0;
   margin-bottom: 20px;
   font-family: $font-regular;
@@ -429,7 +429,7 @@
 
 /* NEXT PREV BUTTONS */
 
-.step-slider__buttons-wrapper {
+.steps-slider__buttons-wrapper {
   @media (min-width: $tablet) {
     margin-left: 3px;
     display: flex;
@@ -438,7 +438,7 @@
   }
 }
 
-.step-slider__step-link {
+.steps-slider__step-link {
   width: 100%;
   padding: 7px 0 3px;
   display: flex;
@@ -522,7 +522,7 @@
 
 /* 2 slide COUNTRIES */
 
-.step-slider__counties-set {
+.steps-slider__counties-set {
   margin: 0;
   margin-bottom: 26px;
   padding: 0;
@@ -540,12 +540,12 @@
   }
 }
 
-.step-slider__counties-list {
+.steps-slider__counties-list {
   padding-left: 0;
   list-style: none;
 }
 
-.step-slider__country + .step-slider__country {
+.steps-slider__country + .steps-slider__country {
   margin-top: 22px;
 
   @media (min-width: $tablet) {
@@ -809,7 +809,7 @@
 
 /* pagination section */
 
-.step-slider__pagination {
+.steps-slider__pagination {
   position: absolute;
   top: 39px;
   right: 48px;
@@ -831,7 +831,7 @@
   }
 }
 
-.step-slider__pagination-item {
+.steps-slider__pagination-item {
   position: relative;
 
   & + & {
@@ -864,13 +864,13 @@
   }
 }
 
-.step-slider__pagination-text {
+.steps-slider__pagination-text {
   display: none;
 }
 
 /* Desktop Navigation section */
 
-.step-slider__nav {
+.steps-slider__nav {
   display: none;
   margin-top: 0;
   margin-bottom: 0;
@@ -885,11 +885,11 @@
   }
 }
 
-.step-slider__nav-item:not(:last-child) {
+.steps-slider__nav-item:not(:last-child) {
   margin-bottom: 19px;
 }
 
-.step-slider__nav-link {
+.steps-slider__nav-link {
   position: relative;
   padding-left: 42px;
   font-size: 20px;
