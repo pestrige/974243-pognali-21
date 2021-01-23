@@ -1,7 +1,65 @@
+/* All Page */
+
 .main-content__title {
   position: relative;
   z-index: 2;
 }
+
+/* Index Page */
+
+.main-content__promo {
+  position: relative;
+  z-index: 11;
+}
+
+.main-content__about {
+  position: relative;
+  z-index: 10;
+
+  @media (min-width: $desktop) {
+    margin-top: -60px;
+  }
+}
+
+.main-content__ways {
+  position: relative;
+  z-index: 9;
+}
+
+.main-content__companions {
+  z-index: 8;
+}
+
+.main-content__pricing {
+  position: relative;
+  z-index: 7;
+}
+
+.main-content__register {
+  z-index: 6;
+}
+
+.main-content__address {
+  z-index: 5;
+}
+
+.main-content__map {
+  z-index: 4;
+}
+
+.main-content__companions,
+.main-content__register,
+.main-content__address,
+.main-content__map {
+  position: relative;
+  margin-top: -30px;
+
+  @media (min-width: $tablet) {
+    margin-top: -60px;
+  }
+}
+
+/* Form Page */
 
 .main-content__profile {
   z-index: 1;
@@ -11,6 +69,12 @@
     background-color: transparent;
   }
 }
+
+.main-content__add-plan {
+  margin-top: calc(var(--inner-border-radius) * -1);
+}
+
+/* Catalog Page */
 
 .main-content__filter {
   margin-top: calc(var(--header-border-radius) * -1);

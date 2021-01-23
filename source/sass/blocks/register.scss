@@ -1,7 +1,4 @@
 .register {
-  position: relative;
-  z-index: 6;
-  margin-top: -30px;
   padding-top: 102px;
   padding-bottom: 28px;
   background-color: var(--basic-400);
@@ -9,7 +6,6 @@
   border-bottom-right-radius: var(--border-radius);
 
   @media (min-width: $tablet) {
-    margin-top: -60px;
     padding-top: 136px;
     padding-bottom: 57px;
   }

@@ -1,7 +1,4 @@
 .companions {
-  position: relative;
-  z-index: 8;
-  margin-top: -30px;
   padding-bottom: 30px;
   color: var(--contrast-text);
   background-color: var(--basic-400);
@@ -12,7 +9,6 @@
   border-bottom-right-radius: var(--border-radius);
 
   @media (min-width: $tablet) {
-    margin-top: -60px;
     padding-bottom: 87px;
     background-image: url("../img/bg/companions-bg-woman-tablet.png");
     background-position: 85% 140px;

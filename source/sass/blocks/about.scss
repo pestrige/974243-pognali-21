@@ -1,13 +1,11 @@
 .about {
   position: relative;
-  z-index: 10;
   color: var(--contrast-text);
   background-color: var(--basic-400);
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
 
   @media (min-width: $desktop) {
-    margin-top: -60px;
     padding-top: 60px;
   }
 
