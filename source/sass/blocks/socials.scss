@@ -39,12 +39,16 @@
         background-color: var(--accent-600);
       }
 
+      &:hover .socials__svg {
+        fill: var(--basic-400);
+      }
+
       &:active {
         background-color: var(--accent-600);
+      }
 
-        .socials__svg {
-          opacity: 0.3;
-        }
+      &:active .socials__svg {
+        fill: rgba(#192144, 0.3);
       }
     }
   }
@@ -58,7 +62,16 @@
   }
 }
 
+.socials__link:hover .socials__svg {
+  fill: rgba(#192144, 0.6);
+}
+
+.socials__link:active .socials__svg {
+  fill: rgba(#192144, 0.3);
+}
+
 .socials__svg {
+  fill: var(--basic-400);
   transition: fill 0.3s, opacity 0.3s;
 
   &--facebook {
@@ -80,9 +93,5 @@
       width: 24px;
       height: 24px;
     }
-  }
-
-  path {
-    fill: var(--basic-400);
   }
 }

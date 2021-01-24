@@ -38,6 +38,7 @@
 .address__marker {
   width: 45px;
   height: 45px;
+  fill: var(--accent);
 
   @media (min-width: $tablet) {
     width: 68px;

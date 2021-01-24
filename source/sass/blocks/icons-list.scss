@@ -52,13 +52,13 @@
 }
 
 .icons-list__item {
-  svg path {
+  svg {
     fill: #101d41;
     opacity: 0.15;
   }
 
   &--active {
-    svg path {
+    svg {
       opacity: 1;
     }
   }

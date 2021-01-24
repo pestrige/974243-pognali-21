@@ -12,7 +12,7 @@
 }
 
 .transport-icons__checkbox {
-  &:checked + .transport-icons__icon svg path {
+  &:checked + .transport-icons__icon .transport-icons__svg {
     fill: var(--basic-300);
   }
 
@@ -22,11 +22,11 @@
     box-shadow: 0 2px 6px rgba(22, 28, 53, 0.17);
   }
 
-  &:hover + .transport-icons__icon svg path {
+  &:hover + .transport-icons__icon .transport-icons__svg {
     fill: #b2b2b2;
   }
 
-  &:checked:hover + .transport-icons__icon svg path {
+  &:checked:hover + .transport-icons__icon .transport-icons__svg {
     fill: var(--basic-300);
     opacity: 0.7;
   }
@@ -35,11 +35,11 @@
     background-color: #e2e5f1;
   }
 
-  &:checked:active + .transport-icons__icon svg path {
+  &:checked:active + .transport-icons__icon .transport-icons__svg {
     opacity: 0.3;
   }
 
-  &:active + .transport-icons__icon svg path {
+  &:active + .transport-icons__icon .transport-icons__svg {
     fill: var(--basic-300);
     opacity: 0.1;
   }
@@ -61,18 +61,30 @@
     height: 44px;
   }
 
-  svg {
-    width: 17px;
-    height: 16px;
+  // svg {
+  //   width: 17px;
+  //   height: 16px;
 
-    @media (min-width: $tablet) {
-      width: 23px;
-      height: 22px;
-    }
+  //   @media (min-width: $tablet) {
+  //     width: 23px;
+  //     height: 22px;
+  //   }
 
-    path {
-      fill: #d9d9d9;
-      transition: opacity 0.2s, fill 0.2s;
-    }
+  //   path {
+  //     fill: #d9d9d9;
+  //     transition: opacity 0.2s, fill 0.2s;
+  //   }
+  // }
+}
+
+.transport-icons__svg {
+  width: 17px;
+  height: 16px;
+  fill: #d9d9d9;
+  transition: opacity 0.2s, fill 0.2s;
+
+  @media (min-width: $tablet) {
+    width: 23px;
+    height: 22px;
   }
 }

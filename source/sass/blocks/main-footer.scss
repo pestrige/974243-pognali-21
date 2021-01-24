@@ -32,6 +32,18 @@
   }
 }
 
+.main-footer__logo {
+  @media (min-width: $tablet) {
+    justify-self: start;
+    margin-top: 4px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 2px;
+    margin-left: 19px;
+  }
+}
+
 .main-footer__creator {
   padding-top: 10px;
   justify-self: stretch;
@@ -76,14 +88,6 @@
   }
 }
 
-.main-footer__logo {
-  @media (min-width: $tablet) {
-    justify-self: start;
-    margin-top: 4px;
-  }
-
-  @media (min-width: $desktop) {
-    margin-top: 2px;
-    margin-left: 19px;
-  }
+.main-footer__creator-logo {
+  fill: var(--basic-400);
 }
